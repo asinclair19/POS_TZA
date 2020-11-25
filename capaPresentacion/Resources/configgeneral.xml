@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfiguracionGeneral>
+  <configuraciones>
+
+    <configuracion type="general">
+      <items>
+        <item name="title">Sistema de Inventario</item>
+        <item name="name">Ebenezer</item>
+        <item name="comercialname">Ebenezer</item>
+        <item name="sucursal">Ebenezer</item>
+        <item name="direccion">Ebenezer</item>
+        <item name="telefono">Ebenezer</item>
+        <item name="correo">Ebenezer</item>
+        <item name="slogan">Ebenezer</item>
+        <item name="propietario">Ebenezer</item>
+        <item name="rtn">Ebenezer</item>
+        <item name="cai">Ebenezer</item>
+      </items>
+    </configuracion>
+
+    <configuracion type="login">
+      <items>
+        <item name="rootuser">Sistema de Inventario</item>
+        <item name="rootpass">Ebenezer</item>
+      </items>
+    </configuracion>
+
+    <configuracion type="compras">
+      <items>
+        <item name="ganancia">0.02</item>
+      </items>
+    </configuracion>
+
+    <configuracion type="pagos">
+      <items>
+        <item name="seguro">0.00</item>
+        <item name="isr">0.00</item>
+      </items>
+    </configuracion>
+
+    <configuracion type="pagos">
+      <items>
+        <item name="isv">0.12</item>
+        <item name="rangoinicial">000000</item>
+        <item name="rangofinal">000000</item>
+      </items>
+    </configuracion>
+    
+  </configuraciones>
+
+</ConfiguracionGeneral>

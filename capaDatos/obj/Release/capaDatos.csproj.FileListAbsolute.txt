@@ -1,0 +1,7 @@
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\bin\Release\capaDatos.dll.config
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\bin\Release\capaDatos.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\bin\Release\capaDatos.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\obj\Release\capaDatos.Properties.Resources.resources
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\obj\Release\capaDatos.csproj.GenerateResource.Cache
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\obj\Release\capaDatos.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\obj\Release\capaDatos.pdb

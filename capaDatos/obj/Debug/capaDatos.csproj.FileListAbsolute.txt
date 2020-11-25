@@ -1,0 +1,29 @@
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaDatos\bin\Debug\capaDatos.dll.config
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaDatos\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaDatos\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaDatos\obj\Debug\capaDatos.csprojResolveAssemblyReference.cache
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaDatos\obj\Debug\capaDatos.Properties.Resources.resources
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaDatos\obj\Debug\capaDatos.csproj.GenerateResource.Cache
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaDatos\obj\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaDatos\obj\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA\capaDatos\bin\Debug\capaDatos.dll.config
+C:\Users\eg\Desktop\POS_TZA\capaDatos\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA\capaDatos\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA\capaDatos\obj\Debug\capaDatos.Properties.Resources.resources
+C:\Users\eg\Desktop\POS_TZA\capaDatos\obj\Debug\capaDatos.csproj.GenerateResource.Cache
+C:\Users\eg\Desktop\POS_TZA\capaDatos\obj\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA\capaDatos\obj\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaDatos\bin\Debug\capaDatos.dll.config
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaDatos\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaDatos\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaDatos\obj\Debug\capaDatos.Properties.Resources.resources
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaDatos\obj\Debug\capaDatos.csproj.GenerateResource.Cache
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaDatos\obj\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaDatos\obj\Debug\capaDatos.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\bin\Debug\capaDatos.dll.config
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\bin\Debug\capaDatos.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\bin\Debug\capaDatos.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\obj\Debug\capaDatos.Properties.Resources.resources
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\obj\Debug\capaDatos.csproj.GenerateResource.Cache
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\obj\Debug\capaDatos.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaDatos\obj\Debug\capaDatos.pdb

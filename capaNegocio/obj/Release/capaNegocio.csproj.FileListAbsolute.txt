@@ -1,0 +1,7 @@
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\bin\Release\capaNegocio.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\bin\Release\capaNegocio.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\bin\Release\capaDatos.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\bin\Release\capaDatos.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\obj\Release\capaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\obj\Release\capaNegocio.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\obj\Release\capaNegocio.pdb

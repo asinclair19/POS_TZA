@@ -1,0 +1,28 @@
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaNegocio\bin\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaNegocio\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaNegocio\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaNegocio\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaNegocio\obj\Debug\capaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaNegocio\obj\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\capaNegocio\obj\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA\capaNegocio\bin\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA\capaNegocio\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA\capaNegocio\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA\capaNegocio\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA\capaNegocio\obj\Debug\capaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\eg\Desktop\POS_TZA\capaNegocio\obj\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA\capaNegocio\obj\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaNegocio\bin\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaNegocio\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaNegocio\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaNegocio\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaNegocio\obj\Debug\capaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaNegocio\obj\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA Nuevo\capaNegocio\obj\Debug\capaNegocio.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\bin\Debug\capaNegocio.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\bin\Debug\capaDatos.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\bin\Debug\capaDatos.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\obj\Debug\capaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\obj\Debug\capaNegocio.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\obj\Debug\capaNegocio.pdb

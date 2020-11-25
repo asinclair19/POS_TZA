@@ -1,0 +1,107 @@
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\bin\Debug\POS_TZA.exe.config
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\obj\x86\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\obj\x86\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\bin\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\bin\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\bin\Debug\capaPresentacion.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\bin\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\bin\Debug\capaPresentacion.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\obj\x86\Debug\POS_TZA.csprojResolveAssemblyReference.cache
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\obj\x86\Debug\POS_TZA.Form1.resources
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\obj\x86\Debug\POS_TZA.Main.resources
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\obj\x86\Debug\POS_TZA.Properties.Resources.resources
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020\POS_TZA\obj\x86\Debug\POS_TZA.csproj.GenerateResource.Cache
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\bin\Debug\POS_TZA.exe.config
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\obj\x86\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\obj\x86\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\bin\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\bin\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\bin\Debug\capaPresentacion.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\bin\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\bin\Debug\capaPresentacion.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\obj\x86\Debug\POS_TZA.csprojResolveAssemblyReference.cache
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\obj\x86\Debug\POS_TZA.Form1.resources
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\obj\x86\Debug\POS_TZA.Main.resources
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\obj\x86\Debug\POS_TZA.Properties.Resources.resources
+C:\Users\eg\Desktop\POS_TZA Backup 16-10-2020 - copia\POS_TZA\obj\x86\Debug\POS_TZA.csproj.GenerateResource.Cache
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\bin\Debug\POS_TZA.exe.config
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\obj\x86\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\obj\x86\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\bin\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\bin\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\bin\Debug\capaPresentacion.dll
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\bin\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\bin\Debug\capaPresentacion.pdb
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\obj\x86\Debug\POS_TZA.csprojResolveAssemblyReference.cache
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\obj\x86\Debug\POS_TZA.Form1.resources
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\obj\x86\Debug\POS_TZA.Main.resources
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\obj\x86\Debug\POS_TZA.Properties.Resources.resources
+C:\Users\eg\Desktop\POS_TZA - FINAL\POS_TZA\obj\x86\Debug\POS_TZA.csproj.GenerateResource.Cache
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\POS_TZA.exe.config
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\POS_TZA.exe.manifest
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\POS_TZA.application
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\capaPresentacion.dll
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\capaPresentacion.pdb
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.csprojResolveAssemblyReference.cache
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.Form1.resources
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.Main.resources
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.Properties.Resources.resources
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.csproj.GenerateResource.Cache
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.exe.manifest
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.application
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\POS_TZA.exe.config
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\capaPresentacion.dll
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\capaNegocio.dll
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\capaDatos.dll
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\capaPresentacion.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\capaDatos.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.csprojResolveAssemblyReference.cache
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.Form1.resources
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.Main.resources
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.Properties.Resources.resources
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.csproj.GenerateResource.Cache
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.exe
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.pdb
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\POS_TZA.exe.manifest
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\bin\Debug\POS_TZA.application
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.TrustInfo.xml
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.exe.manifest
+C:\Users\eg\Desktop\POS_TZA Nuevo\POS_TZA\obj\x86\Debug\POS_TZA.application
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\POS_TZA.exe.config
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\POS_TZA.exe
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\POS_TZA.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\capaPresentacion.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\capaNegocio.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\capaDatos.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\capaPresentacion.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\capaDatos.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.csprojResolveAssemblyReference.cache
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.Form1.resources
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.Main.resources
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.Properties.Resources.resources
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.csproj.GenerateResource.Cache
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.exe
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.pdb
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\libreria.dll
+C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\POS_TZA\bin\Debug\wd220net4.dll
