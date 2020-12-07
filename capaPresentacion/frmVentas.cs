@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using WL;
+//using WL;
 
 using capaNegocio;
 
@@ -17,7 +17,7 @@ namespace capaPresentacion
         private bool EsNuevo;
         public int idEmpleado = 1;
         private DataTable dtDetalle;
-        Tickets ticket1 = new Tickets();
+        //Tickets ticket1 = new Tickets();
 
         private decimal totalPagado = 0;
         private decimal ISVTotal = 0;
@@ -609,59 +609,59 @@ namespace capaPresentacion
         }//final de metodo
         
         
-        private void ImprimirRecibo()
-        {
-            //ticket1.Imprimir("", true); //Ticket para impresora de 58mm
-            ticket1.Imprimir();
+        //private void ImprimirRecibo()
+        //{
+        //    //ticket1.Imprimir("", true); //Ticket para impresora de 58mm
+        //    ticket1.Imprimir();
 
-        }
-        private void convertirPDFRecibo()
-        {
-            ticket1.PDF();
-        }
+        //}
+        //private void convertirPDFRecibo()
+        //{
+        //    ticket1.PDF();
+        //}
 
-        private void vistaPreviaRecibo()
-        {
-            ticket1.VistaPrevia();
-        }
+        //private void vistaPreviaRecibo()
+        //{
+        //    ticket1.VistaPrevia();
+        //}
 
-        private void InicializarRecibo()
-        {
-            ticket1.Limpiar();
-            ticket1.Logo("buy.png");
-            ticket1.Titulo("TITULO DE PRUEBA");
-            ticket1.Encabezado("DIRECCION");
-            ticket1.Encabezado("CIUDAD CODIGO POSTAL");
-            ticket1.Encabezado("RFC: ABC12345678");
-            ticket1.Encabezado("FECHA: " + DateTime.Now.ToShortDateString());
-            int nArticulos = 10;
-            for (int i = 0; i < nArticulos; i++)
-            {
-                ticket1.Articulo("123456789", "1 PZ", "ARTICULO DE PRUEBA NUMERO UNO", "10", "10");
-            }
-            //ticket1.Articulo("123456789", "1 PZ", "ARTICULO DE PRUEBA NUMERO UNO", "10", "10");
-            //ticket1.Articulo("123453254", "2 PZ", "ARTICULO DE PRUEBA NUMERO DOS", "15", "30");
-            ticket1.NumArticulos(nArticulos.ToString());
-            ticket1.Total("40");
-            ticket1.Pago("EFECTIVO:", "10");
-            ticket1.Pago("DOLARES ($18.50) :", "0");
-            ticket1.Pago("TARJETA:", "10");
-            ticket1.Pago("VALES:", "20");
-            ticket1.Pago("CAMBIO:", "0");
-            ticket1.Pie("=================================================");
-            ticket1.Pie("GRACIAS POR SU PREFERENCIA!!");
-        }
+        //private void InicializarRecibo()
+        //{
+        //    ticket1.Limpiar();
+        //    ticket1.Logo("buy.png");
+        //    ticket1.Titulo("TITULO DE PRUEBA");
+        //    ticket1.Encabezado("DIRECCION");
+        //    ticket1.Encabezado("CIUDAD CODIGO POSTAL");
+        //    ticket1.Encabezado("RFC: ABC12345678");
+        //    ticket1.Encabezado("FECHA: " + DateTime.Now.ToShortDateString());
+        //    int nArticulos = 10;
+        //    for (int i = 0; i < nArticulos; i++)
+        //    {
+        //        ticket1.Articulo("123456789", "1 PZ", "ARTICULO DE PRUEBA NUMERO UNO", "10", "10");
+        //    }
+        //    //ticket1.Articulo("123456789", "1 PZ", "ARTICULO DE PRUEBA NUMERO UNO", "10", "10");
+        //    //ticket1.Articulo("123453254", "2 PZ", "ARTICULO DE PRUEBA NUMERO DOS", "15", "30");
+        //    ticket1.NumArticulos(nArticulos.ToString());
+        //    ticket1.Total("40");
+        //    ticket1.Pago("EFECTIVO:", "10");
+        //    ticket1.Pago("DOLARES ($18.50) :", "0");
+        //    ticket1.Pago("TARJETA:", "10");
+        //    ticket1.Pago("VALES:", "20");
+        //    ticket1.Pago("CAMBIO:", "0");
+        //    ticket1.Pie("=================================================");
+        //    ticket1.Pie("GRACIAS POR SU PREFERENCIA!!");
+        //}
 
-        private void limpiarRecibo()
-        {
-            ticket1.Limpiar();
-        }
+        //private void limpiarRecibo()
+        //{
+        //    ticket1.Limpiar();
+        //}
 
-        private void btnRecibo_Click(object sender, EventArgs e)
-        {
-            this.InicializarRecibo();
-            this.convertirPDFRecibo();
-        }
+        //private void btnRecibo_Click(object sender, EventArgs e)
+        //{
+        //    this.InicializarRecibo();
+        //    this.convertirPDFRecibo();
+        //}
 
     //Final de clase
     }

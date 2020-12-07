@@ -68,7 +68,7 @@ namespace capaPresentacion
             this.txtDescripcion.Text = string.Empty;
             this.txtCodigoCategoria.Text = string.Empty;
             this.txtNombreCategoria.Text = string.Empty;
-            //this.pxImagen.Image = global::capaPresentacion.Properties.Resources.logo_empresa;
+            this.pxImagen.Image = global::capaPresentacion.Properties.Resources.img_default_01;
         }
 
         //habilitar cajas de texto
@@ -82,7 +82,7 @@ namespace capaPresentacion
             this.btnSeleccionar.Enabled = valor;
             this.cmbUnidad.Enabled = valor;
             this.btnCargar.Enabled = valor;
-            this.btnLimpiar.Enabled = valor;
+            this.btnDescartar.Enabled = valor;
         }
 
         //habilitar botones ES NUEVO / ES EDITAR
@@ -159,10 +159,10 @@ namespace capaPresentacion
             }
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void btnDescartar_Click(object sender, EventArgs e)
         {
             this.pxImagen.SizeMode = PictureBoxSizeMode.StretchImage;
-            //this.pxImagen.Image = global::capaPresentacion.Properties.Resources.logo_empresa;
+            this.pxImagen.Image = global::capaPresentacion.Properties.Resources.img_default_01;
         }
 
         //cuando inicia el formulario
@@ -245,7 +245,7 @@ namespace capaPresentacion
                 else
                 {
                     System.IO.MemoryStream ms = new System.IO.MemoryStream();
-                    this.pxImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    this.pxImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
 
                     byte[] saveimagen = ms.GetBuffer();
 

@@ -31,6 +31,20 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtRangoFinal = new System.Windows.Forms.MaskedTextBox();
+            this.txtRangoInicial = new System.Windows.Forms.MaskedTextBox();
+            this.txtPuntoEmision = new System.Windows.Forms.MaskedTextBox();
+            this.txtTipoDocumento = new System.Windows.Forms.MaskedTextBox();
+            this.txtEstablecimiento = new System.Windows.Forms.MaskedTextBox();
+            this.lblVistaPrevia = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCAI = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtRTN = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -68,20 +82,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCAI = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtRTN = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.lblVistaPrevia = new System.Windows.Forms.Label();
-            this.txtEstablecimiento = new System.Windows.Forms.MaskedTextBox();
-            this.txtTipoDocumento = new System.Windows.Forms.MaskedTextBox();
-            this.txtPuntoEmision = new System.Windows.Forms.MaskedTextBox();
-            this.txtRangoInicial = new System.Windows.Forms.MaskedTextBox();
-            this.txtRangoFinal = new System.Windows.Forms.MaskedTextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescuento)).BeginInit();
@@ -144,6 +144,150 @@
             this.groupBox3.TabIndex = 60;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Facturación:";
+            // 
+            // txtRangoFinal
+            // 
+            this.txtRangoFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRangoFinal.Location = new System.Drawing.Point(140, 250);
+            this.txtRangoFinal.Mask = "00000009";
+            this.txtRangoFinal.Name = "txtRangoFinal";
+            this.txtRangoFinal.PromptChar = '-';
+            this.txtRangoFinal.Size = new System.Drawing.Size(184, 26);
+            this.txtRangoFinal.TabIndex = 79;
+            this.txtRangoFinal.TextChanged += new System.EventHandler(this.txtRangoFinal_TextChanged);
+            // 
+            // txtRangoInicial
+            // 
+            this.txtRangoInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRangoInicial.Location = new System.Drawing.Point(140, 213);
+            this.txtRangoInicial.Mask = "00000009";
+            this.txtRangoInicial.Name = "txtRangoInicial";
+            this.txtRangoInicial.PromptChar = '-';
+            this.txtRangoInicial.Size = new System.Drawing.Size(184, 26);
+            this.txtRangoInicial.TabIndex = 78;
+            this.txtRangoInicial.TextChanged += new System.EventHandler(this.txtRangoInicial_TextChanged);
+            // 
+            // txtPuntoEmision
+            // 
+            this.txtPuntoEmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntoEmision.Location = new System.Drawing.Point(140, 101);
+            this.txtPuntoEmision.Mask = "009";
+            this.txtPuntoEmision.Name = "txtPuntoEmision";
+            this.txtPuntoEmision.PromptChar = '-';
+            this.txtPuntoEmision.Size = new System.Drawing.Size(184, 26);
+            this.txtPuntoEmision.TabIndex = 77;
+            this.txtPuntoEmision.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPuntoEmision_MaskInputRejected);
+            this.txtPuntoEmision.TextChanged += new System.EventHandler(this.txtPuntoEmision_TextChanged);
+            // 
+            // txtTipoDocumento
+            // 
+            this.txtTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipoDocumento.Location = new System.Drawing.Point(140, 176);
+            this.txtTipoDocumento.Mask = "09";
+            this.txtTipoDocumento.Name = "txtTipoDocumento";
+            this.txtTipoDocumento.PromptChar = '-';
+            this.txtTipoDocumento.Size = new System.Drawing.Size(184, 26);
+            this.txtTipoDocumento.TabIndex = 76;
+            this.txtTipoDocumento.TextChanged += new System.EventHandler(this.txtTipoDocumento_TextChanged);
+            // 
+            // txtEstablecimiento
+            // 
+            this.txtEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstablecimiento.Location = new System.Drawing.Point(140, 139);
+            this.txtEstablecimiento.Mask = "009";
+            this.txtEstablecimiento.Name = "txtEstablecimiento";
+            this.txtEstablecimiento.PromptChar = '-';
+            this.txtEstablecimiento.Size = new System.Drawing.Size(184, 26);
+            this.txtEstablecimiento.TabIndex = 75;
+            this.txtEstablecimiento.TextChanged += new System.EventHandler(this.txtEstablecimiento_TextChanged);
+            // 
+            // lblVistaPrevia
+            // 
+            this.lblVistaPrevia.AutoSize = true;
+            this.lblVistaPrevia.BackColor = System.Drawing.Color.Yellow;
+            this.lblVistaPrevia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVistaPrevia.Location = new System.Drawing.Point(136, 287);
+            this.lblVistaPrevia.Name = "lblVistaPrevia";
+            this.lblVistaPrevia.Size = new System.Drawing.Size(188, 24);
+            this.lblVistaPrevia.TabIndex = 74;
+            this.lblVistaPrevia.Text = "001-001-01-00000001";
+            this.lblVistaPrevia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(20, 291);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(73, 15);
+            this.label24.TabIndex = 73;
+            this.label24.Text = "Vista Previa:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(20, 179);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(101, 15);
+            this.label23.TabIndex = 71;
+            this.label23.Text = "Tipo Documento:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(20, 142);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(98, 15);
+            this.label22.TabIndex = 69;
+            this.label22.Text = "Establecimiento:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(20, 104);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(90, 15);
+            this.label19.TabIndex = 67;
+            this.label19.Text = "Punto Emisión:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 64);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(28, 15);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "CAI:";
+            // 
+            // txtCAI
+            // 
+            this.txtCAI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCAI.Location = new System.Drawing.Point(140, 61);
+            this.txtCAI.Name = "txtCAI";
+            this.txtCAI.Size = new System.Drawing.Size(227, 26);
+            this.txtCAI.TabIndex = 65;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(20, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 15);
+            this.label11.TabIndex = 64;
+            this.label11.Text = "RTN:";
+            // 
+            // txtRTN
+            // 
+            this.txtRTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRTN.Location = new System.Drawing.Point(140, 24);
+            this.txtRTN.Name = "txtRTN";
+            this.txtRTN.Size = new System.Drawing.Size(227, 26);
+            this.txtRTN.TabIndex = 63;
             // 
             // label20
             // 
@@ -312,25 +456,25 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Location = new System.Drawing.Point(397, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 87);
+            this.groupBox1.Size = new System.Drawing.Size(296, 105);
             this.groupBox1.TabIndex = 58;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuración Login";
             // 
             // txtPassRoot
             // 
-            this.txtPassRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassRoot.Location = new System.Drawing.Point(130, 61);
             this.txtPassRoot.Name = "txtPassRoot";
-            this.txtPassRoot.Size = new System.Drawing.Size(137, 22);
+            this.txtPassRoot.Size = new System.Drawing.Size(137, 26);
             this.txtPassRoot.TabIndex = 27;
             // 
             // txtUserRoot
             // 
-            this.txtUserRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserRoot.Location = new System.Drawing.Point(130, 24);
             this.txtUserRoot.Name = "txtUserRoot";
-            this.txtUserRoot.Size = new System.Drawing.Size(137, 22);
+            this.txtUserRoot.Size = new System.Drawing.Size(137, 26);
             this.txtUserRoot.TabIndex = 25;
             // 
             // label10
@@ -376,10 +520,10 @@
             // 
             // txtPropietario
             // 
-            this.txtPropietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPropietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPropietario.Location = new System.Drawing.Point(145, 390);
             this.txtPropietario.Name = "txtPropietario";
-            this.txtPropietario.Size = new System.Drawing.Size(227, 22);
+            this.txtPropietario.Size = new System.Drawing.Size(227, 26);
             this.txtPropietario.TabIndex = 53;
             // 
             // label9
@@ -394,10 +538,10 @@
             // 
             // txtSlogan
             // 
-            this.txtSlogan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSlogan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSlogan.Location = new System.Drawing.Point(145, 354);
             this.txtSlogan.Name = "txtSlogan";
-            this.txtSlogan.Size = new System.Drawing.Size(227, 22);
+            this.txtSlogan.Size = new System.Drawing.Size(227, 26);
             this.txtSlogan.TabIndex = 51;
             // 
             // label5
@@ -412,10 +556,10 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(145, 317);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(227, 22);
+            this.txtCorreo.Size = new System.Drawing.Size(227, 26);
             this.txtCorreo.TabIndex = 49;
             // 
             // label6
@@ -430,15 +574,15 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(145, 280);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(227, 22);
+            this.txtTelefono.Size = new System.Drawing.Size(227, 26);
             this.txtTelefono.TabIndex = 47;
             // 
             // txtDirección
             // 
-            this.txtDirección.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDirección.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDirección.Location = new System.Drawing.Point(145, 206);
             this.txtDirección.Multiline = true;
             this.txtDirección.Name = "txtDirección";
@@ -457,10 +601,10 @@
             // 
             // txtSucursal
             // 
-            this.txtSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSucursal.Location = new System.Drawing.Point(145, 171);
             this.txtSucursal.Name = "txtSucursal";
-            this.txtSucursal.Size = new System.Drawing.Size(227, 22);
+            this.txtSucursal.Size = new System.Drawing.Size(227, 26);
             this.txtSucursal.TabIndex = 44;
             // 
             // label3
@@ -475,10 +619,10 @@
             // 
             // txtComercialNombre
             // 
-            this.txtComercialNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComercialNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComercialNombre.Location = new System.Drawing.Point(145, 134);
             this.txtComercialNombre.Name = "txtComercialNombre";
-            this.txtComercialNombre.Size = new System.Drawing.Size(227, 22);
+            this.txtComercialNombre.Size = new System.Drawing.Size(227, 26);
             this.txtComercialNombre.TabIndex = 42;
             // 
             // label4
@@ -493,10 +637,10 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(145, 97);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(227, 22);
+            this.txtNombre.Size = new System.Drawing.Size(227, 26);
             this.txtNombre.TabIndex = 40;
             // 
             // label2
@@ -511,10 +655,10 @@
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitulo.Location = new System.Drawing.Point(145, 60);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(227, 22);
+            this.txtTitulo.Size = new System.Drawing.Size(227, 26);
             this.txtTitulo.TabIndex = 38;
             // 
             // label1
@@ -526,150 +670,6 @@
             this.label1.Size = new System.Drawing.Size(105, 15);
             this.label1.TabIndex = 37;
             this.label1.Text = "Título de Sistema:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 64);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 15);
-            this.label7.TabIndex = 66;
-            this.label7.Text = "CAI:";
-            // 
-            // txtCAI
-            // 
-            this.txtCAI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCAI.Location = new System.Drawing.Point(140, 61);
-            this.txtCAI.Name = "txtCAI";
-            this.txtCAI.Size = new System.Drawing.Size(227, 22);
-            this.txtCAI.TabIndex = 65;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(20, 27);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 15);
-            this.label11.TabIndex = 64;
-            this.label11.Text = "RTN:";
-            // 
-            // txtRTN
-            // 
-            this.txtRTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRTN.Location = new System.Drawing.Point(140, 24);
-            this.txtRTN.Name = "txtRTN";
-            this.txtRTN.Size = new System.Drawing.Size(227, 22);
-            this.txtRTN.TabIndex = 63;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(20, 104);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(90, 15);
-            this.label19.TabIndex = 67;
-            this.label19.Text = "Punto Emisión:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(20, 142);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(98, 15);
-            this.label22.TabIndex = 69;
-            this.label22.Text = "Establecimiento:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(20, 179);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(101, 15);
-            this.label23.TabIndex = 71;
-            this.label23.Text = "Tipo Documento:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(20, 291);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(73, 15);
-            this.label24.TabIndex = 73;
-            this.label24.Text = "Vista Previa:";
-            // 
-            // lblVistaPrevia
-            // 
-            this.lblVistaPrevia.AutoSize = true;
-            this.lblVistaPrevia.BackColor = System.Drawing.Color.Yellow;
-            this.lblVistaPrevia.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVistaPrevia.Location = new System.Drawing.Point(136, 287);
-            this.lblVistaPrevia.Name = "lblVistaPrevia";
-            this.lblVistaPrevia.Size = new System.Drawing.Size(153, 22);
-            this.lblVistaPrevia.TabIndex = 74;
-            this.lblVistaPrevia.Text = "001-001-01-00000001";
-            this.lblVistaPrevia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtEstablecimiento
-            // 
-            this.txtEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstablecimiento.Location = new System.Drawing.Point(140, 139);
-            this.txtEstablecimiento.Mask = "009";
-            this.txtEstablecimiento.Name = "txtEstablecimiento";
-            this.txtEstablecimiento.PromptChar = '-';
-            this.txtEstablecimiento.Size = new System.Drawing.Size(95, 22);
-            this.txtEstablecimiento.TabIndex = 75;
-            this.txtEstablecimiento.TextChanged += new System.EventHandler(this.txtEstablecimiento_TextChanged);
-            // 
-            // txtTipoDocumento
-            // 
-            this.txtTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoDocumento.Location = new System.Drawing.Point(140, 176);
-            this.txtTipoDocumento.Mask = "09";
-            this.txtTipoDocumento.Name = "txtTipoDocumento";
-            this.txtTipoDocumento.PromptChar = '-';
-            this.txtTipoDocumento.Size = new System.Drawing.Size(95, 22);
-            this.txtTipoDocumento.TabIndex = 76;
-            this.txtTipoDocumento.TextChanged += new System.EventHandler(this.txtTipoDocumento_TextChanged);
-            // 
-            // txtPuntoEmision
-            // 
-            this.txtPuntoEmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPuntoEmision.Location = new System.Drawing.Point(140, 101);
-            this.txtPuntoEmision.Mask = "009";
-            this.txtPuntoEmision.Name = "txtPuntoEmision";
-            this.txtPuntoEmision.PromptChar = '-';
-            this.txtPuntoEmision.Size = new System.Drawing.Size(95, 22);
-            this.txtPuntoEmision.TabIndex = 77;
-            this.txtPuntoEmision.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPuntoEmision_MaskInputRejected);
-            this.txtPuntoEmision.TextChanged += new System.EventHandler(this.txtPuntoEmision_TextChanged);
-            // 
-            // txtRangoInicial
-            // 
-            this.txtRangoInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRangoInicial.Location = new System.Drawing.Point(140, 213);
-            this.txtRangoInicial.Mask = "00000009";
-            this.txtRangoInicial.Name = "txtRangoInicial";
-            this.txtRangoInicial.PromptChar = '-';
-            this.txtRangoInicial.Size = new System.Drawing.Size(95, 22);
-            this.txtRangoInicial.TabIndex = 78;
-            this.txtRangoInicial.TextChanged += new System.EventHandler(this.txtRangoInicial_TextChanged);
-            // 
-            // txtRangoFinal
-            // 
-            this.txtRangoFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRangoFinal.Location = new System.Drawing.Point(140, 250);
-            this.txtRangoFinal.Mask = "00000009";
-            this.txtRangoFinal.Name = "txtRangoFinal";
-            this.txtRangoFinal.PromptChar = '-';
-            this.txtRangoFinal.Size = new System.Drawing.Size(95, 22);
-            this.txtRangoFinal.TabIndex = 79;
-            this.txtRangoFinal.TextChanged += new System.EventHandler(this.txtRangoFinal_TextChanged);
             // 
             // frmConfig
             // 

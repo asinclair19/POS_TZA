@@ -147,3 +147,39 @@ C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaPresentacion\obj\D
 C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.pdb
 C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaPresentacion\bin\Debug\libreria.dll
 C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaPresentacion\bin\Debug\wd220net4.dll
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\bin\Debug\capaPresentacion.dll.config
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\bin\Debug\capaPresentacion.dll
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\bin\Debug\capaPresentacion.pdb
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\bin\Debug\capaNegocio.dll
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\bin\Debug\capaDatos.dll
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\bin\Debug\capaDatos.pdb
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.csprojResolveAssemblyReference.cache
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmCategorias.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmClientes.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmConfig.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmConsulta_Stock.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmEfectivo_Venta.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmEmpleados.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmIngresos.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmLogin.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmPlanillas.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmPrincipal.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmProductos.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmProveedores.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmUnidades.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmVentas.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmVistaCategoria.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmVistaCliente_Venta.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmVistaEmpleado_Planilla.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmVistaProducto_Ingresos.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmVistaProducto_Ventas.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmVistaProveedor_Ingresos.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmInformeFactura.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmInformeProductos.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.Properties.Resources.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.csproj.GenerateResource.Cache
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\RdlCompile.cache
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\RdlCompile.compiled
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.dll
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.pdb

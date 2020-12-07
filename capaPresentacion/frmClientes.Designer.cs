@@ -192,9 +192,10 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(56, 17);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(238, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(238, 26);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -228,9 +229,10 @@
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(88, 55);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(127, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(127, 26);
             this.txtCodigo.TabIndex = 11;
             // 
             // lblCodigo
@@ -301,9 +303,10 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(87, 94);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(186, 20);
+            this.txtNombre.Size = new System.Drawing.Size(361, 26);
             this.txtNombre.TabIndex = 1;
             // 
             // lblNombre

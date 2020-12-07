@@ -188,9 +188,10 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(65, 8);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(238, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(238, 26);
             this.txtBuscar.TabIndex = 7;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -228,19 +229,21 @@
             // txtContacto
             // 
             this.txtContacto.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContacto.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtContacto.Location = new System.Drawing.Point(118, 112);
             this.txtContacto.Name = "txtContacto";
-            this.txtContacto.Size = new System.Drawing.Size(253, 20);
+            this.txtContacto.Size = new System.Drawing.Size(253, 26);
             this.txtContacto.TabIndex = 24;
             // 
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtCodigo.Location = new System.Drawing.Point(118, 32);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(127, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(127, 26);
             this.txtCodigo.TabIndex = 23;
             // 
             // lblCodigo
@@ -341,10 +344,11 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtNombre.Location = new System.Drawing.Point(118, 72);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(253, 20);
+            this.txtNombre.Size = new System.Drawing.Size(253, 26);
             this.txtNombre.TabIndex = 13;
             // 
             // lblNombre

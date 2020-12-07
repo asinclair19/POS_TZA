@@ -32,12 +32,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblNumElementos = new System.Windows.Forms.Label();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
@@ -92,6 +92,21 @@
             this.dgvCliente.TabIndex = 3;
             this.dgvCliente.DoubleClick += new System.EventHandler(this.dgvCliente_DoubleClick);
             // 
+            // idcliente
+            // 
+            this.idcliente.DataPropertyName = "idcliente";
+            this.idcliente.HeaderText = "ID";
+            this.idcliente.Name = "idcliente";
+            this.idcliente.ReadOnly = true;
+            this.idcliente.Visible = false;
+            // 
+            // nombre_cliente
+            // 
+            this.nombre_cliente.DataPropertyName = "nombre_cliente";
+            this.nombre_cliente.HeaderText = "NOMBRE";
+            this.nombre_cliente.Name = "nombre_cliente";
+            this.nombre_cliente.ReadOnly = true;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -108,9 +123,10 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(56, 17);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(238, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(238, 26);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -134,21 +150,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(122, 25);
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "CLIENTES";
-            // 
-            // idcliente
-            // 
-            this.idcliente.DataPropertyName = "idcliente";
-            this.idcliente.HeaderText = "ID";
-            this.idcliente.Name = "idcliente";
-            this.idcliente.ReadOnly = true;
-            this.idcliente.Visible = false;
-            // 
-            // nombre_cliente
-            // 
-            this.nombre_cliente.DataPropertyName = "nombre_cliente";
-            this.nombre_cliente.HeaderText = "NOMBRE";
-            this.nombre_cliente.Name = "nombre_cliente";
-            this.nombre_cliente.ReadOnly = true;
             // 
             // frmVistaCliente_Venta
             // 

@@ -435,6 +435,7 @@ namespace capaPresentacion
 
         private string retornaCadenaPermisos()
         {
+            //cadena: config-inventario-compras-empleados-planilla-ventas-reportes-
             string cadena = "";
 
             if (this.chkConfig.Checked == true)

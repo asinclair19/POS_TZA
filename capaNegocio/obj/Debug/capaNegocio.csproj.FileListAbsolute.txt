@@ -26,3 +26,10 @@ C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\bin\Debug\
 C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\obj\Debug\capaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\obj\Debug\capaNegocio.dll
 C:\Users\eg\Documents\Visual Studio 2010\Projects\POS_TZA\capaNegocio\obj\Debug\capaNegocio.pdb
+C:\Users\eg\Documents\POS_TZA\capaNegocio\bin\Debug\capaNegocio.dll
+C:\Users\eg\Documents\POS_TZA\capaNegocio\bin\Debug\capaNegocio.pdb
+C:\Users\eg\Documents\POS_TZA\capaNegocio\bin\Debug\capaDatos.dll
+C:\Users\eg\Documents\POS_TZA\capaNegocio\bin\Debug\capaDatos.pdb
+C:\Users\eg\Documents\POS_TZA\capaNegocio\obj\Debug\capaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\eg\Documents\POS_TZA\capaNegocio\obj\Debug\capaNegocio.dll
+C:\Users\eg\Documents\POS_TZA\capaNegocio\obj\Debug\capaNegocio.pdb

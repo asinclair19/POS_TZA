@@ -135,10 +135,11 @@
             // 
             // dtpFechaFinal
             // 
+            this.dtpFechaFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFinal.Location = new System.Drawing.Point(82, 37);
+            this.dtpFechaFinal.Location = new System.Drawing.Point(82, 43);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
-            this.dtpFechaFinal.Size = new System.Drawing.Size(127, 20);
+            this.dtpFechaFinal.Size = new System.Drawing.Size(127, 26);
             this.dtpFechaFinal.TabIndex = 17;
             // 
             // lblFechaFinal
@@ -152,10 +153,11 @@
             // 
             // dtpFechaInicial
             // 
+            this.dtpFechaInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaInicial.Location = new System.Drawing.Point(82, 11);
             this.dtpFechaInicial.Name = "dtpFechaInicial";
-            this.dtpFechaInicial.Size = new System.Drawing.Size(127, 20);
+            this.dtpFechaInicial.Size = new System.Drawing.Size(127, 26);
             this.dtpFechaInicial.TabIndex = 15;
             // 
             // btnImprimir
@@ -287,7 +289,7 @@
             // 
             this.txtSalario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtSalario.DecimalPlaces = 2;
-            this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalario.Location = new System.Drawing.Point(111, 141);
             this.txtSalario.Maximum = new decimal(new int[] {
             100000,
@@ -295,7 +297,7 @@
             0,
             0});
             this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(170, 21);
+            this.txtSalario.Size = new System.Drawing.Size(170, 26);
             this.txtSalario.TabIndex = 56;
             this.txtSalario.ValueChanged += new System.EventHandler(this.txtSalario_ValueChanged);
             // 
@@ -340,21 +342,21 @@
             // 
             this.txtTotalPagar.DecimalPlaces = 2;
             this.txtTotalPagar.Enabled = false;
-            this.txtTotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPagar.Location = new System.Drawing.Point(99, 217);
+            this.txtTotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPagar.Location = new System.Drawing.Point(99, 212);
             this.txtTotalPagar.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.txtTotalPagar.Name = "txtTotalPagar";
-            this.txtTotalPagar.Size = new System.Drawing.Size(163, 21);
+            this.txtTotalPagar.Size = new System.Drawing.Size(163, 26);
             this.txtTotalPagar.TabIndex = 55;
             // 
             // txtISR
             // 
             this.txtISR.DecimalPlaces = 2;
-            this.txtISR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtISR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtISR.Location = new System.Drawing.Point(99, 173);
             this.txtISR.Maximum = new decimal(new int[] {
             100000,
@@ -362,14 +364,14 @@
             0,
             0});
             this.txtISR.Name = "txtISR";
-            this.txtISR.Size = new System.Drawing.Size(163, 21);
+            this.txtISR.Size = new System.Drawing.Size(163, 26);
             this.txtISR.TabIndex = 54;
             this.txtISR.ValueChanged += new System.EventHandler(this.txtISR_ValueChanged);
             // 
             // txtSubtotal
             // 
             this.txtSubtotal.DecimalPlaces = 2;
-            this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubtotal.Location = new System.Drawing.Point(99, 63);
             this.txtSubtotal.Maximum = new decimal(new int[] {
             100000,
@@ -377,7 +379,7 @@
             0,
             0});
             this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(163, 21);
+            this.txtSubtotal.Size = new System.Drawing.Size(163, 26);
             this.txtSubtotal.TabIndex = 53;
             this.txtSubtotal.ValueChanged += new System.EventHandler(this.txtSubtotal_ValueChanged);
             // 
@@ -385,7 +387,7 @@
             // 
             this.txtSubtotalNeto.DecimalPlaces = 2;
             this.txtSubtotalNeto.Enabled = false;
-            this.txtSubtotalNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubtotalNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubtotalNeto.Location = new System.Drawing.Point(99, 137);
             this.txtSubtotalNeto.Maximum = new decimal(new int[] {
             100000,
@@ -393,13 +395,13 @@
             0,
             0});
             this.txtSubtotalNeto.Name = "txtSubtotalNeto";
-            this.txtSubtotalNeto.Size = new System.Drawing.Size(163, 21);
+            this.txtSubtotalNeto.Size = new System.Drawing.Size(163, 26);
             this.txtSubtotalNeto.TabIndex = 52;
             // 
             // txtSeguroSocial
             // 
             this.txtSeguroSocial.DecimalPlaces = 2;
-            this.txtSeguroSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeguroSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSeguroSocial.Location = new System.Drawing.Point(99, 101);
             this.txtSeguroSocial.Maximum = new decimal(new int[] {
             100000,
@@ -407,7 +409,7 @@
             0,
             0});
             this.txtSeguroSocial.Name = "txtSeguroSocial";
-            this.txtSeguroSocial.Size = new System.Drawing.Size(163, 21);
+            this.txtSeguroSocial.Size = new System.Drawing.Size(163, 26);
             this.txtSeguroSocial.TabIndex = 51;
             this.txtSeguroSocial.ValueChanged += new System.EventHandler(this.txtSeguroSocial_ValueChanged);
             // 
@@ -473,13 +475,14 @@
             // cmbTipoImporte
             // 
             this.cmbTipoImporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoImporte.FormattingEnabled = true;
             this.cmbTipoImporte.Items.AddRange(new object[] {
             "Mensual",
             "Anual"});
             this.cmbTipoImporte.Location = new System.Drawing.Point(99, 25);
             this.cmbTipoImporte.Name = "cmbTipoImporte";
-            this.cmbTipoImporte.Size = new System.Drawing.Size(163, 21);
+            this.cmbTipoImporte.Size = new System.Drawing.Size(163, 28);
             this.cmbTipoImporte.TabIndex = 42;
             // 
             // label8
@@ -513,6 +516,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtDescripcion.Location = new System.Drawing.Point(96, 172);
             this.txtDescripcion.Multiline = true;
@@ -532,10 +536,11 @@
             // txtNumComprobante
             // 
             this.txtNumComprobante.BackColor = System.Drawing.Color.White;
+            this.txtNumComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumComprobante.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtNumComprobante.Location = new System.Drawing.Point(96, 136);
             this.txtNumComprobante.Name = "txtNumComprobante";
-            this.txtNumComprobante.Size = new System.Drawing.Size(163, 20);
+            this.txtNumComprobante.Size = new System.Drawing.Size(163, 26);
             this.txtNumComprobante.TabIndex = 38;
             // 
             // label6
@@ -550,13 +555,14 @@
             // cmbTipoPago
             // 
             this.cmbTipoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoPago.FormattingEnabled = true;
             this.cmbTipoPago.Items.AddRange(new object[] {
             "Efectivo",
             "Electrónica"});
             this.cmbTipoPago.Location = new System.Drawing.Point(96, 98);
             this.cmbTipoPago.Name = "cmbTipoPago";
-            this.cmbTipoPago.Size = new System.Drawing.Size(163, 21);
+            this.cmbTipoPago.Size = new System.Drawing.Size(163, 28);
             this.cmbTipoPago.TabIndex = 36;
             // 
             // label3
@@ -571,10 +577,11 @@
             // txtConceptoDe
             // 
             this.txtConceptoDe.BackColor = System.Drawing.Color.White;
+            this.txtConceptoDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConceptoDe.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtConceptoDe.Location = new System.Drawing.Point(96, 62);
             this.txtConceptoDe.Name = "txtConceptoDe";
-            this.txtConceptoDe.Size = new System.Drawing.Size(163, 20);
+            this.txtConceptoDe.Size = new System.Drawing.Size(163, 26);
             this.txtConceptoDe.TabIndex = 32;
             // 
             // label2
@@ -588,10 +595,11 @@
             // 
             // dtpFechaPago
             // 
+            this.dtpFechaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaPago.Location = new System.Drawing.Point(96, 25);
             this.dtpFechaPago.Name = "dtpFechaPago";
-            this.dtpFechaPago.Size = new System.Drawing.Size(163, 20);
+            this.dtpFechaPago.Size = new System.Drawing.Size(163, 26);
             this.dtpFechaPago.TabIndex = 33;
             // 
             // label1
@@ -606,10 +614,11 @@
             // txtIdentidad
             // 
             this.txtIdentidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtIdentidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdentidad.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtIdentidad.Location = new System.Drawing.Point(111, 68);
             this.txtIdentidad.Name = "txtIdentidad";
-            this.txtIdentidad.Size = new System.Drawing.Size(170, 20);
+            this.txtIdentidad.Size = new System.Drawing.Size(170, 26);
             this.txtIdentidad.TabIndex = 24;
             // 
             // chkActivo
@@ -654,11 +663,12 @@
             // txtIdempleado
             // 
             this.txtIdempleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtIdempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdempleado.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtIdempleado.Location = new System.Drawing.Point(111, 32);
             this.txtIdempleado.Name = "txtIdempleado";
             this.txtIdempleado.ReadOnly = true;
-            this.txtIdempleado.Size = new System.Drawing.Size(85, 20);
+            this.txtIdempleado.Size = new System.Drawing.Size(85, 26);
             this.txtIdempleado.TabIndex = 11;
             // 
             // label5
@@ -682,19 +692,21 @@
             // txtCargo
             // 
             this.txtCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCargo.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtCargo.Location = new System.Drawing.Point(111, 178);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(170, 20);
+            this.txtCargo.Size = new System.Drawing.Size(170, 26);
             this.txtCargo.TabIndex = 26;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtNombre.Location = new System.Drawing.Point(111, 106);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(170, 20);
+            this.txtNombre.Size = new System.Drawing.Size(170, 26);
             this.txtNombre.TabIndex = 1;
             // 
             // lblNombre

@@ -126,10 +126,11 @@
             // 
             // dtpFechaFinal
             // 
+            this.dtpFechaFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFinal.Location = new System.Drawing.Point(81, 40);
+            this.dtpFechaFinal.Location = new System.Drawing.Point(81, 46);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
-            this.dtpFechaFinal.Size = new System.Drawing.Size(127, 20);
+            this.dtpFechaFinal.Size = new System.Drawing.Size(146, 26);
             this.dtpFechaFinal.TabIndex = 10;
             // 
             // lblFechaFinal
@@ -143,10 +144,11 @@
             // 
             // dtpFechaInicial
             // 
+            this.dtpFechaInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaInicial.Location = new System.Drawing.Point(81, 14);
             this.dtpFechaInicial.Name = "dtpFechaInicial";
-            this.dtpFechaInicial.Size = new System.Drawing.Size(127, 20);
+            this.dtpFechaInicial.Size = new System.Drawing.Size(146, 26);
             this.dtpFechaInicial.TabIndex = 8;
             // 
             // lblNumElementos
@@ -289,7 +291,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(504, 352);
+            this.label13.Location = new System.Drawing.Point(519, 352);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(88, 13);
             this.label13.TabIndex = 60;
@@ -304,11 +306,12 @@
             // 
             // txtIsv
             // 
+            this.txtIsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIsv.Location = new System.Drawing.Point(285, 113);
             this.txtIsv.Mask = "00";
             this.txtIsv.Name = "txtIsv";
             this.txtIsv.PromptChar = '%';
-            this.txtIsv.Size = new System.Drawing.Size(164, 20);
+            this.txtIsv.Size = new System.Drawing.Size(164, 26);
             this.txtIsv.TabIndex = 58;
             // 
             // label12
@@ -331,10 +334,11 @@
             // 
             // dtpFechaIngreso
             // 
+            this.dtpFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaIngreso.Location = new System.Drawing.Point(285, 39);
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(285, 37);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
-            this.dtpFechaIngreso.Size = new System.Drawing.Size(164, 20);
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(127, 26);
             this.dtpFechaIngreso.TabIndex = 55;
             // 
             // groupProducto
@@ -357,39 +361,43 @@
             this.groupProducto.Controls.Add(this.label5);
             this.groupProducto.Location = new System.Drawing.Point(15, 155);
             this.groupProducto.Name = "groupProducto";
-            this.groupProducto.Size = new System.Drawing.Size(483, 210);
+            this.groupProducto.Size = new System.Drawing.Size(498, 210);
             this.groupProducto.TabIndex = 41;
             this.groupProducto.TabStop = false;
             this.groupProducto.Text = "Producto";
             // 
             // txtPrecioCompra
             // 
+            this.txtPrecioCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioCompra.Location = new System.Drawing.Point(95, 104);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
-            this.txtPrecioCompra.Size = new System.Drawing.Size(157, 20);
+            this.txtPrecioCompra.Size = new System.Drawing.Size(157, 26);
             this.txtPrecioCompra.TabIndex = 62;
             this.txtPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCompra_KeyPress);
             // 
             // txtStockInicial
             // 
+            this.txtStockInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStockInicial.Location = new System.Drawing.Point(94, 68);
             this.txtStockInicial.Name = "txtStockInicial";
-            this.txtStockInicial.Size = new System.Drawing.Size(157, 20);
+            this.txtStockInicial.Size = new System.Drawing.Size(157, 26);
             this.txtStockInicial.TabIndex = 61;
             this.txtStockInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStockInicial_KeyPress);
             // 
             // txtIdProducto
             // 
+            this.txtIdProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdProducto.Location = new System.Drawing.Point(326, 31);
             this.txtIdProducto.Name = "txtIdProducto";
-            this.txtIdProducto.Size = new System.Drawing.Size(59, 20);
+            this.txtIdProducto.Size = new System.Drawing.Size(59, 26);
             this.txtIdProducto.TabIndex = 60;
             // 
             // txtPrecioVenta
             // 
+            this.txtPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioVenta.Location = new System.Drawing.Point(95, 140);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.Size = new System.Drawing.Size(157, 20);
+            this.txtPrecioVenta.Size = new System.Drawing.Size(157, 26);
             this.txtPrecioVenta.TabIndex = 59;
             this.txtPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioVenta_KeyPress);
             // 
@@ -421,10 +429,11 @@
             // 
             // dtpFechaVencimiento
             // 
+            this.dtpFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVencimiento.Location = new System.Drawing.Point(380, 104);
+            this.dtpFechaVencimiento.Location = new System.Drawing.Point(361, 104);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
-            this.dtpFechaVencimiento.Size = new System.Drawing.Size(97, 20);
+            this.dtpFechaVencimiento.Size = new System.Drawing.Size(118, 26);
             this.dtpFechaVencimiento.TabIndex = 54;
             // 
             // label10
@@ -438,10 +447,11 @@
             // 
             // dtpFechaProduccion
             // 
+            this.dtpFechaProduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaProduccion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaProduccion.Location = new System.Drawing.Point(380, 67);
+            this.dtpFechaProduccion.Location = new System.Drawing.Point(361, 67);
             this.dtpFechaProduccion.Name = "dtpFechaProduccion";
-            this.dtpFechaProduccion.Size = new System.Drawing.Size(97, 20);
+            this.dtpFechaProduccion.Size = new System.Drawing.Size(118, 26);
             this.dtpFechaProduccion.TabIndex = 52;
             // 
             // label9
@@ -493,9 +503,10 @@
             // 
             // txtNombreProducto
             // 
+            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreProducto.Location = new System.Drawing.Point(94, 31);
             this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Size = new System.Drawing.Size(157, 20);
+            this.txtNombreProducto.Size = new System.Drawing.Size(157, 26);
             this.txtNombreProducto.TabIndex = 43;
             // 
             // label5
@@ -537,11 +548,12 @@
             // 
             // txtNumComprobante
             // 
+            this.txtNumComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumComprobante.Location = new System.Drawing.Point(84, 113);
             this.txtNumComprobante.Mask = "9999999999";
             this.txtNumComprobante.Name = "txtNumComprobante";
             this.txtNumComprobante.PromptChar = '#';
-            this.txtNumComprobante.Size = new System.Drawing.Size(130, 20);
+            this.txtNumComprobante.Size = new System.Drawing.Size(130, 26);
             this.txtNumComprobante.TabIndex = 38;
             // 
             // label4
@@ -556,6 +568,7 @@
             // cmbComprobante
             // 
             this.cmbComprobante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbComprobante.FormattingEnabled = true;
             this.cmbComprobante.Items.AddRange(new object[] {
             "FACTURA",
@@ -563,7 +576,7 @@
             "OTRO"});
             this.cmbComprobante.Location = new System.Drawing.Point(84, 76);
             this.cmbComprobante.Name = "cmbComprobante";
-            this.cmbComprobante.Size = new System.Drawing.Size(129, 21);
+            this.cmbComprobante.Size = new System.Drawing.Size(129, 28);
             this.cmbComprobante.TabIndex = 36;
             // 
             // label3
@@ -590,9 +603,10 @@
             // 
             // txtNombreProveedor
             // 
+            this.txtNombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreProveedor.Location = new System.Drawing.Point(285, 76);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(164, 20);
+            this.txtNombreProveedor.Size = new System.Drawing.Size(164, 26);
             this.txtNombreProveedor.TabIndex = 33;
             // 
             // label2
@@ -606,9 +620,10 @@
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(84, 39);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(130, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(130, 26);
             this.txtCodigo.TabIndex = 31;
             // 
             // label1
@@ -623,7 +638,7 @@
             // lblTotalPagado
             // 
             this.lblTotalPagado.AutoSize = true;
-            this.lblTotalPagado.Location = new System.Drawing.Point(593, 352);
+            this.lblTotalPagado.Location = new System.Drawing.Point(612, 352);
             this.lblTotalPagado.Name = "lblTotalPagado";
             this.lblTotalPagado.Size = new System.Drawing.Size(58, 13);
             this.lblTotalPagado.TabIndex = 26;
@@ -632,9 +647,9 @@
             // dgvDetallesIngreso
             // 
             this.dgvDetallesIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetallesIngreso.Location = new System.Drawing.Point(507, 39);
+            this.dgvDetallesIngreso.Location = new System.Drawing.Point(522, 39);
             this.dgvDetallesIngreso.Name = "dgvDetallesIngreso";
-            this.dgvDetallesIngreso.Size = new System.Drawing.Size(502, 278);
+            this.dgvDetallesIngreso.Size = new System.Drawing.Size(487, 278);
             this.dgvDetallesIngreso.TabIndex = 25;
             // 
             // btnNuevo

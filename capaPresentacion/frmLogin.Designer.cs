@@ -120,7 +120,7 @@
             this.chkVisible.AutoSize = true;
             this.chkVisible.Checked = true;
             this.chkVisible.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkVisible.Location = new System.Drawing.Point(289, 114);
+            this.chkVisible.Location = new System.Drawing.Point(289, 118);
             this.chkVisible.Name = "chkVisible";
             this.chkVisible.Size = new System.Drawing.Size(56, 17);
             this.chkVisible.TabIndex = 4;
@@ -130,16 +130,18 @@
             // 
             // txtPass
             // 
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(113, 88);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(232, 20);
+            this.txtPass.Size = new System.Drawing.Size(232, 26);
             this.txtPass.TabIndex = 3;
             // 
             // txtUser
             // 
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(113, 54);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(232, 20);
+            this.txtUser.Size = new System.Drawing.Size(232, 26);
             this.txtUser.TabIndex = 2;
             // 
             // lblPass
