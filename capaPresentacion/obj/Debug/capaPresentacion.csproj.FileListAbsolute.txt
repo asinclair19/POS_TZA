@@ -183,3 +183,4 @@ C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\RdlCompile.cache
 C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\RdlCompile.compiled
 C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.dll
 C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.pdb
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmReciboVenta.resources

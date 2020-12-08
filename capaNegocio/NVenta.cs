@@ -72,6 +72,12 @@ namespace capaNegocio
             return new DVenta().Mostrar();
         }
 
+        //mostrar ultima venta
+        public static int MostrarUltimaVenta()
+        {
+            return new DVenta().MostrarUltimaVenta();
+        }
+
         //buscar texto
         public static DataTable BuscarFechas(string textobuscar, string textobuscar2)
         {

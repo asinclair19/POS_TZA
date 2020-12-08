@@ -343,6 +343,33 @@ namespace capaDatos
 
             return DtResultado;
         }
+
+        //mostrar ultima venta
+        public int MostrarUltimaVenta()
+        {
+            int idUltimaVenta = 0;
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon.ConnectionString = Conexion.conexion;
+                SqlCon.Open();
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spobtener_ultimaventa";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                idUltimaVenta = (Int32)SqlCmd.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                idUltimaVenta = 0;
+                string valor = ex.ToString();
+            }
+
+            return idUltimaVenta;
+        }
         
         //buscar por fechas
         public DataTable BuscarFechas(string TextoBuscar, string TextoBuscar2)
