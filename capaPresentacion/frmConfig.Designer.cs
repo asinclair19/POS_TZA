@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -82,6 +83,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtIdConfig = new System.Windows.Forms.TextBox();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescuento)).BeginInit();
@@ -90,10 +93,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSeguro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGanancia)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Image = global::capaPresentacion.Properties.Resources.cancel;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,6 +113,7 @@
             // 
             // btnGuardarCambios
             // 
+            this.btnGuardarCambios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarCambios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCambios.Image = global::capaPresentacion.Properties.Resources.save;
             this.btnGuardarCambios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,7 +144,7 @@
             this.groupBox3.Controls.Add(this.txtRTN);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Location = new System.Drawing.Point(698, 73);
+            this.groupBox3.Location = new System.Drawing.Point(698, 55);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(386, 339);
             this.groupBox3.TabIndex = 60;
@@ -152,7 +158,7 @@
             this.txtRangoFinal.Mask = "00000009";
             this.txtRangoFinal.Name = "txtRangoFinal";
             this.txtRangoFinal.PromptChar = '-';
-            this.txtRangoFinal.Size = new System.Drawing.Size(184, 26);
+            this.txtRangoFinal.Size = new System.Drawing.Size(227, 26);
             this.txtRangoFinal.TabIndex = 79;
             this.txtRangoFinal.TextChanged += new System.EventHandler(this.txtRangoFinal_TextChanged);
             // 
@@ -163,7 +169,7 @@
             this.txtRangoInicial.Mask = "00000009";
             this.txtRangoInicial.Name = "txtRangoInicial";
             this.txtRangoInicial.PromptChar = '-';
-            this.txtRangoInicial.Size = new System.Drawing.Size(184, 26);
+            this.txtRangoInicial.Size = new System.Drawing.Size(227, 26);
             this.txtRangoInicial.TabIndex = 78;
             this.txtRangoInicial.TextChanged += new System.EventHandler(this.txtRangoInicial_TextChanged);
             // 
@@ -174,7 +180,7 @@
             this.txtPuntoEmision.Mask = "009";
             this.txtPuntoEmision.Name = "txtPuntoEmision";
             this.txtPuntoEmision.PromptChar = '-';
-            this.txtPuntoEmision.Size = new System.Drawing.Size(184, 26);
+            this.txtPuntoEmision.Size = new System.Drawing.Size(227, 26);
             this.txtPuntoEmision.TabIndex = 77;
             this.txtPuntoEmision.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPuntoEmision_MaskInputRejected);
             this.txtPuntoEmision.TextChanged += new System.EventHandler(this.txtPuntoEmision_TextChanged);
@@ -186,7 +192,7 @@
             this.txtTipoDocumento.Mask = "09";
             this.txtTipoDocumento.Name = "txtTipoDocumento";
             this.txtTipoDocumento.PromptChar = '-';
-            this.txtTipoDocumento.Size = new System.Drawing.Size(184, 26);
+            this.txtTipoDocumento.Size = new System.Drawing.Size(227, 26);
             this.txtTipoDocumento.TabIndex = 76;
             this.txtTipoDocumento.TextChanged += new System.EventHandler(this.txtTipoDocumento_TextChanged);
             // 
@@ -197,7 +203,7 @@
             this.txtEstablecimiento.Mask = "009";
             this.txtEstablecimiento.Name = "txtEstablecimiento";
             this.txtEstablecimiento.PromptChar = '-';
-            this.txtEstablecimiento.Size = new System.Drawing.Size(184, 26);
+            this.txtEstablecimiento.Size = new System.Drawing.Size(227, 26);
             this.txtEstablecimiento.TabIndex = 75;
             this.txtEstablecimiento.TextChanged += new System.EventHandler(this.txtEstablecimiento_TextChanged);
             // 
@@ -205,10 +211,10 @@
             // 
             this.lblVistaPrevia.AutoSize = true;
             this.lblVistaPrevia.BackColor = System.Drawing.Color.Yellow;
-            this.lblVistaPrevia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVistaPrevia.Location = new System.Drawing.Point(136, 287);
+            this.lblVistaPrevia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVistaPrevia.Location = new System.Drawing.Point(141, 287);
             this.lblVistaPrevia.Name = "lblVistaPrevia";
-            this.lblVistaPrevia.Size = new System.Drawing.Size(188, 24);
+            this.lblVistaPrevia.Size = new System.Drawing.Size(132, 16);
             this.lblVistaPrevia.TabIndex = 74;
             this.lblVistaPrevia.Text = "001-001-01-00000001";
             this.lblVistaPrevia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,9 +225,9 @@
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(20, 291);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(73, 15);
+            this.label24.Size = new System.Drawing.Size(88, 15);
             this.label24.TabIndex = 73;
-            this.label24.Text = "Vista Previa:";
+            this.label24.Text = "Factura Previa:";
             // 
             // label23
             // 
@@ -321,7 +327,7 @@
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Location = new System.Drawing.Point(397, 184);
+            this.groupBox2.Location = new System.Drawing.Point(397, 166);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(296, 228);
             this.groupBox2.TabIndex = 59;
@@ -454,7 +460,7 @@
             this.groupBox1.Controls.Add(this.txtUserRoot);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Location = new System.Drawing.Point(397, 73);
+            this.groupBox1.Location = new System.Drawing.Point(397, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(296, 105);
             this.groupBox1.TabIndex = 58;
@@ -671,12 +677,25 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Título de Sistema:";
             // 
+            // txtIdConfig
+            // 
+            this.txtIdConfig.Location = new System.Drawing.Point(145, 38);
+            this.txtIdConfig.Name = "txtIdConfig";
+            this.txtIdConfig.Size = new System.Drawing.Size(100, 20);
+            this.txtIdConfig.TabIndex = 65;
+            this.txtIdConfig.Visible = false;
+            // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1106, 481);
+            this.Controls.Add(this.txtIdConfig);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.groupBox3);
@@ -715,6 +734,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGanancia)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -776,5 +796,7 @@
         private System.Windows.Forms.MaskedTextBox txtPuntoEmision;
         private System.Windows.Forms.MaskedTextBox txtRangoFinal;
         private System.Windows.Forms.MaskedTextBox txtRangoInicial;
+        private System.Windows.Forms.TextBox txtIdConfig;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

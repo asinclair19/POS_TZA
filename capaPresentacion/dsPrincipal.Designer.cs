@@ -374,6 +374,12 @@ namespace capaPresentacion {
             
             private global::System.Data.DataColumn columnrango_final;
             
+            private global::System.Data.DataColumn columnpunto_emision;
+            
+            private global::System.Data.DataColumn columnestablecimiento;
+            
+            private global::System.Data.DataColumn columntipo_documento;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public spinforme_facturaDataTable() {
@@ -649,6 +655,30 @@ namespace capaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn punto_emisionColumn {
+                get {
+                    return this.columnpunto_emision;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn establecimientoColumn {
+                get {
+                    return this.columnestablecimiento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tipo_documentoColumn {
+                get {
+                    return this.columntipo_documento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -713,7 +743,10 @@ namespace capaPresentacion {
                         string rtn, 
                         string cai, 
                         string rango_inicial, 
-                        string rango_final) {
+                        string rango_final, 
+                        string punto_emision, 
+                        string establecimiento, 
+                        string tipo_documento) {
                 spinforme_facturaRow rowspinforme_facturaRow = ((spinforme_facturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -745,7 +778,10 @@ namespace capaPresentacion {
                         rtn,
                         cai,
                         rango_inicial,
-                        rango_final};
+                        rango_final,
+                        punto_emision,
+                        establecimiento,
+                        tipo_documento};
                 rowspinforme_facturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspinforme_facturaRow);
                 return rowspinforme_facturaRow;
@@ -805,6 +841,9 @@ namespace capaPresentacion {
                 this.columncai = base.Columns["cai"];
                 this.columnrango_inicial = base.Columns["rango_inicial"];
                 this.columnrango_final = base.Columns["rango_final"];
+                this.columnpunto_emision = base.Columns["punto_emision"];
+                this.columnestablecimiento = base.Columns["establecimiento"];
+                this.columntipo_documento = base.Columns["tipo_documento"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -870,6 +909,12 @@ namespace capaPresentacion {
                 base.Columns.Add(this.columnrango_inicial);
                 this.columnrango_final = new global::System.Data.DataColumn("rango_final", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnrango_final);
+                this.columnpunto_emision = new global::System.Data.DataColumn("punto_emision", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpunto_emision);
+                this.columnestablecimiento = new global::System.Data.DataColumn("establecimiento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestablecimiento);
+                this.columntipo_documento = new global::System.Data.DataColumn("tipo_documento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo_documento);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidventa}, true));
                 this.columnidventa.AutoIncrement = true;
@@ -907,6 +952,9 @@ namespace capaPresentacion {
                 this.columncai.MaxLength = 50;
                 this.columnrango_inicial.MaxLength = 50;
                 this.columnrango_final.MaxLength = 50;
+                this.columnpunto_emision.MaxLength = 10;
+                this.columnestablecimiento.MaxLength = 10;
+                this.columntipo_documento.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1906,6 +1954,57 @@ namespace capaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string punto_emision {
+                get {
+                    try {
+                        return ((string)(this[this.tablespinforme_factura.punto_emisionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'punto_emision\' de la tabla \'spinforme_factura\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespinforme_factura.punto_emisionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string establecimiento {
+                get {
+                    try {
+                        return ((string)(this[this.tablespinforme_factura.establecimientoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'establecimiento\' de la tabla \'spinforme_factura\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespinforme_factura.establecimientoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipo_documento {
+                get {
+                    try {
+                        return ((string)(this[this.tablespinforme_factura.tipo_documentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipo_documento\' de la tabla \'spinforme_factura\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespinforme_factura.tipo_documentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsempleadoNull() {
                 return this.IsNull(this.tablespinforme_factura.empleadoColumn);
             }
@@ -2154,6 +2253,42 @@ namespace capaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setrango_finalNull() {
                 this[this.tablespinforme_factura.rango_finalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispunto_emisionNull() {
+                return this.IsNull(this.tablespinforme_factura.punto_emisionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpunto_emisionNull() {
+                this[this.tablespinforme_factura.punto_emisionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsestablecimientoNull() {
+                return this.IsNull(this.tablespinforme_factura.establecimientoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetestablecimientoNull() {
+                this[this.tablespinforme_factura.establecimientoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istipo_documentoNull() {
+                return this.IsNull(this.tablespinforme_factura.tipo_documentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settipo_documentoNull() {
+                this[this.tablespinforme_factura.tipo_documentoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2516,6 +2651,9 @@ namespace capaPresentacion.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("cai", "cai");
             tableMapping.ColumnMappings.Add("rango_inicial", "rango_inicial");
             tableMapping.ColumnMappings.Add("rango_final", "rango_final");
+            tableMapping.ColumnMappings.Add("punto_emision", "punto_emision");
+            tableMapping.ColumnMappings.Add("establecimiento", "establecimiento");
+            tableMapping.ColumnMappings.Add("tipo_documento", "tipo_documento");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

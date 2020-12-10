@@ -34,3 +34,4 @@ C:\Users\eg\Documents\POS_TZA\capaDatos\obj\Debug\capaDatos.Properties.Resources
 C:\Users\eg\Documents\POS_TZA\capaDatos\obj\Debug\capaDatos.csproj.GenerateResource.Cache
 C:\Users\eg\Documents\POS_TZA\capaDatos\obj\Debug\capaDatos.dll
 C:\Users\eg\Documents\POS_TZA\capaDatos\obj\Debug\capaDatos.pdb
+C:\Users\eg\Documents\POS_TZA\capaDatos\obj\Debug\capaDatos.csprojResolveAssemblyReference.cache

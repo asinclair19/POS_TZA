@@ -17,8 +17,8 @@ namespace POS_TZA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(frmPrincipal.GetInstancia());
-            //Application.Run(frmVentas.GetInstancia());
+            //Application.Run(frmPrincipal.GetInstancia());
+            Application.Run(frmVentas.GetInstancia());
             //Application.Run(new frmConfig());
         }
     }

@@ -7,15 +7,19 @@ using System.IO;
 using System.Reflection;
 using System.Configuration;
 
+using System.Data;
+using System.Data.SqlClient;
+
 namespace capaDatos
 {
     public class DConfig
     {
 
         //variables privadas
-        private string _Title;
-        private string _Name;
-        private string _comercialName;
+        private int _IdConfig;
+        private string _Titulo;
+        private string _Nombre;
+        private string _comercialNombre;
         private string _Sucursal;
         private string _Direccion;
         private string _Telefono;
@@ -34,6 +38,7 @@ namespace capaDatos
 
         //ventas
         private decimal _Isv;
+        private decimal _Descuento;
         private string _Rtn;
         private string _Cai;
         private string _PuntoEmision;
@@ -43,6 +48,18 @@ namespace capaDatos
         private string _rangoFinal;
 
         //ENCAPSULAMIENTO
+        public int IdConfig
+        {
+            get { return _IdConfig; }
+            set { _IdConfig = value; }
+        }
+
+        public decimal Descuento
+        {
+            get { return _Descuento; }
+            set { _Descuento = value; }
+        }
+
         public string PuntoEmision
         {
             get { return _PuntoEmision; }
@@ -61,22 +78,22 @@ namespace capaDatos
             set { _TipoDocumento = value; }
         }
 
-        public string Title
+        public string Titulo
         {
-            get { return _Title; }
-            set { _Title = value; }
+            get { return _Titulo; }
+            set { _Titulo = value; }
         }
 
-        public string Name
+        public string Nombre
         {
-            get { return _Name; }
-            set { _Name = value; }
+            get { return _Nombre; }
+            set { _Nombre = value; }
         }
 
-        public string ComercialName
+        public string ComercialNombre
         {
-            get { return _comercialName; }
-            set { _comercialName = value; }
+            get { return _comercialNombre; }
+            set { _comercialNombre = value; }
         }
 
         public string Sucursal
@@ -185,9 +202,9 @@ namespace capaDatos
 
         //CONSTRUCTOR CON ATRIBUTOS
         public DConfig(
-            string title,
-            string name,
-            string comercialname,
+            string titulo,
+            string nombre,
+            string comercialnombre,
             string sucursal,
             string direccion,
             string telefono,
@@ -202,6 +219,7 @@ namespace capaDatos
             decimal seguro,
             decimal isr,
             decimal isv,
+            decimal descuento,
             string puntoemision,
             string establecimiento,
             string tipodoc,
@@ -209,9 +227,9 @@ namespace capaDatos
             string rangofinal
             )
         {
-            this.Title = title;
-            this.Name = name;
-            this.ComercialName = comercialname;
+            this.Titulo = titulo;
+            this.Nombre = nombre;
+            this.ComercialNombre = comercialnombre;
             this.Sucursal = sucursal;
             this.Direccion = direccion;
             this.Telefono = telefono;
@@ -226,6 +244,7 @@ namespace capaDatos
             this.Seguro = seguro;
             this.Isr = isr;
             this.Isv = isv;
+            this.Descuento = descuento;
             this.PuntoEmision = puntoemision;
             this.Establecimiento = establecimiento;
             this.TipoDocumento = tipodoc;
@@ -233,77 +252,487 @@ namespace capaDatos
             this.RangoFinal = rangofinal;
         }
 
-        private static void establecerValores(string pclave, string pvalor)
+        //private static void establecerValores(string pclave, string pvalor)
+        //{
+        //    //crea objeto de configuracion
+        //    Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+        //    //borra configuracion actual
+        //    config.AppSettings.Settings.Remove(pclave);
+        //    //guardar cambios
+        //    config.Save(ConfigurationSaveMode.Modified);
+        //    //forzar la recarga de la seccion
+        //    ConfigurationManager.RefreshSection("appSettings");
+
+        //    //guarda la configuracion
+        //    config.AppSettings.Settings.Add(pclave, pvalor);
+
+        //    //guarda cambios
+        //    config.Save(ConfigurationSaveMode.Modified);
+
+        //    //forzar la recarga de la seccion
+        //    ConfigurationManager.RefreshSection("appSettings");
+
+        //}
+
+        //private static string RecuperarValor(string pclave)
+        //{
+        //    string retorno = ConfigurationManager.AppSettings[pclave];
+        //    if(retorno == null)
+        //    {
+        //        retorno = "No se encontró valor.";
+        //    }
+        //    return retorno;
+        //}
+
+        //public string Guardar(DConfig Config)
+        //{
+        //    string rpta = "";
+        //    try
+        //    {
+        //        establecerValores("title", Config.Title);
+        //        establecerValores("name", Config.Name);
+        //        establecerValores("comercialname", Config.ComercialName);
+        //        establecerValores("sucursal", Config.Sucursal);
+        //        establecerValores("direccion", Config.Direccion);
+        //        establecerValores("telefono", Config.Telefono);
+        //        establecerValores("correo", Config.Correo);
+        //        establecerValores("slogan", Config.Slogan);
+        //        establecerValores("propietario", Config.Propietario);
+        //        establecerValores("rtn", Config.Rtn);
+        //        establecerValores("cai", Config.Cai);
+        //        establecerValores("rootuser", Config.RootUser);
+        //        establecerValores("rootpass", Config.RootPass);
+        //        establecerValores("ganancia", Convert.ToString(Config.Ganancia));
+        //        establecerValores("seguro", Convert.ToString(Config.Seguro));
+        //        establecerValores("isr", Convert.ToString(Config.Isr));
+        //        establecerValores("isv", Convert.ToString(Config.Isv));
+        //        establecerValores("rangoinicial", Config.RangoInicial);
+        //        establecerValores("rangofinal", Config.RangoFinal);
+        //        rpta = "OK";
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ex.ToString();
+        //    }
+        //    return rpta;
+
+        //}
+
+        //public string Mostrar(string pclave)
+        //{
+        //    string rtd;
+        //    rtd = RecuperarValor(pclave);
+        //    return rtd;
+        //}
+
+        //metodo insertar
+        public string Insertar(DConfig Config)
         {
-            //crea objeto de configuracion
-            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            //borra configuracion actual
-            config.AppSettings.Settings.Remove(pclave);
-            //guardar cambios
-            config.Save(ConfigurationSaveMode.Modified);
-            //forzar la recarga de la seccion
-            ConfigurationManager.RefreshSection("appSettings");
-
-            //guarda la configuracion
-            config.AppSettings.Settings.Add(pclave, pvalor);
-
-            //guarda cambios
-            config.Save(ConfigurationSaveMode.Modified);
-
-            //forzar la recarga de la seccion
-            ConfigurationManager.RefreshSection("appSettings");
-
-        }
-
-        private static string RecuperarValor(string pclave)
-        {
-            string retorno = ConfigurationManager.AppSettings[pclave];
-            if(retorno == null)
-            {
-                retorno = "No se encontró valor.";
-            }
-            return retorno;
-        }
-
-        public string Guardar(DConfig Config)
-        {
-            string rpta = "";
+            string respuesta = "";
+            SqlConnection SqlCon = new SqlConnection();
             try
             {
-                establecerValores("title", Config.Title);
-                establecerValores("name", Config.Name);
-                establecerValores("comercialname", Config.ComercialName);
-                establecerValores("sucursal", Config.Sucursal);
-                establecerValores("direccion", Config.Direccion);
-                establecerValores("telefono", Config.Telefono);
-                establecerValores("correo", Config.Correo);
-                establecerValores("slogan", Config.Slogan);
-                establecerValores("propietario", Config.Propietario);
-                establecerValores("rtn", Config.Rtn);
-                establecerValores("cai", Config.Cai);
-                establecerValores("rootuser", Config.RootUser);
-                establecerValores("rootpass", Config.RootPass);
-                establecerValores("ganancia", Convert.ToString(Config.Ganancia));
-                establecerValores("seguro", Convert.ToString(Config.Seguro));
-                establecerValores("isr", Convert.ToString(Config.Isr));
-                establecerValores("isv", Convert.ToString(Config.Isv));
-                establecerValores("rangoinicial", Config.RangoInicial);
-                establecerValores("rangofinal", Config.RangoFinal);
-                rpta = "OK";
+                //codigo
+                SqlCon.ConnectionString = Conexion.conexion;
+                SqlCon.Open();
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spinsertar_config";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                /*//parametros
+                SqlParameter ParIdUnidad = new SqlParameter();
+                ParIdUnidad.ParameterName = "@idunidad";
+                ParIdUnidad.SqlDbType = SqlDbType.Int;
+                ParIdUnidad.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIdUnidad);*/
+
+                SqlParameter ParTitulo = new SqlParameter();
+                ParTitulo.ParameterName = "@titulo";
+                ParTitulo.SqlDbType = SqlDbType.VarChar;
+                ParTitulo.Size = 30;
+                ParTitulo.Value = Config.Titulo;
+                SqlCmd.Parameters.Add(ParTitulo);
+
+                SqlParameter ParRazonSocial = new SqlParameter();
+                ParRazonSocial.ParameterName = "@razon_social";
+                ParRazonSocial.SqlDbType = SqlDbType.VarChar;
+                ParRazonSocial.Size = 100;
+                ParRazonSocial.Value = Config.Nombre;
+                SqlCmd.Parameters.Add(ParRazonSocial);
+
+                SqlParameter ParNombreComercial= new SqlParameter();
+                ParNombreComercial.ParameterName = "@nombre_comercial";
+                ParNombreComercial.SqlDbType = SqlDbType.VarChar;
+                ParNombreComercial.Size = 50;
+                ParNombreComercial.Value = Config.ComercialNombre;
+                SqlCmd.Parameters.Add(ParNombreComercial);
+
+                SqlParameter ParSucursal = new SqlParameter();
+                ParSucursal.ParameterName = "@nombre_sucursal";
+                ParSucursal.SqlDbType = SqlDbType.VarChar;
+                ParSucursal.Size = 30;
+                ParSucursal.Value = Config.Sucursal;
+                SqlCmd.Parameters.Add(ParSucursal);
+
+                SqlParameter ParDireccion = new SqlParameter();
+                ParDireccion.ParameterName = "@direccion";
+                ParDireccion.SqlDbType = SqlDbType.Text;
+                ParDireccion.Value = Config.Direccion;
+                SqlCmd.Parameters.Add(ParDireccion);
+
+                SqlParameter ParTelefono = new SqlParameter();
+                ParTelefono.ParameterName = "@telefono";
+                ParTelefono.SqlDbType = SqlDbType.VarChar;
+                ParTelefono.Size = 20;
+                ParTelefono.Value = Config.Telefono;
+                SqlCmd.Parameters.Add(ParTelefono);
+
+                SqlParameter ParCorreo = new SqlParameter();
+                ParCorreo.ParameterName = "@correo";
+                ParCorreo.SqlDbType = SqlDbType.VarChar;
+                ParCorreo.Size = 50;
+                ParCorreo.Value = Config.Correo;
+                SqlCmd.Parameters.Add(ParCorreo);
+
+                SqlParameter ParSlogan = new SqlParameter();
+                ParSlogan.ParameterName = "@slogan";
+                ParSlogan.SqlDbType = SqlDbType.VarChar;
+                ParSlogan.Size = 255;
+                ParSlogan.Value = Config.Slogan;
+                SqlCmd.Parameters.Add(ParSlogan);
+
+                SqlParameter ParPropietario = new SqlParameter();
+                ParPropietario.ParameterName = "@propietario";
+                ParPropietario.SqlDbType = SqlDbType.VarChar;
+                ParPropietario.Size = 30;
+                ParPropietario.Value = Config.Propietario;
+                SqlCmd.Parameters.Add(ParPropietario);
+
+                SqlParameter ParUsuarioRoot = new SqlParameter();
+                ParUsuarioRoot.ParameterName = "@usuario_root";
+                ParUsuarioRoot.SqlDbType = SqlDbType.VarChar;
+                ParUsuarioRoot.Size = 15;
+                ParUsuarioRoot.Value = Config.RootUser;
+                SqlCmd.Parameters.Add(ParUsuarioRoot);
+
+                SqlParameter ParPassRoot = new SqlParameter();
+                ParPassRoot.ParameterName = "@pass_root";
+                ParPassRoot.SqlDbType = SqlDbType.Text;
+                ParPassRoot.Value = Config.RootPass;
+                SqlCmd.Parameters.Add(ParPassRoot);
+
+                SqlParameter ParGanancia = new SqlParameter();
+                ParGanancia.ParameterName = "@ganancia";
+                ParGanancia.SqlDbType = SqlDbType.Decimal;
+                ParGanancia.Value = Config.Ganancia;
+                SqlCmd.Parameters.Add(ParGanancia);
+
+                SqlParameter ParSeguro = new SqlParameter();
+                ParSeguro.ParameterName = "@seguro";
+                ParSeguro.SqlDbType = SqlDbType.Decimal;
+                ParSeguro.Value = Config.Seguro;
+                SqlCmd.Parameters.Add(ParSeguro);
+
+                SqlParameter ParIsr = new SqlParameter();
+                ParIsr.ParameterName = "@isr";
+                ParIsr.SqlDbType = SqlDbType.Decimal;
+                ParIsr.Value = Config.Isr;
+                SqlCmd.Parameters.Add(ParIsr);
+
+                SqlParameter ParIsv = new SqlParameter();
+                ParIsv.ParameterName = "@isv";
+                ParIsv.SqlDbType = SqlDbType.Decimal;
+                ParIsv.Value = Config.Isv;
+                SqlCmd.Parameters.Add(ParIsv);
+
+                SqlParameter ParDescuento = new SqlParameter();
+                ParDescuento.ParameterName = "@descuento";
+                ParDescuento.SqlDbType = SqlDbType.Decimal;
+                ParDescuento.Value = Config.Descuento;
+                SqlCmd.Parameters.Add(ParDescuento);
+
+                SqlParameter ParRtn = new SqlParameter();
+                ParRtn.ParameterName = "@rtn";
+                ParRtn.SqlDbType = SqlDbType.NVarChar;
+                ParRtn.Size = 50;
+                ParRtn.Value = Config.Rtn;
+                SqlCmd.Parameters.Add(ParRtn);
+
+                SqlParameter ParCai = new SqlParameter();
+                ParCai.ParameterName = "@cai";
+                ParCai.SqlDbType = SqlDbType.NVarChar;
+                ParCai.Size = 50;
+                ParCai.Value = Config.Cai;
+                SqlCmd.Parameters.Add(ParCai);
+
+                SqlParameter ParPuntoEmision = new SqlParameter();
+                ParPuntoEmision.ParameterName = "@punto_emision";
+                ParPuntoEmision.SqlDbType = SqlDbType.NVarChar;
+                ParPuntoEmision.Size = 10;
+                ParPuntoEmision.Value = Config.PuntoEmision;
+                SqlCmd.Parameters.Add(ParPuntoEmision);
+
+                SqlParameter ParEstablecimiento = new SqlParameter();
+                ParEstablecimiento.ParameterName = "@establecimiento";
+                ParEstablecimiento.SqlDbType = SqlDbType.NVarChar;
+                ParEstablecimiento.Size = 10;
+                ParEstablecimiento.Value = Config.Establecimiento;
+                SqlCmd.Parameters.Add(ParEstablecimiento);
+
+                SqlParameter ParTipoDoc = new SqlParameter();
+                ParTipoDoc.ParameterName = "@tipo_documento";
+                ParTipoDoc.SqlDbType = SqlDbType.NVarChar;
+                ParTipoDoc.Size = 10;
+                ParTipoDoc.Value = Config.TipoDocumento;
+                SqlCmd.Parameters.Add(ParTipoDoc);
+
+                SqlParameter ParRangoInicial = new SqlParameter();
+                ParRangoInicial.ParameterName = "@rango_inicial";
+                ParRangoInicial.SqlDbType = SqlDbType.NVarChar;
+                ParRangoInicial.Size = 50;
+                ParRangoInicial.Value = Config.RangoInicial;
+                SqlCmd.Parameters.Add(ParRangoInicial);
+
+                SqlParameter ParRangoFinal = new SqlParameter();
+                ParRangoFinal.ParameterName = "@rango_final";
+                ParRangoFinal.SqlDbType = SqlDbType.NVarChar;
+                ParRangoFinal.Size = 50;
+                ParRangoFinal.Value = Config.RangoFinal;
+                SqlCmd.Parameters.Add(ParRangoFinal);
+
+                //Ejecutamos el comando 
+                respuesta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingresó el Registro.";
             }
             catch (Exception ex)
             {
-                ex.ToString();
+                respuesta = ex.Message;
             }
-            return rpta;
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
 
+            return respuesta;
         }
 
-        public string Mostrar(string pclave)
+        //metodo actualizar
+        public string Actualizar(DConfig Config)
         {
-            string rtd;
-            rtd = RecuperarValor(pclave);
-            return rtd;
+            string respuesta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //codigo
+                SqlCon.ConnectionString = Conexion.conexion;
+                SqlCon.Open();
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spupdate_config";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                //parametros
+                SqlParameter ParIdConfig = new SqlParameter();
+                ParIdConfig.ParameterName = "@idconfig";
+                ParIdConfig.SqlDbType = SqlDbType.Int;
+                ParIdConfig.Value = Config.IdConfig;
+                SqlCmd.Parameters.Add(ParIdConfig);
+
+                SqlParameter ParTitulo = new SqlParameter();
+                ParTitulo.ParameterName = "@titulo";
+                ParTitulo.SqlDbType = SqlDbType.VarChar;
+                ParTitulo.Size = 30;
+                ParTitulo.Value = Config.Titulo;
+                SqlCmd.Parameters.Add(ParTitulo);
+
+                SqlParameter ParRazonSocial = new SqlParameter();
+                ParRazonSocial.ParameterName = "@razon_social";
+                ParRazonSocial.SqlDbType = SqlDbType.VarChar;
+                ParRazonSocial.Size = 100;
+                ParRazonSocial.Value = Config.Nombre;
+                SqlCmd.Parameters.Add(ParRazonSocial);
+
+                SqlParameter ParNombreComercial = new SqlParameter();
+                ParNombreComercial.ParameterName = "@nombre_comercial";
+                ParNombreComercial.SqlDbType = SqlDbType.VarChar;
+                ParNombreComercial.Size = 50;
+                ParNombreComercial.Value = Config.ComercialNombre;
+                SqlCmd.Parameters.Add(ParNombreComercial);
+
+                SqlParameter ParSucursal = new SqlParameter();
+                ParSucursal.ParameterName = "@nombre_sucursal";
+                ParSucursal.SqlDbType = SqlDbType.VarChar;
+                ParSucursal.Size = 30;
+                ParSucursal.Value = Config.Sucursal;
+                SqlCmd.Parameters.Add(ParSucursal);
+
+                SqlParameter ParDireccion = new SqlParameter();
+                ParDireccion.ParameterName = "@direccion";
+                ParDireccion.SqlDbType = SqlDbType.Text;
+                ParDireccion.Value = Config.Direccion;
+                SqlCmd.Parameters.Add(ParDireccion);
+
+                SqlParameter ParTelefono = new SqlParameter();
+                ParTelefono.ParameterName = "@telefono";
+                ParTelefono.SqlDbType = SqlDbType.VarChar;
+                ParTelefono.Size = 20;
+                ParTelefono.Value = Config.Telefono;
+                SqlCmd.Parameters.Add(ParTelefono);
+
+                SqlParameter ParCorreo = new SqlParameter();
+                ParCorreo.ParameterName = "@correo";
+                ParCorreo.SqlDbType = SqlDbType.VarChar;
+                ParCorreo.Size = 50;
+                ParCorreo.Value = Config.Correo;
+                SqlCmd.Parameters.Add(ParCorreo);
+
+                SqlParameter ParSlogan = new SqlParameter();
+                ParSlogan.ParameterName = "@slogan";
+                ParSlogan.SqlDbType = SqlDbType.VarChar;
+                ParSlogan.Size = 255;
+                ParSlogan.Value = Config.Slogan;
+                SqlCmd.Parameters.Add(ParSlogan);
+
+                SqlParameter ParPropietario = new SqlParameter();
+                ParPropietario.ParameterName = "@propietario";
+                ParPropietario.SqlDbType = SqlDbType.VarChar;
+                ParPropietario.Size = 30;
+                ParPropietario.Value = Config.Propietario;
+                SqlCmd.Parameters.Add(ParPropietario);
+
+                SqlParameter ParUsuarioRoot = new SqlParameter();
+                ParUsuarioRoot.ParameterName = "@usuario_root";
+                ParUsuarioRoot.SqlDbType = SqlDbType.VarChar;
+                ParUsuarioRoot.Size = 15;
+                ParUsuarioRoot.Value = Config.RootUser;
+                SqlCmd.Parameters.Add(ParUsuarioRoot);
+
+                SqlParameter ParPassRoot = new SqlParameter();
+                ParPassRoot.ParameterName = "@pass_root";
+                ParPassRoot.SqlDbType = SqlDbType.Text;
+                ParPassRoot.Value = Config.RootPass;
+                SqlCmd.Parameters.Add(ParPassRoot);
+
+                SqlParameter ParGanancia = new SqlParameter();
+                ParGanancia.ParameterName = "@ganancia";
+                ParGanancia.SqlDbType = SqlDbType.Decimal;
+                ParGanancia.Value = Config.Ganancia;
+                SqlCmd.Parameters.Add(ParGanancia);
+
+                SqlParameter ParSeguro = new SqlParameter();
+                ParSeguro.ParameterName = "@seguro";
+                ParSeguro.SqlDbType = SqlDbType.Decimal;
+                ParSeguro.Value = Config.Seguro;
+                SqlCmd.Parameters.Add(ParSeguro);
+
+                SqlParameter ParIsr = new SqlParameter();
+                ParIsr.ParameterName = "@isr";
+                ParIsr.SqlDbType = SqlDbType.Decimal;
+                ParIsr.Value = Config.Isr;
+                SqlCmd.Parameters.Add(ParIsr);
+
+                SqlParameter ParIsv = new SqlParameter();
+                ParIsv.ParameterName = "@isv";
+                ParIsv.SqlDbType = SqlDbType.Decimal;
+                ParIsv.Value = Config.Isv;
+                SqlCmd.Parameters.Add(ParIsv);
+
+                SqlParameter ParDescuento = new SqlParameter();
+                ParDescuento.ParameterName = "@descuento";
+                ParDescuento.SqlDbType = SqlDbType.Decimal;
+                ParDescuento.Value = Config.Descuento;
+                SqlCmd.Parameters.Add(ParDescuento);
+
+                SqlParameter ParRtn = new SqlParameter();
+                ParRtn.ParameterName = "@rtn";
+                ParRtn.SqlDbType = SqlDbType.NVarChar;
+                ParRtn.Size = 50;
+                ParRtn.Value = Config.Rtn;
+                SqlCmd.Parameters.Add(ParRtn);
+
+                SqlParameter ParCai = new SqlParameter();
+                ParCai.ParameterName = "@cai";
+                ParCai.SqlDbType = SqlDbType.NVarChar;
+                ParCai.Size = 50;
+                ParCai.Value = Config.Cai;
+                SqlCmd.Parameters.Add(ParCai);
+
+                SqlParameter ParPuntoEmision = new SqlParameter();
+                ParPuntoEmision.ParameterName = "@punto_emision";
+                ParPuntoEmision.SqlDbType = SqlDbType.NVarChar;
+                ParPuntoEmision.Size = 10;
+                ParPuntoEmision.Value = Config.PuntoEmision;
+                SqlCmd.Parameters.Add(ParPuntoEmision);
+
+                SqlParameter ParEstablecimiento = new SqlParameter();
+                ParEstablecimiento.ParameterName = "@establecimiento";
+                ParEstablecimiento.SqlDbType = SqlDbType.NVarChar;
+                ParEstablecimiento.Size = 10;
+                ParEstablecimiento.Value = Config.Establecimiento;
+                SqlCmd.Parameters.Add(ParEstablecimiento);
+
+                SqlParameter ParTipoDoc = new SqlParameter();
+                ParTipoDoc.ParameterName = "@tipo_documento";
+                ParTipoDoc.SqlDbType = SqlDbType.NVarChar;
+                ParTipoDoc.Size = 10;
+                ParTipoDoc.Value = Config.TipoDocumento;
+                SqlCmd.Parameters.Add(ParTipoDoc);
+
+                SqlParameter ParRangoInicial = new SqlParameter();
+                ParRangoInicial.ParameterName = "@rango_inicial";
+                ParRangoInicial.SqlDbType = SqlDbType.NVarChar;
+                ParRangoInicial.Size = 50;
+                ParRangoInicial.Value = Config.RangoInicial;
+                SqlCmd.Parameters.Add(ParRangoInicial);
+
+                SqlParameter ParRangoFinal = new SqlParameter();
+                ParRangoFinal.ParameterName = "@rango_final";
+                ParRangoFinal.SqlDbType = SqlDbType.NVarChar;
+                ParRangoFinal.Size = 50;
+                ParRangoFinal.Value = Config.RangoFinal;
+                SqlCmd.Parameters.Add(ParRangoFinal);
+
+                //Ejecutamos el comando 
+                respuesta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Modificó el Registro.";
+            }
+            catch (Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+
+            return respuesta;
         }
+
+        //obtener valores
+        public DataTable Obtener()
+        {
+            DataTable DtResultado = new DataTable("configuracion");
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon.ConnectionString = Conexion.conexion;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spobtener_config";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+                string valor = ex.ToString();
+            }
+
+            return DtResultado;
+        }
+
+
     }
 }
