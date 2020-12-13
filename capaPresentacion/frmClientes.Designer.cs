@@ -104,7 +104,7 @@
             this.chkEliminar.Location = new System.Drawing.Point(9, 70);
             this.chkEliminar.Name = "chkEliminar";
             this.chkEliminar.Size = new System.Drawing.Size(62, 17);
-            this.chkEliminar.TabIndex = 6;
+            this.chkEliminar.TabIndex = 105;
             this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
             this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
@@ -118,7 +118,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(468, 15);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 5;
+            this.btnImprimir.TabIndex = 104;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(387, 15);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.TabIndex = 103;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -151,7 +151,7 @@
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.Size = new System.Drawing.Size(534, 140);
-            this.dgvCliente.TabIndex = 3;
+            this.dgvCliente.TabIndex = 106;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             this.dgvCliente.DoubleClick += new System.EventHandler(this.dgvCliente_DoubleClick);
             // 
@@ -184,7 +184,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(306, 15);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.TabIndex = 102;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(56, 17);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(238, 26);
-            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TabIndex = 101;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
@@ -233,7 +233,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(88, 55);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(127, 26);
-            this.txtCodigo.TabIndex = 11;
+            this.txtCodigo.TabIndex = 201;
             // 
             // lblCodigo
             // 
@@ -252,7 +252,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(373, 192);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 206;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -266,7 +266,7 @@
             this.btnEditar.Location = new System.Drawing.Point(279, 192);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 8;
+            this.btnEditar.TabIndex = 205;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -280,7 +280,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(184, 192);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 204;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -294,7 +294,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(88, 192);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.TabIndex = 203;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -307,7 +307,7 @@
             this.txtNombre.Location = new System.Drawing.Point(87, 94);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(361, 26);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TabIndex = 202;
             // 
             // lblNombre
             // 

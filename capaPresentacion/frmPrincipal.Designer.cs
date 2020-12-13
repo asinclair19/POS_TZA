@@ -90,6 +90,8 @@
             this.statusLblTiempo = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timerTiempo = new System.Windows.Forms.Timer(this.components);
+            this.reporteDeIngresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeVentasPorFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -493,14 +495,14 @@
             // iconMenuIngresos
             // 
             this.iconMenuIngresos.Name = "iconMenuIngresos";
-            this.iconMenuIngresos.Size = new System.Drawing.Size(139, 22);
+            this.iconMenuIngresos.Size = new System.Drawing.Size(152, 22);
             this.iconMenuIngresos.Text = "Ingresos";
             this.iconMenuIngresos.Click += new System.EventHandler(this.iconMenuIngresos_Click);
             // 
             // iconMenuProveedores
             // 
             this.iconMenuProveedores.Name = "iconMenuProveedores";
-            this.iconMenuProveedores.Size = new System.Drawing.Size(139, 22);
+            this.iconMenuProveedores.Size = new System.Drawing.Size(152, 22);
             this.iconMenuProveedores.Text = "Proveedores";
             this.iconMenuProveedores.Click += new System.EventHandler(this.iconMenuProveedores_Click);
             // 
@@ -536,7 +538,9 @@
             // 
             this.iconReportes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.iconReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iconMenuStockProducto});
+            this.iconMenuStockProducto,
+            this.reporteDeIngresosToolStripMenuItem,
+            this.reporteDeVentasPorFechaToolStripMenuItem});
             this.iconReportes.Image = global::capaPresentacion.Properties.Resources.reportes00;
             this.iconReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.iconReportes.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -548,7 +552,7 @@
             // iconMenuStockProducto
             // 
             this.iconMenuStockProducto.Name = "iconMenuStockProducto";
-            this.iconMenuStockProducto.Size = new System.Drawing.Size(171, 22);
+            this.iconMenuStockProducto.Size = new System.Drawing.Size(241, 22);
             this.iconMenuStockProducto.Text = "Stock de Producto";
             this.iconMenuStockProducto.Click += new System.EventHandler(this.iconMenuStockProducto_Click);
             // 
@@ -603,7 +607,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(51, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(50, 17);
             this.toolStripStatusLabel1.Text = "Tiempo:";
             // 
             // statusLblTiempo
@@ -619,6 +623,20 @@
             this.timerTiempo.Enabled = true;
             this.timerTiempo.Interval = 1000;
             this.timerTiempo.Tick += new System.EventHandler(this.timerTiempo_Tick);
+            // 
+            // reporteDeIngresosToolStripMenuItem
+            // 
+            this.reporteDeIngresosToolStripMenuItem.Name = "reporteDeIngresosToolStripMenuItem";
+            this.reporteDeIngresosToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.reporteDeIngresosToolStripMenuItem.Text = "Reporte de Ingresos - Por Fecha";
+            this.reporteDeIngresosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeIngresosToolStripMenuItem_Click);
+            // 
+            // reporteDeVentasPorFechaToolStripMenuItem
+            // 
+            this.reporteDeVentasPorFechaToolStripMenuItem.Name = "reporteDeVentasPorFechaToolStripMenuItem";
+            this.reporteDeVentasPorFechaToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.reporteDeVentasPorFechaToolStripMenuItem.Text = "Reporte de Ventas - Por Fecha";
+            this.reporteDeVentasPorFechaToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVentasPorFechaToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -707,6 +725,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem toolStripCerrarSesion;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeIngresosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeVentasPorFechaToolStripMenuItem;
     }
 }
 

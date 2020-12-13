@@ -31,15 +31,14 @@
             this.label17 = new System.Windows.Forms.Label();
             this.txtAPagar = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEfectivo = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCambio = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSaldo = new System.Windows.Forms.NumericUpDown();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtEfectivo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtAPagar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEfectivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCambio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSaldo)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +67,7 @@
             0});
             this.txtAPagar.Name = "txtAPagar";
             this.txtAPagar.Size = new System.Drawing.Size(155, 38);
-            this.txtAPagar.TabIndex = 76;
+            this.txtAPagar.TabIndex = 100;
             // 
             // label1
             // 
@@ -80,24 +79,6 @@
             this.label1.TabIndex = 79;
             this.label1.Text = "EFECTIVO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtEfectivo
-            // 
-            this.txtEfectivo.DecimalPlaces = 2;
-            this.txtEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEfectivo.Location = new System.Drawing.Point(161, 99);
-            this.txtEfectivo.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.txtEfectivo.Name = "txtEfectivo";
-            this.txtEfectivo.Size = new System.Drawing.Size(155, 38);
-            this.txtEfectivo.TabIndex = 78;
-            this.txtEfectivo.ValueChanged += new System.EventHandler(this.txtEfectivo_ValueChanged);
-            this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress);
-            this.txtEfectivo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEfectivo_KeyUp);
-            this.txtEfectivo.Leave += new System.EventHandler(this.txtEfectivo_Leave);
             // 
             // label2
             // 
@@ -123,7 +104,7 @@
             0});
             this.txtCambio.Name = "txtCambio";
             this.txtCambio.Size = new System.Drawing.Size(155, 38);
-            this.txtCambio.TabIndex = 80;
+            this.txtCambio.TabIndex = 102;
             // 
             // label3
             // 
@@ -149,7 +130,7 @@
             0});
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(155, 38);
-            this.txtSaldo.TabIndex = 82;
+            this.txtSaldo.TabIndex = 103;
             // 
             // btnAceptar
             // 
@@ -159,7 +140,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(170, 268);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(155, 55);
-            this.btnAceptar.TabIndex = 84;
+            this.btnAceptar.TabIndex = 105;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -172,10 +153,20 @@
             this.btnCancelar.Location = new System.Drawing.Point(9, 268);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(155, 55);
-            this.btnCancelar.TabIndex = 85;
+            this.btnCancelar.TabIndex = 104;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtEfectivo
+            // 
+            this.txtEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEfectivo.Location = new System.Drawing.Point(161, 99);
+            this.txtEfectivo.Name = "txtEfectivo";
+            this.txtEfectivo.Size = new System.Drawing.Size(155, 38);
+            this.txtEfectivo.TabIndex = 106;
+            this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
+            this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress_1);
             // 
             // frmEfectivo_Venta
             // 
@@ -183,6 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(337, 335);
+            this.Controls.Add(this.txtEfectivo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label3);
@@ -190,7 +182,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCambio);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtEfectivo);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txtAPagar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -202,7 +193,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmEfectivo_Venta_FormClosed);
             this.Load += new System.EventHandler(this.frmEfectivo_Venta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtAPagar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEfectivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCambio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSaldo)).EndInit();
             this.ResumeLayout(false);
@@ -215,12 +205,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.NumericUpDown txtAPagar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown txtEfectivo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown txtCambio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown txtSaldo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtEfectivo;
     }
 }

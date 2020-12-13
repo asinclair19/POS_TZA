@@ -200,6 +200,18 @@
     <Compile Include="Informes\frmReciboVenta.Designer.cs">
       <DependentUpon>frmReciboVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informes\frmReporteIngresosByFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\frmReporteIngresosByFechas.Designer.cs">
+      <DependentUpon>frmReporteIngresosByFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\frmReporteVentasByFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\frmReporteVentasByFechas.Designer.cs">
+      <DependentUpon>frmReporteVentasByFechas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -288,9 +300,17 @@
     <EmbeddedResource Include="Informes\frmReciboVenta.resx">
       <DependentUpon>frmReciboVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\rptIngresosByFechas.rdlc" />
+    <EmbeddedResource Include="Informes\frmReporteIngresosByFechas.resx">
+      <DependentUpon>frmReporteIngresosByFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\frmReporteVentasByFechas.resx">
+      <DependentUpon>frmReporteVentasByFechas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Informes\infComprobanteFactura.rdlc" />
     <EmbeddedResource Include="Informes\infProductos.rdlc" />
-    <EmbeddedResource Include="Informes\infReciboVenta.rdlc" />
+    <EmbeddedResource Include="Informes\infReciboVentaProducto.rdlc" />
+    <EmbeddedResource Include="Informes\rptVentasByFechas.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

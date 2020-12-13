@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.dtpFechaFinal = new System.Windows.Forms.DateTimePicker();
             this.lblFechaFinal = new System.Windows.Forms.Label();
             this.dtpFechaInicial = new System.Windows.Forms.DateTimePicker();
@@ -39,7 +40,6 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnAnular = new System.Windows.Forms.Button();
             this.dgvIngresos = new System.Windows.Forms.DataGridView();
-            this.Anular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblFechaInicial = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -84,6 +84,16 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Anular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num_comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isv_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngresos)).BeginInit();
@@ -107,6 +117,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.btnReporte);
             this.tabPage1.Controls.Add(this.dtpFechaFinal);
             this.tabPage1.Controls.Add(this.lblFechaFinal);
             this.tabPage1.Controls.Add(this.dtpFechaInicial);
@@ -124,6 +135,21 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Registros";
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporte.Image = global::capaPresentacion.Properties.Resources.print;
+            this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporte.Location = new System.Drawing.Point(416, 26);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(93, 23);
+            this.btnReporte.TabIndex = 108;
+            this.btnReporte.Text = "REPORTE";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // dtpFechaFinal
             // 
             this.dtpFechaFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,7 +157,7 @@
             this.dtpFechaFinal.Location = new System.Drawing.Point(81, 46);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
             this.dtpFechaFinal.Size = new System.Drawing.Size(146, 26);
-            this.dtpFechaFinal.TabIndex = 10;
+            this.dtpFechaFinal.TabIndex = 102;
             // 
             // lblFechaFinal
             // 
@@ -149,7 +175,7 @@
             this.dtpFechaInicial.Location = new System.Drawing.Point(81, 14);
             this.dtpFechaInicial.Name = "dtpFechaInicial";
             this.dtpFechaInicial.Size = new System.Drawing.Size(146, 26);
-            this.dtpFechaInicial.TabIndex = 8;
+            this.dtpFechaInicial.TabIndex = 101;
             // 
             // lblNumElementos
             // 
@@ -166,7 +192,7 @@
             this.chkAnular.Location = new System.Drawing.Point(9, 89);
             this.chkAnular.Name = "chkAnular";
             this.chkAnular.Size = new System.Drawing.Size(56, 17);
-            this.chkAnular.TabIndex = 6;
+            this.chkAnular.TabIndex = 106;
             this.chkAnular.Text = "Anular";
             this.chkAnular.UseVisualStyleBackColor = true;
             this.chkAnular.CheckedChanged += new System.EventHandler(this.chkAnular_CheckedChanged);
@@ -177,10 +203,10 @@
             this.btnImprimir.Enabled = false;
             this.btnImprimir.Image = global::capaPresentacion.Properties.Resources.print;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(416, 26);
+            this.btnImprimir.Location = new System.Drawing.Point(609, 26);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 5;
+            this.btnImprimir.TabIndex = 105;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -195,7 +221,7 @@
             this.btnAnular.Location = new System.Drawing.Point(335, 26);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(75, 23);
-            this.btnAnular.TabIndex = 4;
+            this.btnAnular.TabIndex = 104;
             this.btnAnular.Text = "Anular";
             this.btnAnular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAnular.UseVisualStyleBackColor = true;
@@ -208,20 +234,23 @@
             this.dgvIngresos.AllowUserToOrderColumns = true;
             this.dgvIngresos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIngresos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Anular});
+            this.Anular,
+            this.empleado,
+            this.proveedor,
+            this.fecha_ingreso,
+            this.tipo_comprobante,
+            this.num_comprobante,
+            this.isv_ingreso,
+            this.total_ingreso,
+            this.estado,
+            this.total});
             this.dgvIngresos.Location = new System.Drawing.Point(9, 112);
             this.dgvIngresos.Name = "dgvIngresos";
             this.dgvIngresos.ReadOnly = true;
             this.dgvIngresos.Size = new System.Drawing.Size(1022, 279);
-            this.dgvIngresos.TabIndex = 3;
+            this.dgvIngresos.TabIndex = 107;
             this.dgvIngresos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngresos_CellContentClick);
             this.dgvIngresos.DoubleClick += new System.EventHandler(this.dgvIngresos_DoubleClick);
-            // 
-            // Anular
-            // 
-            this.Anular.HeaderText = "Anular";
-            this.Anular.Name = "Anular";
-            this.Anular.ReadOnly = true;
             // 
             // btnBuscar
             // 
@@ -232,7 +261,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(254, 26);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.TabIndex = 103;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -302,7 +331,7 @@
             this.txtIdProveedor.Location = new System.Drawing.Point(464, 113);
             this.txtIdProveedor.Name = "txtIdProveedor";
             this.txtIdProveedor.Size = new System.Drawing.Size(36, 20);
-            this.txtIdProveedor.TabIndex = 59;
+            this.txtIdProveedor.TabIndex = 300;
             // 
             // txtIsv
             // 
@@ -312,7 +341,7 @@
             this.txtIsv.Name = "txtIsv";
             this.txtIsv.PromptChar = '%';
             this.txtIsv.Size = new System.Drawing.Size(164, 26);
-            this.txtIsv.TabIndex = 58;
+            this.txtIsv.TabIndex = 206;
             // 
             // label12
             // 
@@ -339,7 +368,7 @@
             this.dtpFechaIngreso.Location = new System.Drawing.Point(285, 37);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(127, 26);
-            this.dtpFechaIngreso.TabIndex = 55;
+            this.dtpFechaIngreso.TabIndex = 201;
             // 
             // groupProducto
             // 
@@ -372,7 +401,7 @@
             this.txtPrecioCompra.Location = new System.Drawing.Point(95, 104);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(157, 26);
-            this.txtPrecioCompra.TabIndex = 62;
+            this.txtPrecioCompra.TabIndex = 210;
             this.txtPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCompra_KeyPress);
             // 
             // txtStockInicial
@@ -381,7 +410,7 @@
             this.txtStockInicial.Location = new System.Drawing.Point(94, 68);
             this.txtStockInicial.Name = "txtStockInicial";
             this.txtStockInicial.Size = new System.Drawing.Size(157, 26);
-            this.txtStockInicial.TabIndex = 61;
+            this.txtStockInicial.TabIndex = 209;
             this.txtStockInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStockInicial_KeyPress);
             // 
             // txtIdProducto
@@ -390,7 +419,7 @@
             this.txtIdProducto.Location = new System.Drawing.Point(326, 31);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(59, 26);
-            this.txtIdProducto.TabIndex = 60;
+            this.txtIdProducto.TabIndex = 301;
             // 
             // txtPrecioVenta
             // 
@@ -398,7 +427,7 @@
             this.txtPrecioVenta.Location = new System.Drawing.Point(95, 140);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(157, 26);
-            this.txtPrecioVenta.TabIndex = 59;
+            this.txtPrecioVenta.TabIndex = 211;
             this.txtPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioVenta_KeyPress);
             // 
             // btnEliminar
@@ -408,7 +437,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(380, 177);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 57;
+            this.btnEliminar.TabIndex = 231;
             this.btnEliminar.Text = "&Quitar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -421,7 +450,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(299, 177);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 56;
+            this.btnAgregar.TabIndex = 230;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -434,7 +463,7 @@
             this.dtpFechaVencimiento.Location = new System.Drawing.Point(361, 104);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
             this.dtpFechaVencimiento.Size = new System.Drawing.Size(118, 26);
-            this.dtpFechaVencimiento.TabIndex = 54;
+            this.dtpFechaVencimiento.TabIndex = 213;
             // 
             // label10
             // 
@@ -452,7 +481,7 @@
             this.dtpFechaProduccion.Location = new System.Drawing.Point(361, 67);
             this.dtpFechaProduccion.Name = "dtpFechaProduccion";
             this.dtpFechaProduccion.Size = new System.Drawing.Size(118, 26);
-            this.dtpFechaProduccion.TabIndex = 52;
+            this.dtpFechaProduccion.TabIndex = 212;
             // 
             // label9
             // 
@@ -497,7 +526,7 @@
             this.btnCargarProducto.Location = new System.Drawing.Point(266, 24);
             this.btnCargarProducto.Name = "btnCargarProducto";
             this.btnCargarProducto.Size = new System.Drawing.Size(36, 33);
-            this.btnCargarProducto.TabIndex = 44;
+            this.btnCargarProducto.TabIndex = 207;
             this.btnCargarProducto.UseVisualStyleBackColor = true;
             this.btnCargarProducto.Click += new System.EventHandler(this.btnCargarProducto_Click);
             // 
@@ -507,7 +536,7 @@
             this.txtNombreProducto.Location = new System.Drawing.Point(94, 31);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(157, 26);
-            this.txtNombreProducto.TabIndex = 43;
+            this.txtNombreProducto.TabIndex = 208;
             // 
             // label5
             // 
@@ -526,7 +555,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(931, 332);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(78, 33);
-            this.btnCancelar.TabIndex = 40;
+            this.btnCancelar.TabIndex = 234;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -540,7 +569,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(847, 332);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(78, 33);
-            this.btnGuardar.TabIndex = 39;
+            this.btnGuardar.TabIndex = 233;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -554,7 +583,7 @@
             this.txtNumComprobante.Name = "txtNumComprobante";
             this.txtNumComprobante.PromptChar = '#';
             this.txtNumComprobante.Size = new System.Drawing.Size(130, 26);
-            this.txtNumComprobante.TabIndex = 38;
+            this.txtNumComprobante.TabIndex = 205;
             // 
             // label4
             // 
@@ -577,7 +606,7 @@
             this.cmbComprobante.Location = new System.Drawing.Point(84, 76);
             this.cmbComprobante.Name = "cmbComprobante";
             this.cmbComprobante.Size = new System.Drawing.Size(129, 28);
-            this.cmbComprobante.TabIndex = 36;
+            this.cmbComprobante.TabIndex = 202;
             // 
             // label3
             // 
@@ -597,7 +626,7 @@
             this.btnCargarProveedor.Location = new System.Drawing.Point(464, 69);
             this.btnCargarProveedor.Name = "btnCargarProveedor";
             this.btnCargarProveedor.Size = new System.Drawing.Size(36, 33);
-            this.btnCargarProveedor.TabIndex = 34;
+            this.btnCargarProveedor.TabIndex = 203;
             this.btnCargarProveedor.UseVisualStyleBackColor = false;
             this.btnCargarProveedor.Click += new System.EventHandler(this.btnCargarProveedor_Click);
             // 
@@ -607,7 +636,7 @@
             this.txtNombreProveedor.Location = new System.Drawing.Point(285, 76);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
             this.txtNombreProveedor.Size = new System.Drawing.Size(164, 26);
-            this.txtNombreProveedor.TabIndex = 33;
+            this.txtNombreProveedor.TabIndex = 204;
             // 
             // label2
             // 
@@ -624,7 +653,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(84, 39);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(130, 26);
-            this.txtCodigo.TabIndex = 31;
+            this.txtCodigo.TabIndex = 200;
             // 
             // label1
             // 
@@ -650,7 +679,7 @@
             this.dgvDetallesIngreso.Location = new System.Drawing.Point(522, 39);
             this.dgvDetallesIngreso.Name = "dgvDetallesIngreso";
             this.dgvDetallesIngreso.Size = new System.Drawing.Size(487, 278);
-            this.dgvDetallesIngreso.TabIndex = 25;
+            this.dgvDetallesIngreso.TabIndex = 240;
             // 
             // btnNuevo
             // 
@@ -660,7 +689,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(763, 332);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(78, 33);
-            this.btnNuevo.TabIndex = 27;
+            this.btnNuevo.TabIndex = 232;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -687,6 +716,75 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
+            // 
+            // Anular
+            // 
+            this.Anular.HeaderText = "Anular";
+            this.Anular.Name = "Anular";
+            this.Anular.ReadOnly = true;
+            // 
+            // empleado
+            // 
+            this.empleado.DataPropertyName = "empleado";
+            this.empleado.HeaderText = "EMPLEADO";
+            this.empleado.Name = "empleado";
+            this.empleado.ReadOnly = true;
+            // 
+            // proveedor
+            // 
+            this.proveedor.DataPropertyName = "proveedor";
+            this.proveedor.HeaderText = "PROVEEDOR";
+            this.proveedor.Name = "proveedor";
+            this.proveedor.ReadOnly = true;
+            // 
+            // fecha_ingreso
+            // 
+            this.fecha_ingreso.DataPropertyName = "fecha_ingreso";
+            this.fecha_ingreso.HeaderText = "FECHA INGRESO";
+            this.fecha_ingreso.Name = "fecha_ingreso";
+            this.fecha_ingreso.ReadOnly = true;
+            // 
+            // tipo_comprobante
+            // 
+            this.tipo_comprobante.DataPropertyName = "tipo_comprobante";
+            this.tipo_comprobante.HeaderText = "COMPROBANTE";
+            this.tipo_comprobante.Name = "tipo_comprobante";
+            this.tipo_comprobante.ReadOnly = true;
+            // 
+            // num_comprobante
+            // 
+            this.num_comprobante.DataPropertyName = "num_comprobante";
+            this.num_comprobante.HeaderText = "NUMERO";
+            this.num_comprobante.Name = "num_comprobante";
+            this.num_comprobante.ReadOnly = true;
+            // 
+            // isv_ingreso
+            // 
+            this.isv_ingreso.DataPropertyName = "isv_ingreso";
+            this.isv_ingreso.HeaderText = "% ISV";
+            this.isv_ingreso.Name = "isv_ingreso";
+            this.isv_ingreso.ReadOnly = true;
+            // 
+            // total_ingreso
+            // 
+            this.total_ingreso.DataPropertyName = "total_ingreso";
+            this.total_ingreso.HeaderText = "SUBTOTAL";
+            this.total_ingreso.Name = "total_ingreso";
+            this.total_ingreso.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "ESTADO";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "TOTAL";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
             // 
             // frmIngresos
             // 
@@ -732,7 +830,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaFinal;
         private System.Windows.Forms.Label lblFechaFinal;
         private System.Windows.Forms.DateTimePicker dtpFechaInicial;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Anular;
         private System.Windows.Forms.GroupBox groupInventario;
         private System.Windows.Forms.Label lblTotalPagado;
         private System.Windows.Forms.DataGridView dgvDetallesIngreso;
@@ -773,5 +870,16 @@
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.TextBox txtStockInicial;
         private System.Windows.Forms.TextBox txtPrecioCompra;
+        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Anular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_ingreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_comprobante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num_comprobante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isv_ingreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total_ingreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
     }
 }

@@ -58,6 +58,7 @@
             this.lblTituloLogin.Size = new System.Drawing.Size(240, 25);
             this.lblTituloLogin.TabIndex = 1;
             this.lblTituloLogin.Text = "Sistema de Inventario";
+            this.lblTituloLogin.Click += new System.EventHandler(this.lblTituloLogin_Click);
             // 
             // groupBoxLogin
             // 
@@ -95,7 +96,7 @@
             this.btnSalir.Location = new System.Drawing.Point(240, 141);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(105, 23);
-            this.btnSalir.TabIndex = 6;
+            this.btnSalir.TabIndex = 111;
             this.btnSalir.Text = "Cerrar";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -109,7 +110,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(113, 141);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(105, 23);
-            this.btnIngresar.TabIndex = 5;
+            this.btnIngresar.TabIndex = 110;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -123,7 +124,7 @@
             this.chkVisible.Location = new System.Drawing.Point(289, 118);
             this.chkVisible.Name = "chkVisible";
             this.chkVisible.Size = new System.Drawing.Size(56, 17);
-            this.chkVisible.TabIndex = 4;
+            this.chkVisible.TabIndex = 102;
             this.chkVisible.Text = "Visible";
             this.chkVisible.UseVisualStyleBackColor = true;
             this.chkVisible.CheckedChanged += new System.EventHandler(this.chkVisible_CheckedChanged);
@@ -134,7 +135,7 @@
             this.txtPass.Location = new System.Drawing.Point(113, 88);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(232, 26);
-            this.txtPass.TabIndex = 3;
+            this.txtPass.TabIndex = 101;
             // 
             // txtUser
             // 
@@ -142,7 +143,7 @@
             this.txtUser.Location = new System.Drawing.Point(113, 54);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(232, 26);
-            this.txtUser.TabIndex = 2;
+            this.txtUser.TabIndex = 100;
             // 
             // lblPass
             // 
@@ -186,6 +187,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(518, 42);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmLogin
             // 

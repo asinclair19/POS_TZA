@@ -80,6 +80,7 @@ namespace capaPresentacion
             this.Left = 0;
             //this.LLenarGrid();
             this.MostrarDatos();
+            this.txtTitulo.Focus();
         }
 
         private void btnGuardarCambios_Click(object sender, EventArgs e)
@@ -105,7 +106,7 @@ namespace capaPresentacion
                     errorIcono.SetError(this.txtUserRoot, "Ingrese nombre de usuario root del sistema");
                     errorIcono.SetError(this.txtPassRoot, "Ingrese contraseña root del sistema");
                     errorIcono.SetError(this.txtNombre, "Ingrese RTN de la empresa (autogenerado).");
-                    errorIcono.SetError(this.txtNombre, "Ingrese CAI de la empresa (autogenerado)");
+                    errorIcono.SetError(this.txtNombre, "Ingrese CAI de la empresa (autogenerado).");
                     errorIcono.SetError(this.txtComercialNombre, "Ingrese nombre comercial de la empresa");
                     errorIcono.SetError(this.txtSucursal, "Ingrese nombre de sucursal que usará el sistema");
                 }
@@ -235,6 +236,11 @@ namespace capaPresentacion
         private void txtRangoFinal_TextChanged(object sender, EventArgs e)
         {
             this.vistaPreviaFacturacion();
+        }
+
+        private void txtTitulo_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 

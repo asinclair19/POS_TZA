@@ -78,5 +78,10 @@ namespace capaPresentacion
             form.setProducto(iddetalle, nombre, stock, pventa, pcompra, fechav);
             this.Hide();
         }
+
+        private void dgvProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

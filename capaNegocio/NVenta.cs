@@ -26,6 +26,7 @@ namespace capaNegocio
             DateTime fecha,
             string tipocomprobante,
             string numcomprobante,
+            string numfactura,
             string porcisv,
             decimal subtotal,
             decimal isv,
@@ -39,6 +40,7 @@ namespace capaNegocio
             Obj.Fechaventa = fecha;
             Obj.Tipocomprobante = tipocomprobante;
             Obj.Numcomprobante = numcomprobante;
+            Obj.Numfactura = numfactura;
             Obj.Subtotal = subtotal;
             Obj.PorcIsv = porcisv;
             Obj.Isv = isv;
@@ -76,6 +78,12 @@ namespace capaNegocio
         public static int MostrarUltimaVenta()
         {
             return new DVenta().MostrarUltimaVenta();
+        }
+
+        //obtener ultima factura
+        public static int ObtenerUltimaFactura()
+        {
+            return new DVenta().ObtenerUltimaFactura();
         }
 
         //buscar texto

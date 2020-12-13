@@ -37,7 +37,6 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -56,6 +55,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nombre_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
@@ -117,7 +119,7 @@
             this.chkEliminar.Location = new System.Drawing.Point(9, 70);
             this.chkEliminar.Name = "chkEliminar";
             this.chkEliminar.Size = new System.Drawing.Size(62, 17);
-            this.chkEliminar.TabIndex = 6;
+            this.chkEliminar.TabIndex = 205;
             this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
             this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
@@ -130,7 +132,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(468, 15);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 5;
+            this.btnImprimir.TabIndex = 204;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
@@ -144,7 +146,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(387, 15);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.TabIndex = 203;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -157,20 +159,16 @@
             this.dgvCategoria.AllowUserToOrderColumns = true;
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Eliminar});
+            this.Eliminar,
+            this.nombre_categoria,
+            this.descripcion_categoria});
             this.dgvCategoria.Location = new System.Drawing.Point(9, 93);
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.ReadOnly = true;
             this.dgvCategoria.Size = new System.Drawing.Size(534, 140);
-            this.dgvCategoria.TabIndex = 3;
+            this.dgvCategoria.TabIndex = 206;
             this.dgvCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellContentClick);
             this.dgvCategoria.DoubleClick += new System.EventHandler(this.dgvCategoria_DoubleClick);
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
             // 
             // btnBuscar
             // 
@@ -180,7 +178,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(306, 15);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.TabIndex = 202;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -192,7 +190,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(56, 17);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(238, 26);
-            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TabIndex = 201;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
@@ -234,7 +232,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(89, 10);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(127, 26);
-            this.txtCodigo.TabIndex = 11;
+            this.txtCodigo.TabIndex = 101;
             // 
             // lblCodigo
             // 
@@ -253,7 +251,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(422, 193);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 109;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -267,7 +265,7 @@
             this.btnEditar.Location = new System.Drawing.Point(324, 193);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 8;
+            this.btnEditar.TabIndex = 108;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -281,7 +279,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(229, 193);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 107;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -295,7 +293,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(133, 193);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.TabIndex = 106;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -309,7 +307,7 @@
             this.chkActiva.Location = new System.Drawing.Point(461, 51);
             this.chkActiva.Name = "chkActiva";
             this.chkActiva.Size = new System.Drawing.Size(36, 17);
-            this.chkActiva.TabIndex = 5;
+            this.chkActiva.TabIndex = 105;
             this.chkActiva.Text = "SI";
             this.chkActiva.UseVisualStyleBackColor = true;
             // 
@@ -331,7 +329,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(408, 84);
-            this.txtDescripcion.TabIndex = 3;
+            this.txtDescripcion.TabIndex = 103;
             // 
             // lblDescripcion
             // 
@@ -350,7 +348,7 @@
             this.txtNombre.Location = new System.Drawing.Point(88, 49);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(253, 26);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TabIndex = 102;
             // 
             // lblNombre
             // 
@@ -371,6 +369,26 @@
             this.ttMensaje.InitialDelay = 400;
             this.ttMensaje.IsBalloon = true;
             this.ttMensaje.ReshowDelay = 100;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
+            // nombre_categoria
+            // 
+            this.nombre_categoria.DataPropertyName = "nombre_categoria";
+            this.nombre_categoria.HeaderText = "NOMBRE";
+            this.nombre_categoria.Name = "nombre_categoria";
+            this.nombre_categoria.ReadOnly = true;
+            // 
+            // descripcion_categoria
+            // 
+            this.descripcion_categoria.DataPropertyName = "descripcion_categoria";
+            this.descripcion_categoria.HeaderText = "DESCRIPCION";
+            this.descripcion_categoria.Name = "descripcion_categoria";
+            this.descripcion_categoria.ReadOnly = true;
             // 
             // frmCategorias
             // 
@@ -413,7 +431,6 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
         private System.Windows.Forms.Label lblActiva;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
@@ -424,5 +441,8 @@
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion_categoria;
     }
 }

@@ -431,6 +431,7 @@ namespace capaPresentacion
             this.habilitarChk(false);
             this.controlarChk(false);
             this.Botones();
+            this.txtBuscar.Focus();
         }
 
         private string retornaCadenaPermisos()

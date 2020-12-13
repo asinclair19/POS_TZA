@@ -184,3 +184,5 @@ C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\RdlCompile.compiled
 C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.dll
 C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.pdb
 C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmReciboVenta.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmReporteVentasByFechas.resources
+C:\Users\eg\Documents\POS_TZA\capaPresentacion\obj\Debug\capaPresentacion.frmReporteIngresosByFechas.resources

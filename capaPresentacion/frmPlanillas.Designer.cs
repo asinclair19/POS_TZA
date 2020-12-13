@@ -41,7 +41,6 @@
             this.lblNumElementos = new System.Windows.Forms.Label();
             this.chkAnular = new System.Windows.Forms.CheckBox();
             this.dgvPagos = new System.Windows.Forms.DataGridView();
-            this.Anular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtSalario = new System.Windows.Forms.NumericUpDown();
             this.btnBuscarEmpleado = new System.Windows.Forms.Button();
@@ -88,6 +87,26 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Anular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idpago_planilla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.concepto_de = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comp_transferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_bruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seguro_social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_neto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.impuesto_renta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.neto_a_pagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salario_base = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargo_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activo_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
@@ -140,7 +159,7 @@
             this.dtpFechaFinal.Location = new System.Drawing.Point(82, 43);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
             this.dtpFechaFinal.Size = new System.Drawing.Size(127, 26);
-            this.dtpFechaFinal.TabIndex = 17;
+            this.dtpFechaFinal.TabIndex = 101;
             // 
             // lblFechaFinal
             // 
@@ -158,7 +177,7 @@
             this.dtpFechaInicial.Location = new System.Drawing.Point(82, 11);
             this.dtpFechaInicial.Name = "dtpFechaInicial";
             this.dtpFechaInicial.Size = new System.Drawing.Size(127, 26);
-            this.dtpFechaInicial.TabIndex = 15;
+            this.dtpFechaInicial.TabIndex = 100;
             // 
             // btnImprimir
             // 
@@ -169,7 +188,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(417, 23);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 14;
+            this.btnImprimir.TabIndex = 104;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -183,7 +202,7 @@
             this.btnAnular.Location = new System.Drawing.Point(336, 23);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(75, 23);
-            this.btnAnular.TabIndex = 13;
+            this.btnAnular.TabIndex = 103;
             this.btnAnular.Text = "Anular";
             this.btnAnular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAnular.UseVisualStyleBackColor = true;
@@ -198,7 +217,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(255, 23);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.TabIndex = 102;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -229,7 +248,7 @@
             this.chkAnular.Location = new System.Drawing.Point(9, 70);
             this.chkAnular.Name = "chkAnular";
             this.chkAnular.Size = new System.Drawing.Size(56, 17);
-            this.chkAnular.TabIndex = 6;
+            this.chkAnular.TabIndex = 105;
             this.chkAnular.Text = "Anular";
             this.chkAnular.UseVisualStyleBackColor = true;
             this.chkAnular.CheckedChanged += new System.EventHandler(this.chkAnular_CheckedChanged);
@@ -241,20 +260,33 @@
             this.dgvPagos.AllowUserToOrderColumns = true;
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Anular});
+            this.Anular,
+            this.idpago_planilla,
+            this.fecha_pago,
+            this.concepto_de,
+            this.tipo_pago,
+            this.comp_transferencia,
+            this.descripcion_pago,
+            this.tipo_importe,
+            this.total_bruto,
+            this.seguro_social,
+            this.total_neto,
+            this.impuesto_renta,
+            this.neto_a_pagar,
+            this.estado,
+            this.IDempleado,
+            this.identidad,
+            this.empleado,
+            this.salario_base,
+            this.cargo_empleado,
+            this.activo_empleado});
             this.dgvPagos.Location = new System.Drawing.Point(9, 93);
             this.dgvPagos.Name = "dgvPagos";
             this.dgvPagos.ReadOnly = true;
             this.dgvPagos.Size = new System.Drawing.Size(878, 241);
-            this.dgvPagos.TabIndex = 3;
+            this.dgvPagos.TabIndex = 106;
             this.dgvPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPagos_CellContentClick);
             this.dgvPagos.DoubleClick += new System.EventHandler(this.dgvPagos_DoubleClick);
-            // 
-            // Anular
-            // 
-            this.Anular.HeaderText = "Anular";
-            this.Anular.Name = "Anular";
-            this.Anular.ReadOnly = true;
             // 
             // tabPage2
             // 
@@ -298,7 +330,7 @@
             0});
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(170, 26);
-            this.txtSalario.TabIndex = 56;
+            this.txtSalario.TabIndex = 204;
             this.txtSalario.ValueChanged += new System.EventHandler(this.txtSalario_ValueChanged);
             // 
             // btnBuscarEmpleado
@@ -310,7 +342,7 @@
             this.btnBuscarEmpleado.Location = new System.Drawing.Point(220, 26);
             this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
             this.btnBuscarEmpleado.Size = new System.Drawing.Size(61, 30);
-            this.btnBuscarEmpleado.TabIndex = 31;
+            this.btnBuscarEmpleado.TabIndex = 200;
             this.btnBuscarEmpleado.Text = "Buscar";
             this.btnBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
@@ -351,7 +383,7 @@
             0});
             this.txtTotalPagar.Name = "txtTotalPagar";
             this.txtTotalPagar.Size = new System.Drawing.Size(163, 26);
-            this.txtTotalPagar.TabIndex = 55;
+            this.txtTotalPagar.TabIndex = 212;
             // 
             // txtISR
             // 
@@ -365,7 +397,7 @@
             0});
             this.txtISR.Name = "txtISR";
             this.txtISR.Size = new System.Drawing.Size(163, 26);
-            this.txtISR.TabIndex = 54;
+            this.txtISR.TabIndex = 211;
             this.txtISR.ValueChanged += new System.EventHandler(this.txtISR_ValueChanged);
             // 
             // txtSubtotal
@@ -380,7 +412,7 @@
             0});
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(163, 26);
-            this.txtSubtotal.TabIndex = 53;
+            this.txtSubtotal.TabIndex = 208;
             this.txtSubtotal.ValueChanged += new System.EventHandler(this.txtSubtotal_ValueChanged);
             // 
             // txtSubtotalNeto
@@ -396,7 +428,7 @@
             0});
             this.txtSubtotalNeto.Name = "txtSubtotalNeto";
             this.txtSubtotalNeto.Size = new System.Drawing.Size(163, 26);
-            this.txtSubtotalNeto.TabIndex = 52;
+            this.txtSubtotalNeto.TabIndex = 210;
             // 
             // txtSeguroSocial
             // 
@@ -410,7 +442,7 @@
             0});
             this.txtSeguroSocial.Name = "txtSeguroSocial";
             this.txtSeguroSocial.Size = new System.Drawing.Size(163, 26);
-            this.txtSeguroSocial.TabIndex = 51;
+            this.txtSeguroSocial.TabIndex = 209;
             this.txtSeguroSocial.ValueChanged += new System.EventHandler(this.txtSeguroSocial_ValueChanged);
             // 
             // btnCalcular
@@ -421,7 +453,7 @@
             this.btnCalcular.Location = new System.Drawing.Point(187, 242);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 23);
-            this.btnCalcular.TabIndex = 32;
+            this.btnCalcular.TabIndex = 213;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -483,7 +515,7 @@
             this.cmbTipoImporte.Location = new System.Drawing.Point(99, 25);
             this.cmbTipoImporte.Name = "cmbTipoImporte";
             this.cmbTipoImporte.Size = new System.Drawing.Size(163, 28);
-            this.cmbTipoImporte.TabIndex = 42;
+            this.cmbTipoImporte.TabIndex = 207;
             // 
             // label8
             // 
@@ -522,7 +554,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(163, 88);
-            this.txtDescripcion.TabIndex = 40;
+            this.txtDescripcion.TabIndex = 218;
             // 
             // label7
             // 
@@ -541,7 +573,7 @@
             this.txtNumComprobante.Location = new System.Drawing.Point(96, 136);
             this.txtNumComprobante.Name = "txtNumComprobante";
             this.txtNumComprobante.Size = new System.Drawing.Size(163, 26);
-            this.txtNumComprobante.TabIndex = 38;
+            this.txtNumComprobante.TabIndex = 217;
             // 
             // label6
             // 
@@ -563,7 +595,7 @@
             this.cmbTipoPago.Location = new System.Drawing.Point(96, 98);
             this.cmbTipoPago.Name = "cmbTipoPago";
             this.cmbTipoPago.Size = new System.Drawing.Size(163, 28);
-            this.cmbTipoPago.TabIndex = 36;
+            this.cmbTipoPago.TabIndex = 216;
             // 
             // label3
             // 
@@ -582,7 +614,7 @@
             this.txtConceptoDe.Location = new System.Drawing.Point(96, 62);
             this.txtConceptoDe.Name = "txtConceptoDe";
             this.txtConceptoDe.Size = new System.Drawing.Size(163, 26);
-            this.txtConceptoDe.TabIndex = 32;
+            this.txtConceptoDe.TabIndex = 215;
             // 
             // label2
             // 
@@ -600,7 +632,7 @@
             this.dtpFechaPago.Location = new System.Drawing.Point(96, 25);
             this.dtpFechaPago.Name = "dtpFechaPago";
             this.dtpFechaPago.Size = new System.Drawing.Size(163, 26);
-            this.dtpFechaPago.TabIndex = 33;
+            this.dtpFechaPago.TabIndex = 214;
             // 
             // label1
             // 
@@ -619,7 +651,7 @@
             this.txtIdentidad.Location = new System.Drawing.Point(111, 68);
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Size = new System.Drawing.Size(170, 26);
-            this.txtIdentidad.TabIndex = 24;
+            this.txtIdentidad.TabIndex = 202;
             // 
             // chkActivo
             // 
@@ -629,7 +661,7 @@
             this.chkActivo.Location = new System.Drawing.Point(111, 214);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(36, 17);
-            this.chkActivo.TabIndex = 21;
+            this.chkActivo.TabIndex = 206;
             this.chkActivo.Text = "SI";
             this.chkActivo.UseVisualStyleBackColor = true;
             // 
@@ -669,7 +701,7 @@
             this.txtIdempleado.Name = "txtIdempleado";
             this.txtIdempleado.ReadOnly = true;
             this.txtIdempleado.Size = new System.Drawing.Size(85, 26);
-            this.txtIdempleado.TabIndex = 11;
+            this.txtIdempleado.TabIndex = 201;
             // 
             // label5
             // 
@@ -697,7 +729,7 @@
             this.txtCargo.Location = new System.Drawing.Point(111, 178);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(170, 26);
-            this.txtCargo.TabIndex = 26;
+            this.txtCargo.TabIndex = 205;
             // 
             // txtNombre
             // 
@@ -707,7 +739,7 @@
             this.txtNombre.Location = new System.Drawing.Point(111, 106);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(170, 26);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TabIndex = 203;
             // 
             // lblNombre
             // 
@@ -726,7 +758,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(448, 289);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 232;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -737,10 +769,10 @@
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Image = global::capaPresentacion.Properties.Resources.edit;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(643, 289);
+            this.btnEditar.Location = new System.Drawing.Point(529, 289);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 8;
+            this.btnEditar.TabIndex = 234;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -754,7 +786,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(367, 289);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 231;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -768,7 +800,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(286, 289);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.TabIndex = 230;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -795,6 +827,152 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
+            // 
+            // Anular
+            // 
+            this.Anular.HeaderText = "Anular";
+            this.Anular.Name = "Anular";
+            this.Anular.ReadOnly = true;
+            // 
+            // idpago_planilla
+            // 
+            this.idpago_planilla.DataPropertyName = "idpago_planilla";
+            this.idpago_planilla.HeaderText = "ID PAGO";
+            this.idpago_planilla.Name = "idpago_planilla";
+            this.idpago_planilla.ReadOnly = true;
+            // 
+            // fecha_pago
+            // 
+            this.fecha_pago.DataPropertyName = "fecha_pago";
+            this.fecha_pago.HeaderText = "FECHA PAGO";
+            this.fecha_pago.Name = "fecha_pago";
+            this.fecha_pago.ReadOnly = true;
+            // 
+            // concepto_de
+            // 
+            this.concepto_de.DataPropertyName = "concepto_de";
+            this.concepto_de.HeaderText = "POR CONCEPTO DE";
+            this.concepto_de.Name = "concepto_de";
+            this.concepto_de.ReadOnly = true;
+            this.concepto_de.Visible = false;
+            // 
+            // tipo_pago
+            // 
+            this.tipo_pago.DataPropertyName = "tipo_pago";
+            this.tipo_pago.HeaderText = "TIPO PAGO";
+            this.tipo_pago.Name = "tipo_pago";
+            this.tipo_pago.ReadOnly = true;
+            // 
+            // comp_transferencia
+            // 
+            this.comp_transferencia.DataPropertyName = "comp_transferencia";
+            this.comp_transferencia.HeaderText = "COMPROBANTE";
+            this.comp_transferencia.Name = "comp_transferencia";
+            this.comp_transferencia.ReadOnly = true;
+            // 
+            // descripcion_pago
+            // 
+            this.descripcion_pago.DataPropertyName = "descripcion_pago";
+            this.descripcion_pago.HeaderText = "DESCRIPCION";
+            this.descripcion_pago.Name = "descripcion_pago";
+            this.descripcion_pago.ReadOnly = true;
+            this.descripcion_pago.Visible = false;
+            // 
+            // tipo_importe
+            // 
+            this.tipo_importe.DataPropertyName = "tipo_importe";
+            this.tipo_importe.HeaderText = "IMPORTE";
+            this.tipo_importe.Name = "tipo_importe";
+            this.tipo_importe.ReadOnly = true;
+            // 
+            // total_bruto
+            // 
+            this.total_bruto.DataPropertyName = "total_bruto";
+            this.total_bruto.HeaderText = "TOTAL BRUTO";
+            this.total_bruto.Name = "total_bruto";
+            this.total_bruto.ReadOnly = true;
+            // 
+            // seguro_social
+            // 
+            this.seguro_social.DataPropertyName = "seguro_social";
+            this.seguro_social.HeaderText = "SEGURO SOCIAL";
+            this.seguro_social.Name = "seguro_social";
+            this.seguro_social.ReadOnly = true;
+            // 
+            // total_neto
+            // 
+            this.total_neto.DataPropertyName = "total_neto";
+            this.total_neto.HeaderText = "TOTAL NETO";
+            this.total_neto.Name = "total_neto";
+            this.total_neto.ReadOnly = true;
+            // 
+            // impuesto_renta
+            // 
+            this.impuesto_renta.DataPropertyName = "impuesto_renta";
+            this.impuesto_renta.HeaderText = "IMPUESTO RENTA";
+            this.impuesto_renta.Name = "impuesto_renta";
+            this.impuesto_renta.ReadOnly = true;
+            // 
+            // neto_a_pagar
+            // 
+            this.neto_a_pagar.DataPropertyName = "neto_a_pagar";
+            this.neto_a_pagar.HeaderText = "NETO PAGAR";
+            this.neto_a_pagar.Name = "neto_a_pagar";
+            this.neto_a_pagar.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "ESTADO";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Visible = false;
+            // 
+            // IDempleado
+            // 
+            this.IDempleado.DataPropertyName = "IDempleado";
+            this.IDempleado.HeaderText = "EMPLEADO ID";
+            this.IDempleado.Name = "IDempleado";
+            this.IDempleado.ReadOnly = true;
+            this.IDempleado.Visible = false;
+            // 
+            // identidad
+            // 
+            this.identidad.DataPropertyName = "identidad";
+            this.identidad.HeaderText = "IDENTIDAD_";
+            this.identidad.Name = "identidad";
+            this.identidad.ReadOnly = true;
+            // 
+            // empleado
+            // 
+            this.empleado.DataPropertyName = "empleado";
+            this.empleado.HeaderText = "EMPLEADO_";
+            this.empleado.Name = "empleado";
+            this.empleado.ReadOnly = true;
+            // 
+            // salario_base
+            // 
+            this.salario_base.DataPropertyName = "salario_base";
+            this.salario_base.HeaderText = "SALARIO BASE";
+            this.salario_base.Name = "salario_base";
+            this.salario_base.ReadOnly = true;
+            this.salario_base.Visible = false;
+            // 
+            // cargo_empleado
+            // 
+            this.cargo_empleado.DataPropertyName = "cargo_empleado";
+            this.cargo_empleado.HeaderText = "CARGO";
+            this.cargo_empleado.Name = "cargo_empleado";
+            this.cargo_empleado.ReadOnly = true;
+            this.cargo_empleado.Visible = false;
+            // 
+            // activo_empleado
+            // 
+            this.activo_empleado.DataPropertyName = "activo_empleado";
+            this.activo_empleado.HeaderText = "ACTIVO";
+            this.activo_empleado.Name = "activo_empleado";
+            this.activo_empleado.ReadOnly = true;
+            this.activo_empleado.Visible = false;
             // 
             // frmPlanillas
             // 
@@ -881,7 +1059,6 @@
         private System.Windows.Forms.Button btnAnular;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblFechaInicial;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Anular;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.Button btnCalcular;
@@ -891,5 +1068,25 @@
         private System.Windows.Forms.NumericUpDown txtISR;
         private System.Windows.Forms.NumericUpDown txtTotalPagar;
         private System.Windows.Forms.NumericUpDown txtSalario;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Anular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpago_planilla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_pago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn concepto_de;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_pago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comp_transferencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion_pago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_importe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total_bruto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn seguro_social;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total_neto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn impuesto_renta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn neto_a_pagar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDempleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn identidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salario_base;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargo_empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activo_empleado;
     }
 }

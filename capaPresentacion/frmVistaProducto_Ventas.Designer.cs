@@ -105,6 +105,7 @@
             this.dgvProducto.ReadOnly = true;
             this.dgvProducto.Size = new System.Drawing.Size(669, 241);
             this.dgvProducto.TabIndex = 3;
+            this.dgvProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellContentClick);
             this.dgvProducto.DoubleClick += new System.EventHandler(this.dgvProducto_DoubleClick);
             // 
             // iddetalleIngreso

@@ -109,6 +109,7 @@ namespace capaPresentacion
             this.MostrarDatos();
             this.Habilitar(false);
             this.Botones();
+            this.txtBuscar.Focus();
         }
 
         //mostrar datos de busqueda

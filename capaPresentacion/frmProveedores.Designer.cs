@@ -35,7 +35,6 @@
             this.lblNumElementos = new System.Windows.Forms.Label();
             this.chkEliminar = new System.Windows.Forms.CheckBox();
             this.dgvProveedor = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -56,6 +55,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nombre_empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
@@ -117,7 +119,7 @@
             this.chkEliminar.Location = new System.Drawing.Point(6, 60);
             this.chkEliminar.Name = "chkEliminar";
             this.chkEliminar.Size = new System.Drawing.Size(62, 17);
-            this.chkEliminar.TabIndex = 12;
+            this.chkEliminar.TabIndex = 105;
             this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
             this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
@@ -129,20 +131,16 @@
             this.dgvProveedor.AllowUserToOrderColumns = true;
             this.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Eliminar});
+            this.Eliminar,
+            this.nombre_empresa,
+            this.nombre_contacto});
             this.dgvProveedor.Location = new System.Drawing.Point(6, 83);
             this.dgvProveedor.Name = "dgvProveedor";
             this.dgvProveedor.ReadOnly = true;
             this.dgvProveedor.Size = new System.Drawing.Size(565, 152);
-            this.dgvProveedor.TabIndex = 11;
+            this.dgvProveedor.TabIndex = 106;
             this.dgvProveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedor_CellContentClick);
             this.dgvProveedor.DoubleClick += new System.EventHandler(this.dgvProveedor_DoubleClick);
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
             // 
             // btnImprimir
             // 
@@ -153,7 +151,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(477, 6);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 10;
+            this.btnImprimir.TabIndex = 104;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
@@ -166,7 +164,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(396, 6);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.TabIndex = 103;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -180,7 +178,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(315, 6);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.TabIndex = 102;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -192,7 +190,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(65, 8);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(238, 26);
-            this.txtBuscar.TabIndex = 7;
+            this.txtBuscar.TabIndex = 101;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
@@ -234,7 +232,7 @@
             this.txtContacto.Location = new System.Drawing.Point(118, 112);
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(253, 26);
-            this.txtContacto.TabIndex = 24;
+            this.txtContacto.TabIndex = 202;
             // 
             // txtCodigo
             // 
@@ -244,7 +242,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(118, 32);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(127, 26);
-            this.txtCodigo.TabIndex = 23;
+            this.txtCodigo.TabIndex = 200;
             // 
             // lblCodigo
             // 
@@ -263,7 +261,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(409, 198);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.TabIndex = 233;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -277,7 +275,7 @@
             this.btnEditar.Location = new System.Drawing.Point(311, 198);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 20;
+            this.btnEditar.TabIndex = 232;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -291,7 +289,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(216, 198);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.TabIndex = 231;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -305,7 +303,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(120, 198);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 18;
+            this.btnNuevo.TabIndex = 230;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -319,7 +317,7 @@
             this.chkActivo.Location = new System.Drawing.Point(119, 148);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(36, 17);
-            this.chkActivo.TabIndex = 17;
+            this.chkActivo.TabIndex = 203;
             this.chkActivo.Text = "SI";
             this.chkActivo.UseVisualStyleBackColor = true;
             // 
@@ -349,7 +347,7 @@
             this.txtNombre.Location = new System.Drawing.Point(118, 72);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(253, 26);
-            this.txtNombre.TabIndex = 13;
+            this.txtNombre.TabIndex = 201;
             // 
             // lblNombre
             // 
@@ -370,6 +368,26 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
+            // nombre_empresa
+            // 
+            this.nombre_empresa.DataPropertyName = "nombre_empresa";
+            this.nombre_empresa.HeaderText = "NOMBRE";
+            this.nombre_empresa.Name = "nombre_empresa";
+            this.nombre_empresa.ReadOnly = true;
+            // 
+            // nombre_contacto
+            // 
+            this.nombre_contacto.DataPropertyName = "nombre_contacto";
+            this.nombre_contacto.HeaderText = "CONTACTO";
+            this.nombre_contacto.Name = "nombre_contacto";
+            this.nombre_contacto.ReadOnly = true;
             // 
             // frmProveedores
             // 
@@ -408,7 +426,6 @@
         private System.Windows.Forms.Label lblNumElementos;
         private System.Windows.Forms.CheckBox chkEliminar;
         private System.Windows.Forms.DataGridView dgvProveedor;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Button btnCancelar;
@@ -423,5 +440,8 @@
         private System.Windows.Forms.TextBox txtContacto;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_empresa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_contacto;
     }
 }

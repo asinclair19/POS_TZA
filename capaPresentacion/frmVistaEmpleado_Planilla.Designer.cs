@@ -86,6 +86,7 @@
             this.dgvEmpleado.ReadOnly = true;
             this.dgvEmpleado.Size = new System.Drawing.Size(703, 241);
             this.dgvEmpleado.TabIndex = 3;
+            this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
             this.dgvEmpleado.DoubleClick += new System.EventHandler(this.dgvEmpleado_DoubleClick);
             // 
             // btnBuscar

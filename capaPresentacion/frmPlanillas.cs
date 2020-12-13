@@ -171,6 +171,7 @@ namespace capaPresentacion
             this.MostrarDatos();
             this.Habilitar(false);
             this.Botones();
+            this.dtpFechaInicial.Focus();
         }
 
         private void frmPlanillas_FormClosed(object sender, FormClosedEventArgs e)

@@ -36,7 +36,6 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -83,6 +82,13 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primer_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primer_apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.privilegios_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
@@ -136,7 +142,7 @@
             this.chkEliminar.Location = new System.Drawing.Point(9, 70);
             this.chkEliminar.Name = "chkEliminar";
             this.chkEliminar.Size = new System.Drawing.Size(62, 17);
-            this.chkEliminar.TabIndex = 6;
+            this.chkEliminar.TabIndex = 105;
             this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
             this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
@@ -150,7 +156,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(799, 12);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 5;
+            this.btnImprimir.TabIndex = 104;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
@@ -163,7 +169,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(718, 12);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.TabIndex = 103;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -176,20 +182,20 @@
             this.dgvEmpleado.AllowUserToOrderColumns = true;
             this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Eliminar});
+            this.Eliminar,
+            this.identidad,
+            this.primer_nombre,
+            this.primer_apellido,
+            this.celular,
+            this.username,
+            this.privilegios_user});
             this.dgvEmpleado.Location = new System.Drawing.Point(9, 93);
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.ReadOnly = true;
             this.dgvEmpleado.Size = new System.Drawing.Size(878, 241);
-            this.dgvEmpleado.TabIndex = 3;
+            this.dgvEmpleado.TabIndex = 106;
             this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
             this.dgvEmpleado.DoubleClick += new System.EventHandler(this.dgvEmpleado_DoubleClick);
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
             // 
             // btnBuscar
             // 
@@ -199,7 +205,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(637, 12);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.TabIndex = 102;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -211,7 +217,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(119, 14);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(502, 26);
-            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TabIndex = 101;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
@@ -261,7 +267,7 @@
             this.txtAnioNacimiento.Name = "txtAnioNacimiento";
             this.txtAnioNacimiento.PromptChar = 'a';
             this.txtAnioNacimiento.Size = new System.Drawing.Size(170, 26);
-            this.txtAnioNacimiento.TabIndex = 33;
+            this.txtAnioNacimiento.TabIndex = 205;
             this.txtAnioNacimiento.Text = "1993";
             // 
             // txtIdentidad
@@ -272,7 +278,7 @@
             this.txtIdentidad.Location = new System.Drawing.Point(96, 42);
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Size = new System.Drawing.Size(170, 26);
-            this.txtIdentidad.TabIndex = 24;
+            this.txtIdentidad.TabIndex = 202;
             // 
             // panel2
             // 
@@ -298,7 +304,7 @@
             this.btnModificarPermisos.Location = new System.Drawing.Point(218, 80);
             this.btnModificarPermisos.Name = "btnModificarPermisos";
             this.btnModificarPermisos.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarPermisos.TabIndex = 32;
+            this.btnModificarPermisos.TabIndex = 221;
             this.btnModificarPermisos.Text = "Modificar";
             this.btnModificarPermisos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificarPermisos.UseVisualStyleBackColor = true;
@@ -313,7 +319,7 @@
             this.txtPermisos.Name = "txtPermisos";
             this.txtPermisos.ReadOnly = true;
             this.txtPermisos.Size = new System.Drawing.Size(233, 26);
-            this.txtPermisos.TabIndex = 25;
+            this.txtPermisos.TabIndex = 213;
             // 
             // chkReportes
             // 
@@ -321,7 +327,7 @@
             this.chkReportes.Location = new System.Drawing.Point(20, 181);
             this.chkReportes.Name = "chkReportes";
             this.chkReportes.Size = new System.Drawing.Size(107, 17);
-            this.chkReportes.TabIndex = 31;
+            this.chkReportes.TabIndex = 220;
             this.chkReportes.Tag = "reportes";
             this.chkReportes.Text = "Módulo Reportes";
             this.chkReportes.UseVisualStyleBackColor = true;
@@ -333,7 +339,7 @@
             this.chkVentas.Location = new System.Drawing.Point(20, 158);
             this.chkVentas.Name = "chkVentas";
             this.chkVentas.Size = new System.Drawing.Size(97, 17);
-            this.chkVentas.TabIndex = 30;
+            this.chkVentas.TabIndex = 219;
             this.chkVentas.Tag = "ventas";
             this.chkVentas.Text = "Módulo Ventas";
             this.chkVentas.UseVisualStyleBackColor = true;
@@ -345,7 +351,7 @@
             this.chkPlanilla.Location = new System.Drawing.Point(20, 135);
             this.chkPlanilla.Name = "chkPlanilla";
             this.chkPlanilla.Size = new System.Drawing.Size(97, 17);
-            this.chkPlanilla.TabIndex = 29;
+            this.chkPlanilla.TabIndex = 218;
             this.chkPlanilla.Tag = "planilla";
             this.chkPlanilla.Text = "Módulo Planilla";
             this.chkPlanilla.UseVisualStyleBackColor = true;
@@ -357,7 +363,7 @@
             this.chkEmpleados.Location = new System.Drawing.Point(20, 115);
             this.chkEmpleados.Name = "chkEmpleados";
             this.chkEmpleados.Size = new System.Drawing.Size(116, 17);
-            this.chkEmpleados.TabIndex = 28;
+            this.chkEmpleados.TabIndex = 217;
             this.chkEmpleados.Tag = "empleados";
             this.chkEmpleados.Text = "Módulo Empleados";
             this.chkEmpleados.UseVisualStyleBackColor = true;
@@ -369,7 +375,7 @@
             this.chkCompras.Location = new System.Drawing.Point(20, 92);
             this.chkCompras.Name = "chkCompras";
             this.chkCompras.Size = new System.Drawing.Size(105, 17);
-            this.chkCompras.TabIndex = 27;
+            this.chkCompras.TabIndex = 216;
             this.chkCompras.Tag = "compras";
             this.chkCompras.Text = "Módulo Compras";
             this.chkCompras.UseVisualStyleBackColor = true;
@@ -381,7 +387,7 @@
             this.chkInventario.Location = new System.Drawing.Point(20, 69);
             this.chkInventario.Name = "chkInventario";
             this.chkInventario.Size = new System.Drawing.Size(111, 17);
-            this.chkInventario.TabIndex = 26;
+            this.chkInventario.TabIndex = 215;
             this.chkInventario.Tag = "inventario";
             this.chkInventario.Text = "Módulo Inventario";
             this.chkInventario.UseVisualStyleBackColor = true;
@@ -393,7 +399,7 @@
             this.chkConfig.Location = new System.Drawing.Point(20, 46);
             this.chkConfig.Name = "chkConfig";
             this.chkConfig.Size = new System.Drawing.Size(129, 17);
-            this.chkConfig.TabIndex = 25;
+            this.chkConfig.TabIndex = 214;
             this.chkConfig.Tag = "config";
             this.chkConfig.Text = "Módulo Configuración";
             this.chkConfig.UseVisualStyleBackColor = true;
@@ -432,7 +438,7 @@
             this.chkPassvisible.Location = new System.Drawing.Point(140, 165);
             this.chkPassvisible.Name = "chkPassvisible";
             this.chkPassvisible.Size = new System.Drawing.Size(60, 17);
-            this.chkPassvisible.TabIndex = 25;
+            this.chkPassvisible.TabIndex = 211;
             this.chkPassvisible.Text = "Ocultar";
             this.chkPassvisible.UseVisualStyleBackColor = true;
             this.chkPassvisible.CheckedChanged += new System.EventHandler(this.chkPassvisible_CheckedChanged);
@@ -454,7 +460,7 @@
             this.txtPassword.Location = new System.Drawing.Point(16, 185);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(211, 26);
-            this.txtPassword.TabIndex = 32;
+            this.txtPassword.TabIndex = 212;
             // 
             // label6
             // 
@@ -473,7 +479,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(16, 132);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(211, 26);
-            this.txtUsuario.TabIndex = 30;
+            this.txtUsuario.TabIndex = 210;
             // 
             // txtSalario
             // 
@@ -483,7 +489,7 @@
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.PromptChar = '$';
             this.txtSalario.Size = new System.Drawing.Size(211, 26);
-            this.txtSalario.TabIndex = 28;
+            this.txtSalario.TabIndex = 208;
             this.txtSalario.Text = "1500000";
             // 
             // label4
@@ -512,7 +518,7 @@
             this.txtCargo.Location = new System.Drawing.Point(16, 80);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(211, 26);
-            this.txtCargo.TabIndex = 26;
+            this.txtCargo.TabIndex = 209;
             // 
             // chkActivo
             // 
@@ -522,7 +528,7 @@
             this.chkActivo.Location = new System.Drawing.Point(96, 220);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(36, 17);
-            this.chkActivo.TabIndex = 21;
+            this.chkActivo.TabIndex = 207;
             this.chkActivo.Text = "SI";
             this.chkActivo.UseVisualStyleBackColor = true;
             // 
@@ -552,7 +558,7 @@
             this.txtCelular.Mask = "000-0000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(170, 26);
-            this.txtCelular.TabIndex = 18;
+            this.txtCelular.TabIndex = 206;
             this.txtCelular.Text = "504";
             // 
             // label2
@@ -572,7 +578,7 @@
             this.txtApellido.Location = new System.Drawing.Point(96, 115);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(170, 26);
-            this.txtApellido.TabIndex = 15;
+            this.txtApellido.TabIndex = 204;
             // 
             // label1
             // 
@@ -601,7 +607,7 @@
             this.txtIdempleado.Name = "txtIdempleado";
             this.txtIdempleado.ReadOnly = true;
             this.txtIdempleado.Size = new System.Drawing.Size(103, 26);
-            this.txtIdempleado.TabIndex = 11;
+            this.txtIdempleado.TabIndex = 201;
             // 
             // lblIDProducto
             // 
@@ -620,7 +626,7 @@
             this.txtNombre.Location = new System.Drawing.Point(96, 80);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(170, 26);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TabIndex = 203;
             // 
             // lblNombre
             // 
@@ -639,7 +645,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(516, 289);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 233;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -653,7 +659,7 @@
             this.btnEditar.Location = new System.Drawing.Point(418, 289);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 8;
+            this.btnEditar.TabIndex = 232;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -667,7 +673,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(323, 289);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 231;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -681,7 +687,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(227, 289);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.TabIndex = 230;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -708,6 +714,54 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
+            // identidad
+            // 
+            this.identidad.DataPropertyName = "identidad";
+            this.identidad.HeaderText = "IDENTIDAD";
+            this.identidad.Name = "identidad";
+            this.identidad.ReadOnly = true;
+            // 
+            // primer_nombre
+            // 
+            this.primer_nombre.DataPropertyName = "primer_nombre";
+            this.primer_nombre.HeaderText = "NOMBRE";
+            this.primer_nombre.Name = "primer_nombre";
+            this.primer_nombre.ReadOnly = true;
+            // 
+            // primer_apellido
+            // 
+            this.primer_apellido.DataPropertyName = "primer_apellido";
+            this.primer_apellido.HeaderText = "APELLIDO";
+            this.primer_apellido.Name = "primer_apellido";
+            this.primer_apellido.ReadOnly = true;
+            // 
+            // celular
+            // 
+            this.celular.DataPropertyName = "celular";
+            this.celular.HeaderText = "CELULAR";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.HeaderText = "USUARIO";
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            // 
+            // privilegios_user
+            // 
+            this.privilegios_user.DataPropertyName = "privilegios_user";
+            this.privilegios_user.HeaderText = "PERMISOS";
+            this.privilegios_user.Name = "privilegios_user";
+            this.privilegios_user.ReadOnly = true;
             // 
             // frmEmpleados
             // 
@@ -786,11 +840,17 @@
         private System.Windows.Forms.TextBox txtPermisos;
         private System.Windows.Forms.MaskedTextBox txtAnioNacimiento;
         private System.Windows.Forms.Button btnModificarPermisos;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn identidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primer_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primer_apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn celular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn privilegios_user;
     }
 }

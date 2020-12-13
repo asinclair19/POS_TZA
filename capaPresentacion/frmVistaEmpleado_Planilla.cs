@@ -91,5 +91,10 @@ namespace capaPresentacion
             this.Hide();
         }
 
+        private void dgvEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

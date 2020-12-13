@@ -184,6 +184,7 @@ namespace capaPresentacion
             this.Habilitar(false);
             this.Botones();
             this.CrearTabla();
+            this.dtpFechaInicial.Focus();
         }
 
         private void btnCargarProducto_Click(object sender, EventArgs e)
@@ -498,6 +499,16 @@ namespace capaPresentacion
         private void txtPrecioVenta_KeyPress(object sender, KeyPressEventArgs e)
         {
             this.soloNumerosConDecimales(e);
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            string textobuscar = dtpFechaInicial.Value.ToString("yyyy-MM-dd");
+            string textobuscar2 = dtpFechaFinal.Value.ToString("yyyy-MM-dd");
+            frmReporteIngresosByFechas frm = new frmReporteIngresosByFechas();
+            frm.Fechainicial = textobuscar;
+            frm.Fechafinal = textobuscar2;
+            frm.ShowDialog();
         }
 
 

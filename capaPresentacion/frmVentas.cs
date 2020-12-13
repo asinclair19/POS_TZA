@@ -17,6 +17,7 @@ namespace capaPresentacion
         private bool EsNuevo;
         public int idEmpleado = 1;
         private DataTable dtDetalle;
+        private DataRow drConfig = NConfig.Obtener().Rows[0];
         //Tickets ticket1 = new Tickets();
 
         private decimal totalPagado = 0;
@@ -50,6 +51,7 @@ namespace capaPresentacion
             this.txtPrecioCompra.Value = precio_compra;
             this.dtpVencimiento.Value = fechav;
             this.txtCantidad.Value = 1;
+            this.maskedDescuento.Text = Convert.ToInt32((Convert.ToDecimal(drConfig["default_porc_descuento"]) * 100)).ToString();
         }
 
         public frmVentas()
@@ -72,6 +74,23 @@ namespace capaPresentacion
 
         }
 
+        //ultima factura
+        private string ultima_factura(int factura)
+        {
+            int num_factura = factura + 1;
+            int length_factura = num_factura.ToString().Length;
+            string ceros = "";
+            //code
+
+            for (int i = 0; i < (8 - length_factura); i++)
+            {
+                ceros += "0";
+            }
+                
+            //end code
+            return ceros + num_factura.ToString();
+        }
+
         //INICIO DE FORMULARIO
         private void frmVentas_Load(object sender, EventArgs e)
         {
@@ -81,6 +100,9 @@ namespace capaPresentacion
             this.Habilitar(false);
             this.Botones();
             this.CrearTabla();
+            //this.Limpiar();
+            //this.LimpiarDetalle();
+            this.dtpFechaInicial.Focus();
         }
 
         private void frmVentas_FormClosing(object sender, FormClosingEventArgs e)
@@ -136,13 +158,13 @@ namespace capaPresentacion
         //Mensaje de confirmacion
         private void MensajeOK(string mensaje)
         {
-            MessageBox.Show(mensaje, "Sistema POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, drConfig["titulo_sistema"].ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //Mensaje de error
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Sistema POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(mensaje, drConfig["titulo_sistema"].ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         //Limpiar todos los controles del formulario
@@ -153,8 +175,10 @@ namespace capaPresentacion
             this.cmbComprobante.SelectedIndex = 0;
             this.txtNombreCliente.Text = string.Empty;
             this.txtIdCliente.Text = string.Empty;
-            this.txtNumComprobante.Text = string.Empty;
-            this.txtIsv.Text = "15.00";
+            // drConfig["punto_emision"].ToString(); //+ drConfig["establecimiento"].ToString() + drConfig["tipo_documento"].ToString();
+            this.txtNumComprobante.Text = drConfig["punto_emision"].ToString() + drConfig["establecimiento"].ToString() + drConfig["tipo_documento"].ToString();
+            this.txtNumFactura.Text = ultima_factura(NVenta.ObtenerUltimaFactura());
+            this.txtIsv.Text = (Convert.ToDecimal(drConfig["default_isv"])*100).ToString();
             this.CrearTabla();
             this.txtTotalAPagar.Text = "0.00";
             this.txtISVTotal.Text = "0.00";
@@ -184,7 +208,8 @@ namespace capaPresentacion
             this.cmbComprobante.Enabled = valor;
             this.txtNombreCliente.ReadOnly = true;
             this.txtIdCliente.ReadOnly = true;
-            this.txtNumComprobante.ReadOnly = !valor;
+            this.txtNumComprobante.ReadOnly = true;
+            this.txtNumFactura.ReadOnly = true;
             this.txtIsv.Enabled = valor;
             //detalle
             this.txtIdDetalle.ReadOnly = true;
@@ -208,7 +233,7 @@ namespace capaPresentacion
         //habilitar botones ES NUEVO / ES EDITAR
         private void Botones()
         {
-            if (this.EsNuevo)
+            if (this.EsNuevo == true)
             {
                 this.Habilitar(true);
                 this.btnNuevo.Enabled = false;
@@ -342,6 +367,7 @@ namespace capaPresentacion
             this.cmbComprobante.Text = Convert.ToString(this.dgvVentas.CurrentRow.Cells["tipo_comprobante"].Value);
             this.txtNombreCliente.Text = Convert.ToString(this.dgvVentas.CurrentRow.Cells["nombre_cliente"].Value);
             this.txtNumComprobante.Text = Convert.ToString(this.dgvVentas.CurrentRow.Cells["num_comprobante"].Value);
+            this.txtNumFactura.Text = Convert.ToString(this.dgvVentas.CurrentRow.Cells["num_factura"].Value);
             this.txtIsv.Text = Convert.ToString(this.dgvVentas.CurrentRow.Cells["porc_isv"].Value);
             this.txtTotalAPagar.Text = Convert.ToDecimal(this.dgvVentas.CurrentRow.Cells["subtotalventa"].Value).ToString("#0.00#");
             this.txtISVTotal.Text = Convert.ToDecimal(this.dgvVentas.CurrentRow.Cells["isv"].Value).ToString("#0.00#");
@@ -384,13 +410,14 @@ namespace capaPresentacion
                 string rpta = "";
                 if (this.txtIdCliente.Text == string.Empty
                     || this.txtNumComprobante.Text == string.Empty
+                    || this.txtNumFactura.Text == string.Empty
                     || this.txtIsv.Text == string.Empty)
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados.");
                     errorIcono.SetError(this.txtNombreCliente, "Seleccione cliente.");
                     errorIcono.SetError(this.txtNumComprobante, "Ingrese número de comprobante.");
+                    errorIcono.SetError(this.txtNumFactura, "Ingrese número de factura.");
                     errorIcono.SetError(this.txtIsv, "Ingrese ISV.");
-                    
                 }
                 else
                 {
@@ -403,6 +430,7 @@ namespace capaPresentacion
                             Convert.ToDateTime(dtpFechaVenta.Value),
                             cmbComprobante.Text,
                             txtNumComprobante.Text,
+                            txtNumFactura.Text,
                             Convert.ToString(txtIsv.Value),
                             txtTotalAPagar.Value,
                             txtISVTotal.Value,
@@ -624,7 +652,23 @@ namespace capaPresentacion
                 MensajeError("¡No hay venta que mostrar!.");
             }
 
-        }//fin de metodo
+        }
+
+        private void txtIdCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            string textobuscar = dtpFechaInicial.Value.ToString("yyyy-MM-dd");
+            string textobuscar2 = dtpFechaFinal.Value.ToString("yyyy-MM-dd");
+            frmReporteVentasByFechas frm = new frmReporteVentasByFechas();
+            frm.Fechainicial = textobuscar;
+            frm.Fechafinal = textobuscar2;
+            frm.ShowDialog();
+        }
+        //fin de metodo
 
     //Final de clase
     }

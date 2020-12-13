@@ -21,7 +21,7 @@ namespace capaPresentacion
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            this.txtUser.Focus();
         }
 
         private void timerHora_Tick(object sender, EventArgs e)
@@ -64,8 +64,18 @@ namespace capaPresentacion
                 form.Privilegios = Datos.Rows[0][3].ToString();
                 form.Restricciones();
                 this.Hide();
-                MessageBox.Show("Bienvenid@ al sistema, " + par1 + " " + par2 + ".");
+                //MessageBox.Show("Bienvenid@ al sistema, " + par1 + " " + par2 + ".");
             }
+        }
+
+        private void lblTituloLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

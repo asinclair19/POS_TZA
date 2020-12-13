@@ -459,6 +459,22 @@ namespace capaPresentacion
             frm.Show();
         }
 
+        private void reporteDeIngresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIngresos frm = frmIngresos.GetInstancia();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.idempleado = Convert.ToInt32(this.Idempleado);
+        }
+
+        private void reporteDeVentasPorFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVentas frm = frmVentas.GetInstancia();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.idEmpleado = Convert.ToInt32(this.Idempleado);
+        }
+
 
     }
 }

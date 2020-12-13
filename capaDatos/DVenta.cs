@@ -15,6 +15,7 @@ namespace capaDatos
         private DateTime _Fechaventa;
         private string _Tipocomprobante;
         private string _Numcomprobante;
+        private string _Numfactura;
         private decimal _Subtotal;
         private string _PorcIsv;
         private decimal _Isv;
@@ -23,6 +24,12 @@ namespace capaDatos
         private int _Idempleado;
 
         //encapsulamiento
+        public string Numfactura
+        {
+            get { return _Numfactura; }
+            set { _Numfactura = value; }
+        }
+
         public string PorcIsv
         {
             get { return _PorcIsv; }
@@ -95,6 +102,7 @@ namespace capaDatos
             DateTime fecha,
             string tipocomprobante,
             string numcomprobante,
+            string numfactura,
             string porcisv,
             decimal subtotal,
             decimal isv,
@@ -107,6 +115,7 @@ namespace capaDatos
             this.Fechaventa = fecha;
             this.Tipocomprobante = tipocomprobante;
             this.Numcomprobante = numcomprobante;
+            this.Numfactura = numfactura;
             this.PorcIsv = porcisv;
             this.Subtotal = subtotal;
             this.Isv = isv;
@@ -203,6 +212,13 @@ namespace capaDatos
                 ParNumComp.Size = 50;
                 ParNumComp.Value = Venta.Numcomprobante;
                 SqlCmd.Parameters.Add(ParNumComp);
+
+                SqlParameter ParNumFactura = new SqlParameter();
+                ParNumFactura.ParameterName = "@num_factura";
+                ParNumFactura.SqlDbType = SqlDbType.VarChar;
+                ParNumFactura.Size = 8;
+                ParNumFactura.Value = Venta.Numfactura;
+                SqlCmd.Parameters.Add(ParNumFactura);
 
                 SqlParameter ParPorcISV = new SqlParameter();
                 ParPorcISV.ParameterName = "@porc_isv";
@@ -369,6 +385,33 @@ namespace capaDatos
             }
 
             return idUltimaVenta;
+        }
+
+        //mostrar ultima factura
+        public int ObtenerUltimaFactura()
+        {
+            int idUltimaFactura = 0;
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon.ConnectionString = Conexion.conexion;
+                SqlCon.Open();
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spobtener_ultimo_num_factura";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                idUltimaFactura = (Int32)SqlCmd.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                idUltimaFactura = 0;
+                string valor = ex.ToString();
+            }
+
+            return idUltimaFactura;
         }
         
         //buscar por fechas

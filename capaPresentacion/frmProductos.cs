@@ -173,6 +173,7 @@ namespace capaPresentacion
             this.MostrarDatos();
             this.Habilitar(false);
             this.Botones();
+            this.txtBuscar.Focus();
         }
 
         //buscar con boton

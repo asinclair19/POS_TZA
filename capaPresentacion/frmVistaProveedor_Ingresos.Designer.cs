@@ -84,7 +84,7 @@
             this.dgvProveedor.Name = "dgvProveedor";
             this.dgvProveedor.ReadOnly = true;
             this.dgvProveedor.Size = new System.Drawing.Size(565, 168);
-            this.dgvProveedor.TabIndex = 11;
+            this.dgvProveedor.TabIndex = 3;
             this.dgvProveedor.DoubleClick += new System.EventHandler(this.dgvProveedor_DoubleClick);
             // 
             // btnBuscar
@@ -95,7 +95,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(315, 6);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(65, 8);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(238, 26);
-            this.txtBuscar.TabIndex = 7;
+            this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
