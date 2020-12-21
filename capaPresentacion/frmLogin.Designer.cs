@@ -53,11 +53,12 @@
             this.lblTituloLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblTituloLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloLogin.ForeColor = System.Drawing.Color.White;
-            this.lblTituloLogin.Location = new System.Drawing.Point(166, 9);
+            this.lblTituloLogin.Location = new System.Drawing.Point(140, 9);
             this.lblTituloLogin.Name = "lblTituloLogin";
             this.lblTituloLogin.Size = new System.Drawing.Size(240, 25);
             this.lblTituloLogin.TabIndex = 1;
             this.lblTituloLogin.Text = "Sistema de Inventario";
+            this.lblTituloLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblTituloLogin.Click += new System.EventHandler(this.lblTituloLogin_Click);
             // 
             // groupBoxLogin
@@ -119,8 +120,6 @@
             // chkVisible
             // 
             this.chkVisible.AutoSize = true;
-            this.chkVisible.Checked = true;
-            this.chkVisible.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkVisible.Location = new System.Drawing.Point(289, 118);
             this.chkVisible.Name = "chkVisible";
             this.chkVisible.Size = new System.Drawing.Size(56, 17);
@@ -136,6 +135,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(232, 26);
             this.txtPass.TabIndex = 101;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // txtUser
             // 

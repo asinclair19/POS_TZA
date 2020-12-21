@@ -39,9 +39,9 @@ namespace capaPresentacion
             DataTable dt = new DataTable();
             dt = NConfig.Obtener(); //llenamos el data-table
 
-            DataRow row = dt.Rows[0];
-            if (row != null)
+            if (dt.Rows.Count != 0) //verificamos si hay almenos una fila
             {
+                DataRow row = dt.Rows[0];
                 //MensajeOK("Si hay filas en el data-table!");
                 this.txtIdConfig.Text = row["idconfig"].ToString();
                 this.txtTitulo.Text = row["titulo_sistema"].ToString();
@@ -67,8 +67,9 @@ namespace capaPresentacion
                 this.txtTipoDocumento.Text = row["tipo_documento"].ToString();
                 this.txtRangoInicial.Text = row["rango_inicial"].ToString();
                 this.txtRangoFinal.Text = row["rango_final"].ToString();
+
             }
-            else {
+            else { //sino hay filas en el data table
                 this.txtIdConfig.Text = "";
                 MensajeOK("No hay configuración creada!");
             }

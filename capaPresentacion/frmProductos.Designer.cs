@@ -450,6 +450,7 @@
             this.txtIDProducto.Name = "txtIDProducto";
             this.txtIDProducto.Size = new System.Drawing.Size(83, 26);
             this.txtIDProducto.TabIndex = 201;
+            this.txtIDProducto.Visible = false;
             // 
             // lblIDProducto
             // 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="POS_TZA.exe" version="1.0.0.2" publicKeyToken="24493abf6ce32455" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="POS_TZA.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="icono.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -63,38 +63,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="capaDatos.dll" size="206336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="capaDatos.dll" size="210944">
       <assemblyIdentity name="capaDatos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>eVpZZOier63zsz4VQ1NH1Q1hgB0=</dsig:DigestValue>
+        <dsig:DigestValue>ghJ8APnGaiBYdwWzYkRaIq4zzvM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="capaNegocio.dll" size="18944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="capaNegocio.dll" size="19456">
       <assemblyIdentity name="capaNegocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LQDjfbRZG+bxGlp69gq+zp0hvIw=</dsig:DigestValue>
+        <dsig:DigestValue>BnRdivbu6d/G6DwCrZdFdEJWmRU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="capaPresentacion.dll" size="428544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="capaPresentacion.dll" size="653312">
       <assemblyIdentity name="capaPresentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VK/PmC6qP0e+vJndzFZtyDg1wxY=</dsig:DigestValue>
+        <dsig:DigestValue>qY77ji1VinQHGJadWMCs3/oaOxw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="libreria.dll" size="352256">
+      <assemblyIdentity name="libreria" version="1.0.2.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>DYiqFNl5PjRyDz7IpPsGIeMi91I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -106,7 +118,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/GrHAN5ih/XdphdppyanDRJ2B/8=</dsig:DigestValue>
+        <dsig:DigestValue>hiCexruHbdUm6hE9XL254OzUzF4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="wd220net4.dll" size="548616">
+      <assemblyIdentity name="wd220net4" version="22.0.0.0" publicKeyToken="4173916B013FAA00" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>skGDvOTTo74t0swNB/rXPzXFBrw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -135,4 +159,4 @@
       <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
     </application>
   </compatibility>
-<publisherIdentity name="CN=DESKTOP-JT2O1E3\eg" issuerKeyHash="b16bd36e54b70a199a90e377def2f6a16320c77e" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>QEN6CZu26Oq8nv8fqXRzeV6RQtM=</DigestValue></Reference></SignedInfo><SignatureValue>UIScJvVBsPyZtN3wy6pXRyvRvL19M63q9qTYoDRvvj86Keo7oraGU2gx6hyShIcYUh3EROM/LxMqQFZPHiNhABDsCHdrVmr90rLr16Q1vipM+kR4eZRyUlTOhAMp7AQr7WYn//5xNs9VObaJqM6Cb5fWEXY2lJqaiopPRjstlLM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>s/Oymoj1csks7EYc6MyQVeyGmm/Ujnvv20Md8UCz9V8szscTzbIdsDFAy0YajuuvnkkK2A1oobwj7hE8Zt8na8oLrpFo8gug++IQ7N6CoZcgaeveSmG44eDC6+jsnat2kNcHcF0Ews+/YFIjCg38ORfQPLQbUcmeGBVmvZu5MwE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d342915e797374a91fff9ebceae8b69b097a4340" Description="" Url=""><as:assemblyIdentity name="POS_TZA.exe" version="1.0.0.2" publicKeyToken="24493abf6ce32455" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-JT2O1E3\eg</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>WXhpL/kw6YLRu3GVWUugI5n8rNI=</DigestValue></Reference></SignedInfo><SignatureValue>lSx1TJsaR2N8ipjZPUYVnGzrxjdKWuEFqry10B3z1d3Yq7oHkpJWpCmvL5/bqPAHplNjD+8mEJ5bZlpcM677p6V1PrbhesTm7h4bNW2KxErpOBVpSkMb3l5QGU5CHDeYyuQAFFRY2ORYFPgTbXlP12DcwJdIfpVNASvDZKb7cuY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>s/Oymoj1csks7EYc6MyQVeyGmm/Ujnvv20Md8UCz9V8szscTzbIdsDFAy0YajuuvnkkK2A1oobwj7hE8Zt8na8oLrpFo8gug++IQ7N6CoZcgaeveSmG44eDC6+jsnat2kNcHcF0Ews+/YFIjCg38ORfQPLQbUcmeGBVmvZu5MwE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQLYN8l4c+MrJHLgy2Xh99nTANBgkqhkiG9w0BAQUFADAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEoAVAAyAE8AMQBFADMAXABlAGcwHhcNMjAxMDIxMDYxMjI1WhcNMjExMDIxMTIxMjI1WjAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEoAVAAyAE8AMQBFADMAXABlAGcwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALPzspqI9XLJLOxGHOjMkFXshppv1I5779tDHfFAs/VfLM7HE82yHbAxQMtGGo7rr55JCtgNaKG8I+4RPGbfJ2vKC66RaPILoPviEOzegqGXIGnr3kphuOHgwuvo7J2rdpDXB3BdBMLPv2BSIwoN/DkX0Dy0G1HJnhgVZr2buTMBAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEALpsbx3G99MBCN8mjhDDC3AoxlMAZIqf0Rtz5gIf/VlSoi7Ce6pdBZdR8na14/2enwFFv840p5Wp+XhkLCCTTmpoMPnugnwc20k7qnGcDV9LTYYbln5PufO7owKTaRcfvGthPVkZP5DONPeuPqLOBmrvhRPXS0UN/lMUqTI0ci08=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+</asmv1:assembly>

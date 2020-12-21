@@ -149,7 +149,7 @@
             this.groupBox3.Size = new System.Drawing.Size(386, 339);
             this.groupBox3.TabIndex = 60;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Facturación:";
+            this.groupBox3.Text = "FACTURACION";
             // 
             // txtRangoFinal
             // 
@@ -332,7 +332,7 @@
             this.groupBox2.Size = new System.Drawing.Size(296, 228);
             this.groupBox2.TabIndex = 59;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Valores por defecto";
+            this.groupBox2.Text = "VALORES POR DEFECTO";
             // 
             // txtDescuento
             // 
@@ -465,7 +465,7 @@
             this.groupBox1.Size = new System.Drawing.Size(296, 105);
             this.groupBox1.TabIndex = 58;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Configuración Login";
+            this.groupBox1.Text = "SUPER ADMINISTRADOR";
             // 
             // txtPassRoot
             // 
@@ -480,6 +480,7 @@
             this.txtUserRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserRoot.Location = new System.Drawing.Point(130, 24);
             this.txtUserRoot.Name = "txtUserRoot";
+            this.txtUserRoot.ReadOnly = true;
             this.txtUserRoot.Size = new System.Drawing.Size(137, 26);
             this.txtUserRoot.TabIndex = 111;
             // 

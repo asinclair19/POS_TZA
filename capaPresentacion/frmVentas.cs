@@ -67,6 +67,9 @@ namespace capaPresentacion
             this.ttMensaje.SetToolTip(this.txtCantidad, "Ingrese cantidad a vender.");
             this.ttMensaje.SetToolTip(this.txtDescuento, "Ingrese porcentaje de descuento.");
             this.ttMensaje.SetToolTip(this.maskedDescuento, "Ingrese porcentaje de descuento.");
+            this.Top = 0;
+            this.Left = 0;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -94,8 +97,6 @@ namespace capaPresentacion
         //INICIO DE FORMULARIO
         private void frmVentas_Load(object sender, EventArgs e)
         {
-            this.Top = 0;
-            this.Left = 0;
             this.MostrarDatos();
             this.Habilitar(false);
             this.Botones();
@@ -147,7 +148,9 @@ namespace capaPresentacion
 
         private void txtStockActual_TextChanged(object sender, EventArgs e)
         {
-            txtCantidad.Maximum = Convert.ToInt32(txtStockActual.Text);
+            //if(this.txtStockActual.Text != string.Empty){
+            //    txtCantidad.Maximum = Convert.ToInt32(txtStockActual.Text);
+            //}
         }
 
         private void txtNombreProducto_TextChanged(object sender, EventArgs e)
@@ -183,6 +186,7 @@ namespace capaPresentacion
             this.txtTotalAPagar.Text = "0.00";
             this.txtISVTotal.Text = "0.00";
             this.txtGranTotal.Text = "0.00";
+            //this.groupVenta.Enabled = true;
         }
 
         //limpiar detalle de ingreso
@@ -197,6 +201,7 @@ namespace capaPresentacion
             this.txtPrecioVenta.Text = "0.00";
             this.txtDescuento.Text = "0.00";
             this.maskedDescuento.Text = string.Empty;
+            this.groupProducto.Enabled = true;
         }
 
         //habilitar cajas de texto
@@ -373,7 +378,10 @@ namespace capaPresentacion
             this.txtISVTotal.Text = Convert.ToDecimal(this.dgvVentas.CurrentRow.Cells["isv"].Value).ToString("#0.00#");
             this.txtGranTotal.Text = Convert.ToDecimal(this.dgvVentas.CurrentRow.Cells["total"].Value).ToString("#0.00#");
             this.MostrarDetalle();
+            //this.groupVenta.Enabled = false;
             this.tabControl1.SelectedIndex = 1;
+            this.LimpiarDetalle();
+            this.groupProducto.Enabled = false;
         }
 
         private void dgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -513,6 +521,14 @@ namespace capaPresentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            bool producto_duplicado = false;
+            foreach (DataRow row in dtDetalle.Rows)
+            {
+                if (Convert.ToString(row["nombre_producto"]) == Convert.ToString(this.txtNombreProducto.Text.Trim()))
+                {
+                    producto_duplicado = true;
+                }
+            }
             try
             {
                 //MensajeError("");
@@ -525,38 +541,37 @@ namespace capaPresentacion
                 }
                 else
                 {
-                    bool registrar = true;
-                    foreach (DataRow row in dtDetalle.Rows)
+                    if (producto_duplicado != true)
                     {
-                        if (Convert.ToString(row["nombre_producto"]) == Convert.ToString(this.txtNombreProducto.Text.Trim()))
+                        if (Convert.ToInt32(txtCantidad.Value) <= Convert.ToInt32(txtStockActual.Text))
                         {
-                            registrar = false;
-                            this.MensajeError("YA se encuentra el producto en el detalle.");
+                            decimal descuentoTotal = txtDescuento.Value * txtCantidad.Value;
+                            decimal subTotal = (Convert.ToDecimal(this.txtCantidad.Text) * (Convert.ToDecimal(this.txtPrecioVenta.Text))) - descuentoTotal;
+                            totalPagado = totalPagado + subTotal;
+                            ISVTotal = calcularTotalISV(txtIsv.Value, totalPagado);
+                            GranTotal = calcularGranTotalaPagar(totalPagado, ISVTotal);
+                            DataRow row = this.dtDetalle.NewRow();
+                            row["iddetalleingreso"] = Convert.ToInt32(this.txtIdDetalle.Text);
+                            row["nombre_producto"] = this.txtNombreProducto.Text;
+                            row["cantidad"] = Convert.ToInt32(this.txtCantidad.Text);
+                            row["precio_venta"] = Convert.ToDecimal(this.txtPrecioVenta.Text);
+                            row["descuento"] = descuentoTotal;
+                            row["Subtotal"] = subTotal;
+                            this.dtDetalle.Rows.Add(row);
+                            this.txtTotalAPagar.Text = totalPagado.ToString("#0.00#");
+                            this.txtISVTotal.Text = ISVTotal.ToString("#0.00#");
+                            this.txtGranTotal.Text = GranTotal.ToString("#0.00#");
+                            this.LimpiarDetalle();
+                        }
+                        else
+                        {
+                            MensajeError("No hay stock suficiente.");
                         }
                     }
-                    if (registrar && Convert.ToInt32(txtCantidad.Value) <= Convert.ToInt32(txtStockActual.Text))
-                    {
-                        decimal descuentoTotal = txtDescuento.Value * txtCantidad.Value;
-                        decimal subTotal = (Convert.ToDecimal(this.txtCantidad.Text) * (Convert.ToDecimal(this.txtPrecioVenta.Text))) - descuentoTotal;
-                        totalPagado = totalPagado + subTotal;
-                        ISVTotal = calcularTotalISV(txtIsv.Value, totalPagado);
-                        GranTotal = calcularGranTotalaPagar(totalPagado, ISVTotal);
-                        DataRow row = this.dtDetalle.NewRow();
-                        row["iddetalleingreso"] = Convert.ToInt32(this.txtIdDetalle.Text);
-                        row["nombre_producto"] = this.txtNombreProducto.Text;
-                        row["cantidad"] = Convert.ToInt32(this.txtCantidad.Text);
-                        row["precio_venta"] = Convert.ToDecimal(this.txtPrecioVenta.Text);
-                        row["descuento"] = descuentoTotal;
-                        row["Subtotal"] = subTotal;
-                        this.dtDetalle.Rows.Add(row);
-                        this.txtTotalAPagar.Text = totalPagado.ToString("#0.00#");
-                        this.txtISVTotal.Text = ISVTotal.ToString("#0.00#");
-                        this.txtGranTotal.Text = GranTotal.ToString("#0.00#");
-                        this.LimpiarDetalle();
-                    }
                     else {
-                        MensajeError("No hay stock suficiente.");
-                    } //final else hijo
+                        MensajeError("El producto que desea agregar ya esta en lista de venta!");
+                    }
+                     //final else hijo
                 } //final else padre   
             }
             catch (Exception ex)
@@ -567,21 +582,23 @@ namespace capaPresentacion
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int indiceFila = this.dgvDetallesVenta.CurrentCell.RowIndex;
-                DataRow row = this.dtDetalle.Rows[indiceFila];
-                this.totalPagado = this.totalPagado - Convert.ToDecimal(row["Subtotal"].ToString());
-                this.txtTotalAPagar.Text = totalPagado.ToString("#0.00#");
-                decimal interes = txtIsv.Value / 100;
-                this.txtISVTotal.Text = calcularTotalISV(interes, txtTotalAPagar.Value).ToString("#0.00#");
-                this.txtGranTotal.Text = calcularGranTotalaPagar(txtTotalAPagar.Value, txtISVTotal.Value).ToString("#0.00#");
-                this.dtDetalle.Rows.Remove(row);
-            }
-            catch (Exception)
-            {
-                MensajeError("No hay fila para remover.");
-                throw;
+            if (dgvDetallesVenta.RowCount != 0) { 
+                try
+                {
+                    int indiceFila = this.dgvDetallesVenta.CurrentCell.RowIndex;
+                    DataRow row = this.dtDetalle.Rows[indiceFila];
+                    this.totalPagado = this.totalPagado - Convert.ToDecimal(row["Subtotal"].ToString());
+                    this.txtTotalAPagar.Text = totalPagado.ToString("#0.00#");
+                    decimal interes = txtIsv.Value / 100;
+                    this.txtISVTotal.Text = calcularTotalISV(interes, txtTotalAPagar.Value).ToString("#0.00#");
+                    this.txtGranTotal.Text = calcularGranTotalaPagar(txtTotalAPagar.Value, txtISVTotal.Value).ToString("#0.00#");
+                    this.dtDetalle.Rows.Remove(row);
+                }
+                catch (Exception)
+                {
+                    MensajeError("No hay fila para remover.");
+                    throw;
+                }
             }
         }
 
@@ -667,6 +684,11 @@ namespace capaPresentacion
             frm.Fechainicial = textobuscar;
             frm.Fechafinal = textobuscar2;
             frm.ShowDialog();
+        }
+
+        private void txtCantidad_ValueChanged(object sender, EventArgs e)
+        {
+
         }
         //fin de metodo
 

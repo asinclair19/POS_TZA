@@ -37,6 +37,9 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nombre_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -55,9 +58,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.nombre_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
@@ -170,6 +170,26 @@
             this.dgvCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellContentClick);
             this.dgvCategoria.DoubleClick += new System.EventHandler(this.dgvCategoria_DoubleClick);
             // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
+            // nombre_categoria
+            // 
+            this.nombre_categoria.DataPropertyName = "nombre_categoria";
+            this.nombre_categoria.HeaderText = "NOMBRE";
+            this.nombre_categoria.Name = "nombre_categoria";
+            this.nombre_categoria.ReadOnly = true;
+            // 
+            // descripcion_categoria
+            // 
+            this.descripcion_categoria.DataPropertyName = "descripcion_categoria";
+            this.descripcion_categoria.HeaderText = "DESCRIPCION";
+            this.descripcion_categoria.Name = "descripcion_categoria";
+            this.descripcion_categoria.ReadOnly = true;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -233,6 +253,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(127, 26);
             this.txtCodigo.TabIndex = 101;
+            this.txtCodigo.Visible = false;
             // 
             // lblCodigo
             // 
@@ -242,6 +263,7 @@
             this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 10;
             this.lblCodigo.Text = "Codigo:";
+            this.lblCodigo.Visible = false;
             // 
             // btnCancelar
             // 
@@ -369,26 +391,6 @@
             this.ttMensaje.InitialDelay = 400;
             this.ttMensaje.IsBalloon = true;
             this.ttMensaje.ReshowDelay = 100;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            // 
-            // nombre_categoria
-            // 
-            this.nombre_categoria.DataPropertyName = "nombre_categoria";
-            this.nombre_categoria.HeaderText = "NOMBRE";
-            this.nombre_categoria.Name = "nombre_categoria";
-            this.nombre_categoria.ReadOnly = true;
-            // 
-            // descripcion_categoria
-            // 
-            this.descripcion_categoria.DataPropertyName = "descripcion_categoria";
-            this.descripcion_categoria.HeaderText = "DESCRIPCION";
-            this.descripcion_categoria.Name = "descripcion_categoria";
-            this.descripcion_categoria.ReadOnly = true;
             // 
             // frmCategorias
             // 

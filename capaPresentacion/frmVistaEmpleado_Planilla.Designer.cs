@@ -36,6 +36,12 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primer_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primer_apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.privilegios_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
@@ -81,6 +87,13 @@
             this.dgvEmpleado.AllowUserToDeleteRows = false;
             this.dgvEmpleado.AllowUserToOrderColumns = true;
             this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.identidad,
+            this.primer_nombre,
+            this.primer_apellido,
+            this.celular,
+            this.username,
+            this.privilegios_user});
             this.dgvEmpleado.Location = new System.Drawing.Point(9, 93);
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.ReadOnly = true;
@@ -134,6 +147,48 @@
             this.lblTitulo.Text = "EMPLEADOS";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
+            // identidad
+            // 
+            this.identidad.DataPropertyName = "identidad";
+            this.identidad.HeaderText = "IDENTIDAD";
+            this.identidad.Name = "identidad";
+            this.identidad.ReadOnly = true;
+            // 
+            // primer_nombre
+            // 
+            this.primer_nombre.DataPropertyName = "primer_nombre";
+            this.primer_nombre.HeaderText = "PRIMER NOMBRE";
+            this.primer_nombre.Name = "primer_nombre";
+            this.primer_nombre.ReadOnly = true;
+            // 
+            // primer_apellido
+            // 
+            this.primer_apellido.DataPropertyName = "primer_apellido";
+            this.primer_apellido.HeaderText = "PRIMER APELLIDO";
+            this.primer_apellido.Name = "primer_apellido";
+            this.primer_apellido.ReadOnly = true;
+            // 
+            // celular
+            // 
+            this.celular.DataPropertyName = "celular";
+            this.celular.HeaderText = "CELULAR";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.HeaderText = "USUARIO";
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            // 
+            // privilegios_user
+            // 
+            this.privilegios_user.DataPropertyName = "privilegios_user";
+            this.privilegios_user.HeaderText = "PERMISOS";
+            this.privilegios_user.Name = "privilegios_user";
+            this.privilegios_user.ReadOnly = true;
+            // 
             // frmVistaEmpleado_Planilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,5 +220,11 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn identidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primer_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primer_apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn celular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn privilegios_user;
     }
 }

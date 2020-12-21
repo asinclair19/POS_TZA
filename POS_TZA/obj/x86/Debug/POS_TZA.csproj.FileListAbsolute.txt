@@ -121,3 +121,8 @@ C:\Users\eg\Documents\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.Form1.resources
 C:\Users\eg\Documents\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.Main.resources
 C:\Users\eg\Documents\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.Properties.Resources.resources
 C:\Users\eg\Documents\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.csproj.GenerateResource.Cache
+C:\Users\eg\Documents\POS_TZA\POS_TZA\bin\Debug\POS_TZA.exe.manifest
+C:\Users\eg\Documents\POS_TZA\POS_TZA\bin\Debug\POS_TZA.application
+C:\Users\eg\Documents\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.TrustInfo.xml
+C:\Users\eg\Documents\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.exe.manifest
+C:\Users\eg\Documents\POS_TZA\POS_TZA\obj\x86\Debug\POS_TZA.application

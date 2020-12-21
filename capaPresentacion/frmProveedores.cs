@@ -63,7 +63,7 @@ namespace capaPresentacion
             this.txtNombre.ReadOnly = !valor;
             this.txtContacto.ReadOnly = !valor;
             this.txtCodigo.ReadOnly = !valor;
-
+            this.chkActivo.Checked = true;
         }
 
         //habilitar botones

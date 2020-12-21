@@ -36,6 +36,8 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.idproveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
@@ -80,6 +82,9 @@
             this.dgvProveedor.AllowUserToDeleteRows = false;
             this.dgvProveedor.AllowUserToOrderColumns = true;
             this.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idproveedor,
+            this.nombre_empresa});
             this.dgvProveedor.Location = new System.Drawing.Point(6, 67);
             this.dgvProveedor.Name = "dgvProveedor";
             this.dgvProveedor.ReadOnly = true;
@@ -130,6 +135,20 @@
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "PROVEEDORES";
             // 
+            // idproveedor
+            // 
+            this.idproveedor.DataPropertyName = "idproveedor";
+            this.idproveedor.HeaderText = "ID";
+            this.idproveedor.Name = "idproveedor";
+            this.idproveedor.ReadOnly = true;
+            // 
+            // nombre_empresa
+            // 
+            this.nombre_empresa.DataPropertyName = "nombre_empresa";
+            this.nombre_empresa.HeaderText = "NOMBRE PROVEEDOR";
+            this.nombre_empresa.Name = "nombre_empresa";
+            this.nombre_empresa.ReadOnly = true;
+            // 
             // frmVistaProveedor_Ingresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,5 +180,7 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idproveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_empresa;
     }
 }

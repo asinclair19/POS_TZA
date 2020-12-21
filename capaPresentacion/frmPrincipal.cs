@@ -69,6 +69,7 @@ namespace capaPresentacion
 
         public void Restricciones()
         {
+            //cadena de permisos: [inventario-compras-ventas-reportes-empleados-planilla-config-]
             string permisos = this.Privilegios;
             if (permisos.Contains("inventario"))
             {
@@ -152,7 +153,9 @@ namespace capaPresentacion
                 this.configGeneralToolStripMenuItem.Enabled = false;
             }
             this.loginToolStripIniciarSesion.Enabled = false;
+            this.btnEntrar.Enabled = false;
             this.toolStripCerrarSesion.Enabled = true;
+            this.btnSalir.Enabled = true;
             statusLblUsuario.Text = Nombre + " " + Apellido;
             
         }
@@ -244,6 +247,8 @@ namespace capaPresentacion
 
         private void salirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.CerrarFormularioHijosMDI();
+            this.Close();
             Application.Exit();
         }
 
@@ -324,6 +329,13 @@ namespace capaPresentacion
             frm.Show();
         }
 
+        private void CerrarFormularioHijosMDI() {
+            foreach (var frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+        }
+
         private void AbrirFrmLogin()
         {
             frmLogin frm = new frmLogin();
@@ -399,6 +411,7 @@ namespace capaPresentacion
             this.loginToolStripIniciarSesion.Enabled = true;
             this.toolStripCerrarSesion.Enabled = false;
             statusLblUsuario.Text = "root";
+            this.CerrarFormularioHijosMDI();
             this.AbrirFrmLogin();
         }
 
@@ -473,6 +486,31 @@ namespace capaPresentacion
             frm.MdiParent = this;
             frm.Show();
             frm.idEmpleado = Convert.ToInt32(this.Idempleado);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.HabilitarMnus(false);
+            this.loginToolStripIniciarSesion.Enabled = true;
+            this.btnEntrar.Enabled = true;
+            this.toolStripCerrarSesion.Enabled = false;
+            this.btnSalir.Enabled = false;
+            statusLblUsuario.Text = "root";
+            this.CerrarFormularioHijosMDI();
+            this.AbrirFrmLogin();
+            
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            this.AbrirFrmLogin();
+        }
+
+        private void btnCerrarSistema_Click(object sender, EventArgs e)
+        {
+            this.CerrarFormularioHijosMDI();
+            this.Close();
+            Application.Exit();
         }
 
 

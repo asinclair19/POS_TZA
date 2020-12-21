@@ -35,6 +35,9 @@
             this.lblNumElementos = new System.Windows.Forms.Label();
             this.chkEliminar = new System.Windows.Forms.CheckBox();
             this.dgvProveedor = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nombre_empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -55,9 +58,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.nombre_empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
@@ -141,6 +141,26 @@
             this.dgvProveedor.TabIndex = 106;
             this.dgvProveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedor_CellContentClick);
             this.dgvProveedor.DoubleClick += new System.EventHandler(this.dgvProveedor_DoubleClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
+            // nombre_empresa
+            // 
+            this.nombre_empresa.DataPropertyName = "nombre_empresa";
+            this.nombre_empresa.HeaderText = "NOMBRE";
+            this.nombre_empresa.Name = "nombre_empresa";
+            this.nombre_empresa.ReadOnly = true;
+            // 
+            // nombre_contacto
+            // 
+            this.nombre_contacto.DataPropertyName = "nombre_contacto";
+            this.nombre_contacto.HeaderText = "CONTACTO";
+            this.nombre_contacto.Name = "nombre_contacto";
+            this.nombre_contacto.ReadOnly = true;
             // 
             // btnImprimir
             // 
@@ -243,6 +263,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(127, 26);
             this.txtCodigo.TabIndex = 200;
+            this.txtCodigo.Visible = false;
             // 
             // lblCodigo
             // 
@@ -252,6 +273,7 @@
             this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 22;
             this.lblCodigo.Text = "Codigo:";
+            this.lblCodigo.Visible = false;
             // 
             // btnCancelar
             // 
@@ -368,26 +390,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            // 
-            // nombre_empresa
-            // 
-            this.nombre_empresa.DataPropertyName = "nombre_empresa";
-            this.nombre_empresa.HeaderText = "NOMBRE";
-            this.nombre_empresa.Name = "nombre_empresa";
-            this.nombre_empresa.ReadOnly = true;
-            // 
-            // nombre_contacto
-            // 
-            this.nombre_contacto.DataPropertyName = "nombre_contacto";
-            this.nombre_contacto.HeaderText = "CONTACTO";
-            this.nombre_contacto.Name = "nombre_contacto";
-            this.nombre_contacto.ReadOnly = true;
             // 
             // frmProveedores
             // 

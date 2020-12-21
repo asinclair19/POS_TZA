@@ -234,6 +234,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(127, 26);
             this.txtCodigo.TabIndex = 201;
+            this.txtCodigo.Visible = false;
             // 
             // lblCodigo
             // 
@@ -243,6 +244,7 @@
             this.lblCodigo.Size = new System.Drawing.Size(21, 13);
             this.lblCodigo.TabIndex = 10;
             this.lblCodigo.Text = "ID:";
+            this.lblCodigo.Visible = false;
             // 
             // btnCancelar
             // 

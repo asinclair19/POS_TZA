@@ -101,7 +101,7 @@ namespace capaPresentacion
                 this.Habilitar(false);
                 this.btnNuevo.Enabled = true;
                 this.btnGuardar.Enabled = false;
-                this.btnEditar.Enabled = true;
+                this.btnEditar.Enabled = false;
                 this.btnCancelar.Enabled = false;
             }
         }
@@ -379,6 +379,7 @@ namespace capaPresentacion
             this.cmbUnidad.SelectedValue = Convert.ToString(this.dgvProducto.CurrentRow.Cells["IDunidad"].Value);
 
             this.tabControl1.SelectedIndex = 1;
+            this.btnEditar.Enabled = true;
         }
 
         //Checkbox Eliminar

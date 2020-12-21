@@ -36,6 +36,13 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primer_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primer_apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.privilegios_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -82,13 +89,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primer_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primer_apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.privilegios_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
@@ -196,6 +196,54 @@
             this.dgvEmpleado.TabIndex = 106;
             this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
             this.dgvEmpleado.DoubleClick += new System.EventHandler(this.dgvEmpleado_DoubleClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
+            // identidad
+            // 
+            this.identidad.DataPropertyName = "identidad";
+            this.identidad.HeaderText = "IDENTIDAD";
+            this.identidad.Name = "identidad";
+            this.identidad.ReadOnly = true;
+            // 
+            // primer_nombre
+            // 
+            this.primer_nombre.DataPropertyName = "primer_nombre";
+            this.primer_nombre.HeaderText = "NOMBRE";
+            this.primer_nombre.Name = "primer_nombre";
+            this.primer_nombre.ReadOnly = true;
+            // 
+            // primer_apellido
+            // 
+            this.primer_apellido.DataPropertyName = "primer_apellido";
+            this.primer_apellido.HeaderText = "APELLIDO";
+            this.primer_apellido.Name = "primer_apellido";
+            this.primer_apellido.ReadOnly = true;
+            // 
+            // celular
+            // 
+            this.celular.DataPropertyName = "celular";
+            this.celular.HeaderText = "CELULAR";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.HeaderText = "USUARIO";
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            // 
+            // privilegios_user
+            // 
+            this.privilegios_user.DataPropertyName = "privilegios_user";
+            this.privilegios_user.HeaderText = "PERMISOS";
+            this.privilegios_user.Name = "privilegios_user";
+            this.privilegios_user.ReadOnly = true;
             // 
             // btnBuscar
             // 
@@ -608,6 +656,7 @@
             this.txtIdempleado.ReadOnly = true;
             this.txtIdempleado.Size = new System.Drawing.Size(103, 26);
             this.txtIdempleado.TabIndex = 201;
+            this.txtIdempleado.Visible = false;
             // 
             // lblIDProducto
             // 
@@ -617,6 +666,7 @@
             this.lblIDProducto.Size = new System.Drawing.Size(71, 13);
             this.lblIDProducto.TabIndex = 10;
             this.lblIDProducto.Text = "ID Empleado:";
+            this.lblIDProducto.Visible = false;
             // 
             // txtNombre
             // 
@@ -714,54 +764,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            // 
-            // identidad
-            // 
-            this.identidad.DataPropertyName = "identidad";
-            this.identidad.HeaderText = "IDENTIDAD";
-            this.identidad.Name = "identidad";
-            this.identidad.ReadOnly = true;
-            // 
-            // primer_nombre
-            // 
-            this.primer_nombre.DataPropertyName = "primer_nombre";
-            this.primer_nombre.HeaderText = "NOMBRE";
-            this.primer_nombre.Name = "primer_nombre";
-            this.primer_nombre.ReadOnly = true;
-            // 
-            // primer_apellido
-            // 
-            this.primer_apellido.DataPropertyName = "primer_apellido";
-            this.primer_apellido.HeaderText = "APELLIDO";
-            this.primer_apellido.Name = "primer_apellido";
-            this.primer_apellido.ReadOnly = true;
-            // 
-            // celular
-            // 
-            this.celular.DataPropertyName = "celular";
-            this.celular.HeaderText = "CELULAR";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            // 
-            // username
-            // 
-            this.username.DataPropertyName = "username";
-            this.username.HeaderText = "USUARIO";
-            this.username.Name = "username";
-            this.username.ReadOnly = true;
-            // 
-            // privilegios_user
-            // 
-            this.privilegios_user.DataPropertyName = "privilegios_user";
-            this.privilegios_user.HeaderText = "PERMISOS";
-            this.privilegios_user.Name = "privilegios_user";
-            this.privilegios_user.ReadOnly = true;
             // 
             // frmEmpleados
             // 

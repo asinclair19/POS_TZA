@@ -54,6 +54,7 @@ namespace capaPresentacion
             this.txtNombre.ReadOnly = !valor;
             this.txtDescripcion.ReadOnly = !valor;
             this.txtCodigo.ReadOnly = !valor;
+            this.chkActiva.Checked = true;
 
         }
 

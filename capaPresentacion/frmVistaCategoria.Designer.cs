@@ -36,6 +36,8 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.nombre_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -71,6 +73,9 @@
             this.dgvCategoria.AllowUserToDeleteRows = false;
             this.dgvCategoria.AllowUserToOrderColumns = true;
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre_categoria,
+            this.descripcion_categoria});
             this.dgvCategoria.Location = new System.Drawing.Point(9, 60);
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.ReadOnly = true;
@@ -130,6 +135,20 @@
             this.lblTitulo.TabIndex = 4;
             this.lblTitulo.Text = "CATEGORIAS";
             // 
+            // nombre_categoria
+            // 
+            this.nombre_categoria.DataPropertyName = "nombre_categoria";
+            this.nombre_categoria.HeaderText = "NOMBRE";
+            this.nombre_categoria.Name = "nombre_categoria";
+            this.nombre_categoria.ReadOnly = true;
+            // 
+            // descripcion_categoria
+            // 
+            this.descripcion_categoria.DataPropertyName = "descripcion_categoria";
+            this.descripcion_categoria.HeaderText = "DESCRIPCION";
+            this.descripcion_categoria.Name = "descripcion_categoria";
+            this.descripcion_categoria.ReadOnly = true;
+            // 
             // frmVistaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +180,8 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion_categoria;
 
     }
 }

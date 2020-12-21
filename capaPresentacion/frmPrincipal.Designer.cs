@@ -51,8 +51,6 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.stockDeProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuHerramientas = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,10 +61,6 @@
             this.tileHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arrangeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.iconConfig = new System.Windows.Forms.ToolStripButton();
             this.iconInventario = new System.Windows.Forms.ToolStripSplitButton();
@@ -81,6 +75,8 @@
             this.iconMenuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.iconReportes = new System.Windows.Forms.ToolStripSplitButton();
             this.iconMenuStockProducto = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeIngresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeVentasPorFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iconEmpleados = new System.Windows.Forms.ToolStripButton();
             this.iconPlanilla = new System.Windows.Forms.ToolStripButton();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
@@ -90,8 +86,9 @@
             this.statusLblTiempo = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timerTiempo = new System.Windows.Forms.Timer(this.components);
-            this.reporteDeIngresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeVentasPorFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.btnCerrarSistema = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -106,10 +103,8 @@
             this.MnuMantenimiento,
             this.MnuVentas,
             this.MnuReportes,
-            this.MnuHerramientas,
             this.viewMenu,
-            this.windowsMenu,
-            this.helpMenu});
+            this.windowsMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -285,21 +280,6 @@
             this.stockDeProductoToolStripMenuItem.Text = "Stock de Producto";
             this.stockDeProductoToolStripMenuItem.Click += new System.EventHandler(this.stockDeProductoToolStripMenuItem_Click);
             // 
-            // MnuHerramientas
-            // 
-            this.MnuHerramientas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionsToolStripMenuItem});
-            this.MnuHerramientas.Name = "MnuHerramientas";
-            this.MnuHerramientas.Size = new System.Drawing.Size(90, 20);
-            this.MnuHerramientas.Text = "&Herramientas";
-            // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.Image = global::capaPresentacion.Properties.Resources.options;
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
-            this.optionsToolStripMenuItem.Text = "BD";
-            // 
             // viewMenu
             // 
             this.viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -384,35 +364,6 @@
             this.arrangeIconsToolStripMenuItem.Text = "&Organizar iconos";
             this.arrangeIconsToolStripMenuItem.Click += new System.EventHandler(this.ArrangeIconsToolStripMenuItem_Click);
             // 
-            // helpMenu
-            // 
-            this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.indexToolStripMenuItem,
-            this.toolStripSeparator8,
-            this.aboutToolStripMenuItem});
-            this.helpMenu.Name = "helpMenu";
-            this.helpMenu.Size = new System.Drawing.Size(53, 20);
-            this.helpMenu.Text = "Ay&uda";
-            // 
-            // indexToolStripMenuItem
-            // 
-            this.indexToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indexToolStripMenuItem.Image")));
-            this.indexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.indexToolStripMenuItem.Text = "&Índice";
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(144, 6);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.aboutToolStripMenuItem.Text = "&Acerca de... ...";
-            // 
             // toolStrip
             // 
             this.toolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -495,14 +446,14 @@
             // iconMenuIngresos
             // 
             this.iconMenuIngresos.Name = "iconMenuIngresos";
-            this.iconMenuIngresos.Size = new System.Drawing.Size(152, 22);
+            this.iconMenuIngresos.Size = new System.Drawing.Size(139, 22);
             this.iconMenuIngresos.Text = "Ingresos";
             this.iconMenuIngresos.Click += new System.EventHandler(this.iconMenuIngresos_Click);
             // 
             // iconMenuProveedores
             // 
             this.iconMenuProveedores.Name = "iconMenuProveedores";
-            this.iconMenuProveedores.Size = new System.Drawing.Size(152, 22);
+            this.iconMenuProveedores.Size = new System.Drawing.Size(139, 22);
             this.iconMenuProveedores.Text = "Proveedores";
             this.iconMenuProveedores.Click += new System.EventHandler(this.iconMenuProveedores_Click);
             // 
@@ -555,6 +506,20 @@
             this.iconMenuStockProducto.Size = new System.Drawing.Size(241, 22);
             this.iconMenuStockProducto.Text = "Stock de Producto";
             this.iconMenuStockProducto.Click += new System.EventHandler(this.iconMenuStockProducto_Click);
+            // 
+            // reporteDeIngresosToolStripMenuItem
+            // 
+            this.reporteDeIngresosToolStripMenuItem.Name = "reporteDeIngresosToolStripMenuItem";
+            this.reporteDeIngresosToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.reporteDeIngresosToolStripMenuItem.Text = "Reporte de Ingresos - Por Fecha";
+            this.reporteDeIngresosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeIngresosToolStripMenuItem_Click);
+            // 
+            // reporteDeVentasPorFechaToolStripMenuItem
+            // 
+            this.reporteDeVentasPorFechaToolStripMenuItem.Name = "reporteDeVentasPorFechaToolStripMenuItem";
+            this.reporteDeVentasPorFechaToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.reporteDeVentasPorFechaToolStripMenuItem.Text = "Reporte de Ventas - Por Fecha";
+            this.reporteDeVentasPorFechaToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVentasPorFechaToolStripMenuItem_Click);
             // 
             // iconEmpleados
             // 
@@ -624,27 +589,61 @@
             this.timerTiempo.Interval = 1000;
             this.timerTiempo.Tick += new System.EventHandler(this.timerTiempo_Tick);
             // 
-            // reporteDeIngresosToolStripMenuItem
+            // btnSalir
             // 
-            this.reporteDeIngresosToolStripMenuItem.Name = "reporteDeIngresosToolStripMenuItem";
-            this.reporteDeIngresosToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.reporteDeIngresosToolStripMenuItem.Text = "Reporte de Ingresos - Por Fecha";
-            this.reporteDeIngresosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeIngresosToolStripMenuItem_Click);
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Enabled = false;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.Location = new System.Drawing.Point(1088, 0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(122, 23);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Cerrar Sesión";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // reporteDeVentasPorFechaToolStripMenuItem
+            // btnEntrar
             // 
-            this.reporteDeVentasPorFechaToolStripMenuItem.Name = "reporteDeVentasPorFechaToolStripMenuItem";
-            this.reporteDeVentasPorFechaToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.reporteDeVentasPorFechaToolStripMenuItem.Text = "Reporte de Ventas - Por Fecha";
-            this.reporteDeVentasPorFechaToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVentasPorFechaToolStripMenuItem_Click);
+            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEntrar.BackColor = System.Drawing.Color.Lime;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEntrar.Location = new System.Drawing.Point(960, 0);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(122, 23);
+            this.btnEntrar.TabIndex = 5;
+            this.btnEntrar.Text = "Iniciar Sesión";
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            // 
+            // btnCerrarSistema
+            // 
+            this.btnCerrarSistema.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarSistema.BackColor = System.Drawing.Color.Red;
+            this.btnCerrarSistema.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSistema.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrarSistema.Location = new System.Drawing.Point(832, 0);
+            this.btnCerrarSistema.Name = "btnCerrarSistema";
+            this.btnCerrarSistema.Size = new System.Drawing.Size(122, 23);
+            this.btnCerrarSistema.TabIndex = 7;
+            this.btnCerrarSistema.Text = "Cerrar Sistema";
+            this.btnCerrarSistema.UseVisualStyleBackColor = false;
+            this.btnCerrarSistema.Click += new System.EventHandler(this.btnCerrarSistema_Click);
             // 
             // frmPrincipal
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1322, 733);
+            this.Controls.Add(this.btnCerrarSistema);
+            this.Controls.Add(this.btnEntrar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmPrincipal";
@@ -668,22 +667,16 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tileHorizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMenu;
         private System.Windows.Forms.ToolStripMenuItem toolBarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statusBarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem MnuHerramientas;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem windowsMenu;
         private System.Windows.Forms.ToolStripMenuItem newWindowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cascadeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tileVerticalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arrangeIconsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpMenu;
-        private System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem MnuSisVentas;
         private System.Windows.Forms.ToolStripMenuItem salirDelSistemaToolStripMenuItem;
@@ -727,6 +720,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripCerrarSesion;
         private System.Windows.Forms.ToolStripMenuItem reporteDeIngresosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeVentasPorFechaToolStripMenuItem;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Button btnCerrarSistema;
     }
 }
 

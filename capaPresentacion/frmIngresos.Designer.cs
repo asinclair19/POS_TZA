@@ -40,6 +40,16 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnAnular = new System.Windows.Forms.Button();
             this.dgvIngresos = new System.Windows.Forms.DataGridView();
+            this.Anular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num_comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isv_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblFechaInicial = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -84,16 +94,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Anular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.num_comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isv_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngresos)).BeginInit();
@@ -252,6 +252,75 @@
             this.dgvIngresos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngresos_CellContentClick);
             this.dgvIngresos.DoubleClick += new System.EventHandler(this.dgvIngresos_DoubleClick);
             // 
+            // Anular
+            // 
+            this.Anular.HeaderText = "Anular";
+            this.Anular.Name = "Anular";
+            this.Anular.ReadOnly = true;
+            // 
+            // empleado
+            // 
+            this.empleado.DataPropertyName = "empleado";
+            this.empleado.HeaderText = "EMPLEADO";
+            this.empleado.Name = "empleado";
+            this.empleado.ReadOnly = true;
+            // 
+            // proveedor
+            // 
+            this.proveedor.DataPropertyName = "proveedor";
+            this.proveedor.HeaderText = "PROVEEDOR";
+            this.proveedor.Name = "proveedor";
+            this.proveedor.ReadOnly = true;
+            // 
+            // fecha_ingreso
+            // 
+            this.fecha_ingreso.DataPropertyName = "fecha_ingreso";
+            this.fecha_ingreso.HeaderText = "FECHA INGRESO";
+            this.fecha_ingreso.Name = "fecha_ingreso";
+            this.fecha_ingreso.ReadOnly = true;
+            // 
+            // tipo_comprobante
+            // 
+            this.tipo_comprobante.DataPropertyName = "tipo_comprobante";
+            this.tipo_comprobante.HeaderText = "COMPROBANTE";
+            this.tipo_comprobante.Name = "tipo_comprobante";
+            this.tipo_comprobante.ReadOnly = true;
+            // 
+            // num_comprobante
+            // 
+            this.num_comprobante.DataPropertyName = "num_comprobante";
+            this.num_comprobante.HeaderText = "NUMERO";
+            this.num_comprobante.Name = "num_comprobante";
+            this.num_comprobante.ReadOnly = true;
+            // 
+            // isv_ingreso
+            // 
+            this.isv_ingreso.DataPropertyName = "isv_ingreso";
+            this.isv_ingreso.HeaderText = "% ISV";
+            this.isv_ingreso.Name = "isv_ingreso";
+            this.isv_ingreso.ReadOnly = true;
+            // 
+            // total_ingreso
+            // 
+            this.total_ingreso.DataPropertyName = "total_ingreso";
+            this.total_ingreso.HeaderText = "SUBTOTAL";
+            this.total_ingreso.Name = "total_ingreso";
+            this.total_ingreso.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "ESTADO";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "TOTAL";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -328,10 +397,11 @@
             // 
             // txtIdProveedor
             // 
-            this.txtIdProveedor.Location = new System.Drawing.Point(464, 113);
+            this.txtIdProveedor.Location = new System.Drawing.Point(416, 11);
             this.txtIdProveedor.Name = "txtIdProveedor";
             this.txtIdProveedor.Size = new System.Drawing.Size(36, 20);
             this.txtIdProveedor.TabIndex = 300;
+            this.txtIdProveedor.Visible = false;
             // 
             // txtIsv
             // 
@@ -340,7 +410,7 @@
             this.txtIsv.Mask = "00";
             this.txtIsv.Name = "txtIsv";
             this.txtIsv.PromptChar = '%';
-            this.txtIsv.Size = new System.Drawing.Size(164, 26);
+            this.txtIsv.Size = new System.Drawing.Size(209, 26);
             this.txtIsv.TabIndex = 206;
             // 
             // label12
@@ -367,7 +437,7 @@
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaIngreso.Location = new System.Drawing.Point(285, 37);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
-            this.dtpFechaIngreso.Size = new System.Drawing.Size(127, 26);
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(209, 26);
             this.dtpFechaIngreso.TabIndex = 201;
             // 
             // groupProducto
@@ -398,7 +468,7 @@
             // txtPrecioCompra
             // 
             this.txtPrecioCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioCompra.Location = new System.Drawing.Point(95, 104);
+            this.txtPrecioCompra.Location = new System.Drawing.Point(95, 115);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(157, 26);
             this.txtPrecioCompra.TabIndex = 210;
@@ -407,7 +477,7 @@
             // txtStockInicial
             // 
             this.txtStockInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStockInicial.Location = new System.Drawing.Point(94, 68);
+            this.txtStockInicial.Location = new System.Drawing.Point(94, 79);
             this.txtStockInicial.Name = "txtStockInicial";
             this.txtStockInicial.Size = new System.Drawing.Size(157, 26);
             this.txtStockInicial.TabIndex = 209;
@@ -416,15 +486,16 @@
             // txtIdProducto
             // 
             this.txtIdProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdProducto.Location = new System.Drawing.Point(326, 31);
+            this.txtIdProducto.Location = new System.Drawing.Point(193, 10);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(59, 26);
             this.txtIdProducto.TabIndex = 301;
+            this.txtIdProducto.Visible = false;
             // 
             // txtPrecioVenta
             // 
             this.txtPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioVenta.Location = new System.Drawing.Point(95, 140);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(95, 151);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(157, 26);
             this.txtPrecioVenta.TabIndex = 211;
@@ -460,7 +531,7 @@
             // 
             this.dtpFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVencimiento.Location = new System.Drawing.Point(361, 104);
+            this.dtpFechaVencimiento.Location = new System.Drawing.Point(361, 115);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
             this.dtpFechaVencimiento.Size = new System.Drawing.Size(118, 26);
             this.dtpFechaVencimiento.TabIndex = 213;
@@ -468,7 +539,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(263, 107);
+            this.label10.Location = new System.Drawing.Point(263, 118);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 13);
             this.label10.TabIndex = 53;
@@ -478,7 +549,7 @@
             // 
             this.dtpFechaProduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaProduccion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaProduccion.Location = new System.Drawing.Point(361, 67);
+            this.dtpFechaProduccion.Location = new System.Drawing.Point(361, 78);
             this.dtpFechaProduccion.Name = "dtpFechaProduccion";
             this.dtpFechaProduccion.Size = new System.Drawing.Size(118, 26);
             this.dtpFechaProduccion.TabIndex = 212;
@@ -486,7 +557,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(263, 71);
+            this.label9.Location = new System.Drawing.Point(263, 82);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 13);
             this.label9.TabIndex = 51;
@@ -495,7 +566,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 143);
+            this.label7.Location = new System.Drawing.Point(8, 154);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 49;
@@ -504,7 +575,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 107);
+            this.label8.Location = new System.Drawing.Point(8, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 13);
             this.label8.TabIndex = 47;
@@ -513,7 +584,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 70);
+            this.label6.Location = new System.Drawing.Point(8, 81);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 45;
@@ -523,7 +594,7 @@
             // 
             this.btnCargarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargarProducto.Image = global::capaPresentacion.Properties.Resources.search;
-            this.btnCargarProducto.Location = new System.Drawing.Point(266, 24);
+            this.btnCargarProducto.Location = new System.Drawing.Point(443, 40);
             this.btnCargarProducto.Name = "btnCargarProducto";
             this.btnCargarProducto.Size = new System.Drawing.Size(36, 33);
             this.btnCargarProducto.TabIndex = 207;
@@ -533,15 +604,15 @@
             // txtNombreProducto
             // 
             this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.Location = new System.Drawing.Point(94, 31);
+            this.txtNombreProducto.Location = new System.Drawing.Point(94, 42);
             this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Size = new System.Drawing.Size(157, 26);
+            this.txtNombreProducto.Size = new System.Drawing.Size(343, 26);
             this.txtNombreProducto.TabIndex = 208;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 34);
+            this.label5.Location = new System.Drawing.Point(8, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 42;
@@ -579,9 +650,8 @@
             // 
             this.txtNumComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumComprobante.Location = new System.Drawing.Point(84, 113);
-            this.txtNumComprobante.Mask = "9999999999";
+            this.txtNumComprobante.Mask = "999999999999999";
             this.txtNumComprobante.Name = "txtNumComprobante";
-            this.txtNumComprobante.PromptChar = '#';
             this.txtNumComprobante.Size = new System.Drawing.Size(130, 26);
             this.txtNumComprobante.TabIndex = 205;
             // 
@@ -623,7 +693,7 @@
             this.btnCargarProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCargarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargarProveedor.Image = global::capaPresentacion.Properties.Resources.search;
-            this.btnCargarProveedor.Location = new System.Drawing.Point(464, 69);
+            this.btnCargarProveedor.Location = new System.Drawing.Point(458, 74);
             this.btnCargarProveedor.Name = "btnCargarProveedor";
             this.btnCargarProveedor.Size = new System.Drawing.Size(36, 33);
             this.btnCargarProveedor.TabIndex = 203;
@@ -635,7 +705,7 @@
             this.txtNombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreProveedor.Location = new System.Drawing.Point(285, 76);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(164, 26);
+            this.txtNombreProveedor.Size = new System.Drawing.Size(167, 26);
             this.txtNombreProveedor.TabIndex = 204;
             // 
             // label2
@@ -716,75 +786,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // Anular
-            // 
-            this.Anular.HeaderText = "Anular";
-            this.Anular.Name = "Anular";
-            this.Anular.ReadOnly = true;
-            // 
-            // empleado
-            // 
-            this.empleado.DataPropertyName = "empleado";
-            this.empleado.HeaderText = "EMPLEADO";
-            this.empleado.Name = "empleado";
-            this.empleado.ReadOnly = true;
-            // 
-            // proveedor
-            // 
-            this.proveedor.DataPropertyName = "proveedor";
-            this.proveedor.HeaderText = "PROVEEDOR";
-            this.proveedor.Name = "proveedor";
-            this.proveedor.ReadOnly = true;
-            // 
-            // fecha_ingreso
-            // 
-            this.fecha_ingreso.DataPropertyName = "fecha_ingreso";
-            this.fecha_ingreso.HeaderText = "FECHA INGRESO";
-            this.fecha_ingreso.Name = "fecha_ingreso";
-            this.fecha_ingreso.ReadOnly = true;
-            // 
-            // tipo_comprobante
-            // 
-            this.tipo_comprobante.DataPropertyName = "tipo_comprobante";
-            this.tipo_comprobante.HeaderText = "COMPROBANTE";
-            this.tipo_comprobante.Name = "tipo_comprobante";
-            this.tipo_comprobante.ReadOnly = true;
-            // 
-            // num_comprobante
-            // 
-            this.num_comprobante.DataPropertyName = "num_comprobante";
-            this.num_comprobante.HeaderText = "NUMERO";
-            this.num_comprobante.Name = "num_comprobante";
-            this.num_comprobante.ReadOnly = true;
-            // 
-            // isv_ingreso
-            // 
-            this.isv_ingreso.DataPropertyName = "isv_ingreso";
-            this.isv_ingreso.HeaderText = "% ISV";
-            this.isv_ingreso.Name = "isv_ingreso";
-            this.isv_ingreso.ReadOnly = true;
-            // 
-            // total_ingreso
-            // 
-            this.total_ingreso.DataPropertyName = "total_ingreso";
-            this.total_ingreso.HeaderText = "SUBTOTAL";
-            this.total_ingreso.Name = "total_ingreso";
-            this.total_ingreso.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "ESTADO";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            // 
-            // total
-            // 
-            this.total.DataPropertyName = "total";
-            this.total.HeaderText = "TOTAL";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
             // 
             // frmIngresos
             // 

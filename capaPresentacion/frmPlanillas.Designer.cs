@@ -41,6 +41,26 @@
             this.lblNumElementos = new System.Windows.Forms.Label();
             this.chkAnular = new System.Windows.Forms.CheckBox();
             this.dgvPagos = new System.Windows.Forms.DataGridView();
+            this.Anular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idpago_planilla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.concepto_de = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comp_transferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_bruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seguro_social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_neto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.impuesto_renta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.neto_a_pagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salario_base = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargo_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activo_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtSalario = new System.Windows.Forms.NumericUpDown();
             this.btnBuscarEmpleado = new System.Windows.Forms.Button();
@@ -87,26 +107,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Anular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idpago_planilla = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.concepto_de = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comp_transferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total_bruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.seguro_social = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total_neto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.impuesto_renta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.neto_a_pagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salario_base = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargo_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activo_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
@@ -288,6 +288,152 @@
             this.dgvPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPagos_CellContentClick);
             this.dgvPagos.DoubleClick += new System.EventHandler(this.dgvPagos_DoubleClick);
             // 
+            // Anular
+            // 
+            this.Anular.HeaderText = "Anular";
+            this.Anular.Name = "Anular";
+            this.Anular.ReadOnly = true;
+            // 
+            // idpago_planilla
+            // 
+            this.idpago_planilla.DataPropertyName = "idpago_planilla";
+            this.idpago_planilla.HeaderText = "ID PAGO";
+            this.idpago_planilla.Name = "idpago_planilla";
+            this.idpago_planilla.ReadOnly = true;
+            // 
+            // fecha_pago
+            // 
+            this.fecha_pago.DataPropertyName = "fecha_pago";
+            this.fecha_pago.HeaderText = "FECHA PAGO";
+            this.fecha_pago.Name = "fecha_pago";
+            this.fecha_pago.ReadOnly = true;
+            // 
+            // concepto_de
+            // 
+            this.concepto_de.DataPropertyName = "concepto_de";
+            this.concepto_de.HeaderText = "POR CONCEPTO DE";
+            this.concepto_de.Name = "concepto_de";
+            this.concepto_de.ReadOnly = true;
+            this.concepto_de.Visible = false;
+            // 
+            // tipo_pago
+            // 
+            this.tipo_pago.DataPropertyName = "tipo_pago";
+            this.tipo_pago.HeaderText = "TIPO PAGO";
+            this.tipo_pago.Name = "tipo_pago";
+            this.tipo_pago.ReadOnly = true;
+            // 
+            // comp_transferencia
+            // 
+            this.comp_transferencia.DataPropertyName = "comp_transferencia";
+            this.comp_transferencia.HeaderText = "COMPROBANTE";
+            this.comp_transferencia.Name = "comp_transferencia";
+            this.comp_transferencia.ReadOnly = true;
+            // 
+            // descripcion_pago
+            // 
+            this.descripcion_pago.DataPropertyName = "descripcion_pago";
+            this.descripcion_pago.HeaderText = "DESCRIPCION";
+            this.descripcion_pago.Name = "descripcion_pago";
+            this.descripcion_pago.ReadOnly = true;
+            this.descripcion_pago.Visible = false;
+            // 
+            // tipo_importe
+            // 
+            this.tipo_importe.DataPropertyName = "tipo_importe";
+            this.tipo_importe.HeaderText = "IMPORTE";
+            this.tipo_importe.Name = "tipo_importe";
+            this.tipo_importe.ReadOnly = true;
+            // 
+            // total_bruto
+            // 
+            this.total_bruto.DataPropertyName = "total_bruto";
+            this.total_bruto.HeaderText = "TOTAL BRUTO";
+            this.total_bruto.Name = "total_bruto";
+            this.total_bruto.ReadOnly = true;
+            // 
+            // seguro_social
+            // 
+            this.seguro_social.DataPropertyName = "seguro_social";
+            this.seguro_social.HeaderText = "SEGURO SOCIAL";
+            this.seguro_social.Name = "seguro_social";
+            this.seguro_social.ReadOnly = true;
+            // 
+            // total_neto
+            // 
+            this.total_neto.DataPropertyName = "total_neto";
+            this.total_neto.HeaderText = "TOTAL NETO";
+            this.total_neto.Name = "total_neto";
+            this.total_neto.ReadOnly = true;
+            // 
+            // impuesto_renta
+            // 
+            this.impuesto_renta.DataPropertyName = "impuesto_renta";
+            this.impuesto_renta.HeaderText = "IMPUESTO RENTA";
+            this.impuesto_renta.Name = "impuesto_renta";
+            this.impuesto_renta.ReadOnly = true;
+            // 
+            // neto_a_pagar
+            // 
+            this.neto_a_pagar.DataPropertyName = "neto_a_pagar";
+            this.neto_a_pagar.HeaderText = "NETO PAGAR";
+            this.neto_a_pagar.Name = "neto_a_pagar";
+            this.neto_a_pagar.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "ESTADO";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Visible = false;
+            // 
+            // IDempleado
+            // 
+            this.IDempleado.DataPropertyName = "IDempleado";
+            this.IDempleado.HeaderText = "EMPLEADO ID";
+            this.IDempleado.Name = "IDempleado";
+            this.IDempleado.ReadOnly = true;
+            this.IDempleado.Visible = false;
+            // 
+            // identidad
+            // 
+            this.identidad.DataPropertyName = "identidad";
+            this.identidad.HeaderText = "IDENTIDAD_";
+            this.identidad.Name = "identidad";
+            this.identidad.ReadOnly = true;
+            // 
+            // empleado
+            // 
+            this.empleado.DataPropertyName = "empleado";
+            this.empleado.HeaderText = "EMPLEADO_";
+            this.empleado.Name = "empleado";
+            this.empleado.ReadOnly = true;
+            // 
+            // salario_base
+            // 
+            this.salario_base.DataPropertyName = "salario_base";
+            this.salario_base.HeaderText = "SALARIO BASE";
+            this.salario_base.Name = "salario_base";
+            this.salario_base.ReadOnly = true;
+            this.salario_base.Visible = false;
+            // 
+            // cargo_empleado
+            // 
+            this.cargo_empleado.DataPropertyName = "cargo_empleado";
+            this.cargo_empleado.HeaderText = "CARGO";
+            this.cargo_empleado.Name = "cargo_empleado";
+            this.cargo_empleado.ReadOnly = true;
+            this.cargo_empleado.Visible = false;
+            // 
+            // activo_empleado
+            // 
+            this.activo_empleado.DataPropertyName = "activo_empleado";
+            this.activo_empleado.HeaderText = "ACTIVO";
+            this.activo_empleado.Name = "activo_empleado";
+            this.activo_empleado.ReadOnly = true;
+            this.activo_empleado.Visible = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
@@ -322,7 +468,7 @@
             this.txtSalario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtSalario.DecimalPlaces = 2;
             this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalario.Location = new System.Drawing.Point(111, 141);
+            this.txtSalario.Location = new System.Drawing.Point(111, 149);
             this.txtSalario.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -339,9 +485,9 @@
             this.btnBuscarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarEmpleado.Image = global::capaPresentacion.Properties.Resources.search;
             this.btnBuscarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEmpleado.Location = new System.Drawing.Point(220, 26);
+            this.btnBuscarEmpleado.Location = new System.Drawing.Point(14, 34);
             this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
-            this.btnBuscarEmpleado.Size = new System.Drawing.Size(61, 30);
+            this.btnBuscarEmpleado.Size = new System.Drawing.Size(267, 30);
             this.btnBuscarEmpleado.TabIndex = 200;
             this.btnBuscarEmpleado.Text = "Buscar";
             this.btnBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -648,7 +794,7 @@
             this.txtIdentidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtIdentidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdentidad.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtIdentidad.Location = new System.Drawing.Point(111, 68);
+            this.txtIdentidad.Location = new System.Drawing.Point(111, 76);
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Size = new System.Drawing.Size(170, 26);
             this.txtIdentidad.TabIndex = 202;
@@ -658,7 +804,7 @@
             this.chkActivo.AutoSize = true;
             this.chkActivo.Checked = true;
             this.chkActivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkActivo.Location = new System.Drawing.Point(111, 214);
+            this.chkActivo.Location = new System.Drawing.Point(111, 222);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(36, 17);
             this.chkActivo.TabIndex = 206;
@@ -668,7 +814,7 @@
             // lblActivo
             // 
             this.lblActivo.AutoSize = true;
-            this.lblActivo.Location = new System.Drawing.Point(11, 215);
+            this.lblActivo.Location = new System.Drawing.Point(11, 223);
             this.lblActivo.Name = "lblActivo";
             this.lblActivo.Size = new System.Drawing.Size(43, 13);
             this.lblActivo.TabIndex = 20;
@@ -677,7 +823,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(11, 71);
+            this.lblCodigo.Location = new System.Drawing.Point(11, 79);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(54, 13);
             this.lblCodigo.TabIndex = 12;
@@ -686,7 +832,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 145);
+            this.label4.Location = new System.Drawing.Point(11, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 27;
@@ -697,16 +843,17 @@
             this.txtIdempleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtIdempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdempleado.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtIdempleado.Location = new System.Drawing.Point(111, 32);
+            this.txtIdempleado.Location = new System.Drawing.Point(111, 6);
             this.txtIdempleado.Name = "txtIdempleado";
             this.txtIdempleado.ReadOnly = true;
             this.txtIdempleado.Size = new System.Drawing.Size(85, 26);
             this.txtIdempleado.TabIndex = 201;
+            this.txtIdempleado.Visible = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 181);
+            this.label5.Location = new System.Drawing.Point(11, 189);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 25;
@@ -715,18 +862,19 @@
             // lblIDProducto
             // 
             this.lblIDProducto.AutoSize = true;
-            this.lblIDProducto.Location = new System.Drawing.Point(11, 35);
+            this.lblIDProducto.Location = new System.Drawing.Point(11, 9);
             this.lblIDProducto.Name = "lblIDProducto";
             this.lblIDProducto.Size = new System.Drawing.Size(71, 13);
             this.lblIDProducto.TabIndex = 10;
             this.lblIDProducto.Text = "ID Empleado:";
+            this.lblIDProducto.Visible = false;
             // 
             // txtCargo
             // 
             this.txtCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCargo.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtCargo.Location = new System.Drawing.Point(111, 178);
+            this.txtCargo.Location = new System.Drawing.Point(111, 186);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(170, 26);
             this.txtCargo.TabIndex = 205;
@@ -736,7 +884,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtNombre.Location = new System.Drawing.Point(111, 106);
+            this.txtNombre.Location = new System.Drawing.Point(111, 114);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(170, 26);
             this.txtNombre.TabIndex = 203;
@@ -744,7 +892,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(11, 109);
+            this.lblNombre.Location = new System.Drawing.Point(11, 117);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(94, 13);
             this.lblNombre.TabIndex = 0;
@@ -827,152 +975,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // Anular
-            // 
-            this.Anular.HeaderText = "Anular";
-            this.Anular.Name = "Anular";
-            this.Anular.ReadOnly = true;
-            // 
-            // idpago_planilla
-            // 
-            this.idpago_planilla.DataPropertyName = "idpago_planilla";
-            this.idpago_planilla.HeaderText = "ID PAGO";
-            this.idpago_planilla.Name = "idpago_planilla";
-            this.idpago_planilla.ReadOnly = true;
-            // 
-            // fecha_pago
-            // 
-            this.fecha_pago.DataPropertyName = "fecha_pago";
-            this.fecha_pago.HeaderText = "FECHA PAGO";
-            this.fecha_pago.Name = "fecha_pago";
-            this.fecha_pago.ReadOnly = true;
-            // 
-            // concepto_de
-            // 
-            this.concepto_de.DataPropertyName = "concepto_de";
-            this.concepto_de.HeaderText = "POR CONCEPTO DE";
-            this.concepto_de.Name = "concepto_de";
-            this.concepto_de.ReadOnly = true;
-            this.concepto_de.Visible = false;
-            // 
-            // tipo_pago
-            // 
-            this.tipo_pago.DataPropertyName = "tipo_pago";
-            this.tipo_pago.HeaderText = "TIPO PAGO";
-            this.tipo_pago.Name = "tipo_pago";
-            this.tipo_pago.ReadOnly = true;
-            // 
-            // comp_transferencia
-            // 
-            this.comp_transferencia.DataPropertyName = "comp_transferencia";
-            this.comp_transferencia.HeaderText = "COMPROBANTE";
-            this.comp_transferencia.Name = "comp_transferencia";
-            this.comp_transferencia.ReadOnly = true;
-            // 
-            // descripcion_pago
-            // 
-            this.descripcion_pago.DataPropertyName = "descripcion_pago";
-            this.descripcion_pago.HeaderText = "DESCRIPCION";
-            this.descripcion_pago.Name = "descripcion_pago";
-            this.descripcion_pago.ReadOnly = true;
-            this.descripcion_pago.Visible = false;
-            // 
-            // tipo_importe
-            // 
-            this.tipo_importe.DataPropertyName = "tipo_importe";
-            this.tipo_importe.HeaderText = "IMPORTE";
-            this.tipo_importe.Name = "tipo_importe";
-            this.tipo_importe.ReadOnly = true;
-            // 
-            // total_bruto
-            // 
-            this.total_bruto.DataPropertyName = "total_bruto";
-            this.total_bruto.HeaderText = "TOTAL BRUTO";
-            this.total_bruto.Name = "total_bruto";
-            this.total_bruto.ReadOnly = true;
-            // 
-            // seguro_social
-            // 
-            this.seguro_social.DataPropertyName = "seguro_social";
-            this.seguro_social.HeaderText = "SEGURO SOCIAL";
-            this.seguro_social.Name = "seguro_social";
-            this.seguro_social.ReadOnly = true;
-            // 
-            // total_neto
-            // 
-            this.total_neto.DataPropertyName = "total_neto";
-            this.total_neto.HeaderText = "TOTAL NETO";
-            this.total_neto.Name = "total_neto";
-            this.total_neto.ReadOnly = true;
-            // 
-            // impuesto_renta
-            // 
-            this.impuesto_renta.DataPropertyName = "impuesto_renta";
-            this.impuesto_renta.HeaderText = "IMPUESTO RENTA";
-            this.impuesto_renta.Name = "impuesto_renta";
-            this.impuesto_renta.ReadOnly = true;
-            // 
-            // neto_a_pagar
-            // 
-            this.neto_a_pagar.DataPropertyName = "neto_a_pagar";
-            this.neto_a_pagar.HeaderText = "NETO PAGAR";
-            this.neto_a_pagar.Name = "neto_a_pagar";
-            this.neto_a_pagar.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "ESTADO";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Visible = false;
-            // 
-            // IDempleado
-            // 
-            this.IDempleado.DataPropertyName = "IDempleado";
-            this.IDempleado.HeaderText = "EMPLEADO ID";
-            this.IDempleado.Name = "IDempleado";
-            this.IDempleado.ReadOnly = true;
-            this.IDempleado.Visible = false;
-            // 
-            // identidad
-            // 
-            this.identidad.DataPropertyName = "identidad";
-            this.identidad.HeaderText = "IDENTIDAD_";
-            this.identidad.Name = "identidad";
-            this.identidad.ReadOnly = true;
-            // 
-            // empleado
-            // 
-            this.empleado.DataPropertyName = "empleado";
-            this.empleado.HeaderText = "EMPLEADO_";
-            this.empleado.Name = "empleado";
-            this.empleado.ReadOnly = true;
-            // 
-            // salario_base
-            // 
-            this.salario_base.DataPropertyName = "salario_base";
-            this.salario_base.HeaderText = "SALARIO BASE";
-            this.salario_base.Name = "salario_base";
-            this.salario_base.ReadOnly = true;
-            this.salario_base.Visible = false;
-            // 
-            // cargo_empleado
-            // 
-            this.cargo_empleado.DataPropertyName = "cargo_empleado";
-            this.cargo_empleado.HeaderText = "CARGO";
-            this.cargo_empleado.Name = "cargo_empleado";
-            this.cargo_empleado.ReadOnly = true;
-            this.cargo_empleado.Visible = false;
-            // 
-            // activo_empleado
-            // 
-            this.activo_empleado.DataPropertyName = "activo_empleado";
-            this.activo_empleado.HeaderText = "ACTIVO";
-            this.activo_empleado.Name = "activo_empleado";
-            this.activo_empleado.ReadOnly = true;
-            this.activo_empleado.Visible = false;
             // 
             // frmPlanillas
             // 
